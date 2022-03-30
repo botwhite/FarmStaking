@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BinanceHives</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="bootstrap-4.2.1/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/jcarousel.responsive.css">
+    <link rel="stylesheet" href="styles/style.css?t=1">
+    <link rel="stylesheet" href="styles/media-1.css">
+    <link rel="stylesheet" href="styles/loader.css">
+</head>
+
+<body class="bg-body light-bg-body">
+    <div id="spinner" class="show">
+        <img src="image/7.png" background="rgba(0, 0, 0, 0)" style="width: 242px; height: 231px;">
+        <div class="container-top-progress">
+            <div class="progress-line" id="progress_loader"></div>
+        </div>
+    </div>
+
+    <div id="website2" style="opacity:0;">
+        <header class="landing-header">
+            <div class="container">
+                <div class="content-header">
+                    <a href="index.htm" class="logo-landing">
+                        <h1>
+                            <div class="container-logo">
+                                <img src="image/logo.png" alt="logo">
+                            </div>
+                        </h1>
+                    </a>
+                    <div class="header-navigation">
+                        <div class="navbar-landing-nav">
+                            <div class="btn-back-mobile-wrapper-landing">
+                                <button type="button" class="button-btn btn-menu-landing"></button>
+                            </div>
+                            <ul class="list-nav">
+                                <li class="nav-list-item">
+                                    <a class="nav-link GAME_MECHANICS" href="index.html#ex1">Механика игры</a>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a class="nav-link MEDALS_AND_BONUSES" href="index.html#ex2">Медали и бонусы</a>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a class="nav-link represent-link REPRESENTATIVES" href="representatives.html">Представители</a>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a class="nav-link represent-link STAKING" href="#">Staking</a>
+                                </li>
+                                <li class="nav-list-item">
+                                    <ul class="social-list-icon">
+                                        <li class="header-social-item">
+                                            <a href="https://twitter.com/BeehiveDApps" target="_blank" class="header-social-link twitter-link"></a>
+                                        </li>
+                                        <li class="header-social-item">
+                                            <a href="https://discordapp.com/invite/pVFVtPM" target="_blank" class="header-social-link discord-link"></a>
+                                        </li>
+                                        <li class="header-social-item">
+                                            <a href="https://www.facebook.com/BeeHiveGame" target="_blank" class="header-social-link facebook-link"></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wrapper-right-nav">
+                            <button type="button" class="button-btn go-to-game PLAY">Играть</button>
+                            <div class="drop-down-lg">
+                                <div class="btn-drop-down">
+                                    <span>ru</span>
+                                </div>
+                                <ul class="list-db">
+                                    <li>
+                                        <span>ru</span>
+                                    </li>
+                                    <li>
+                                        <span>en</span>
+                                    </li>
+                                    <li>
+                                        <span>ir</span>
+                                    </li>
+                                    <li><span>zh</span></li>
+                                    <li><span>es</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-wrapper-menu-landing">
+                <ul class="list-nav">
+                    <li class="nav-list-item">
+                        <a class="nav-link GAME_MECHANICS" href="index.html#ex1">Механика игры</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a class="nav-link MEDALS_AND_BONUSES" href="index.html#ex2">Медали и бонусы</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a class="nav-link REPRESENTATIVES" href="representatives.html">Представители</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a class="nav-link STAKING" href="#">Staking</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <ul class="social-list-icon">
+                            <li class="header-social-item">
+                                <a href="" class="header-social-link telegram-link"></a>
+                            </li>
+                            <li class="header-social-item">
+                                <a href="" class="header-social-link bitcoin-link"></a>
+                            </li>
+                            <li class="header-social-item">
+                                <a href="" class="header-social-link messag-link"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="section-content white-section">
+            <div class="container">
+                <header class="header-sections">
+                    <h2 class="section-title STAKING">STAKING</h2>
+                    <p class="sub-header-title HOW_TOGET_AMBR">
+                        Вы можете получить токены NEC, сделав депозит в игру или же купив их на бирже PancakeSwap
+                        (ссылка).
+                        Имея токены, вам доступна опция их стекинга. Для этого нужно сделать ликвидность на бирже
+                        PancakeSwap для пары BNB/NEC и получить за это токены ликвидности NEC-LP (Cake LP). Используя
+                        токены ликвидности, вы можете принять участие в стекинге и получать новые токены NEC. Создать
+                        или забрать ликвидность, а также свои токены со стейкинга, Вы можете в любой момент.
+                    </p>
+                    <div class="sub-header-link">
+                        <a class="decoration-link BUY_AMBR" target="_blank" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xcC9960620c08B599C6ADe18310961b0eb30F9e51" target="_blank">Buy NEC</a>
+                        <a class="decoration-link GET_AMBR_LP" target="_blank" href="https://exchange.pancakeswap.finance/#/add/BNB/0xcC9960620c08B599C6ADe18310961b0eb30F9e51" target="_blank">Get NEC LP</a>
+                        <a class="decoration-link AMBR_METAMASK" target="_blank" href="#" target="_blank" id="addTokenToMM">Add NEC to Metamask</a>
+                        <a class="decoration-link ABR_LP_METAMASK" target="_blank" href="#" target="_blank" id="addFlipTokenToMM">Add NEC LP to Metamask</a>
+                        <a class="decoration-link AMBR_ADDRESS" target="_blank" href="https://bscscan.com/token/0xcC9960620c08B599C6ADe18310961b0eb30F9e51" target="_blank">NEC address</a>
+                    </div>
+                </header>
+
+                <div class="container-row" style="margin-top: 50px;">
+                    <div class="wrapper-list-statistic">
+                        <ul class="list-statistic staking-statistic">
+                            <li class="statistic-item">
+                                <div class="container-list-stat-item">
+                                    <div class="info-item">
+                                        <h2 class="title-item STAKED_LP_TOKENS">Staked LP tokens</h2>
+                                        <div class="result">
+                                            <p class="result-info"><span class="stakeAmount">0000</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="statistic-item ">
+                                <div class="container-list-stat-item">
+                                    <div class="info-item">
+                                        <h2 class="title-item FREE_LP">Free LP</h2>
+                                        <div class="result">
+                                            <p class="result-info"><span class='flipsBalance'>0</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="statistic-item">
+                                <div class="container-list-stat-item">
+                                    <div class="info-item">
+                                        <h2 class="title-item AMBR_BALANCE">Tokens NEC</h2>
+                                        <div class="result">
+                                            <p class="result-info"><span class='tokensBalance'>0</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="statistic-item">
+                                <div class="container-list-stat-item">
+                                    <div class="info-item">
+                                        <h2 class="title-item EARNED_AMBR">Earned, NEC</h2>
+                                        <div class="result">
+                                            <p class="result-info"><span class='withdrawnReward'>0</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="statistic-item ">
+                                <div class="container-list-stat-item">
+                                    <div class="info-item">
+                                        <h2 class="title-item DAILY_PROFITABILITY">Daily rofitability</h2>
+                                        <div class="result">
+                                            <p class="result-info"><span class='dailyReward'>0 </span> NEC</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="statistic-item ">
+                                <div class="container-list-stat-item">
+                                    <div class="info-item">
+                                        <h2 class="title-item AMBR_PRICE">NEC price, USD</h2>
+                                        <div class="result">
+                                            <p class="result-info"><span class='flipPrice'>0</span><span class="flip-price-percent changePrice">(+0%)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="section-content grey-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="wrapper-input-staking">
+                            <h3 class="title-item-block STAKE">Stake</h3>
+                            <div class="amount-input">
+                                <div class="title STAKE_AMOUNT">Amount :</div>
+                                <div class="value">
+                                    <button> <span class="flipsBalance">0.0000</span> <span>NEC-LP</span></button>
+                                </div>
+                            </div>
+                            <div class="container-input-staking">
+                                <input type="number" class="staking-input" value="0" id="amountToStake">
+                                <p>NEC-LP</p>
+                            </div>
+                            <div class="footer-input-staking">
+                                <button class="button-btn btn STAKE" id="stakeBtn">Stake</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="wrapper-input-staking">
+                            <h3 class="title-item-block UNSTAKE">Unstake</h3>
+                            <div class="amount-input">
+                                <div class="title STAKE_AMOUNT">Amount :</div>
+                                <div class="value">
+                                    <button> <span class="stakeAmount">0.0000</span> <span>NEC-LP</span></button>
+                                </div>
+                            </div>
+                            <div class="container-input-staking">
+                                <input type="number" class="staking-input" value="0" id="amountToUnstake">
+                                <p>NEC-LP</p>
+                            </div>
+                            <div class="footer-input-staking">
+                                <button class="button-btn btn UNSTAKE" id="unstakeBtn">Unstake</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                    Price : 
+                    Staked tokens : 0.0000 NEC-LP
+                    Earned : 0.0000
+                    Staking profitability : ~3,5% 
+                -->
+
+            <!-- <ul class="list-representative">
+                       
+                   </ul> -->
+
+        </section>
+
+        <section class="section-content white-section">
+            <div class="container">
+
+                <div class="row container-row collect-amount">
+
+                    <div class="col">
+                        <h3 class="title-item-block AMBR_EARNED">NEC EARNED</h3>
+                        <div class="wrapper-tetx-item-block">
+                            <p class="item-text ATTENTION_NOTE"> Attention! Remember about blockchain fees! You should
+                                always keep a small amount of NEC to pay the transacton fee</p>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="collect-wrapper">
+                            <h2 class="availableToCollect">0.0000 NEC</h2>
+                            <button type="button" class="button-btn slider-btn COLLECT" id="collect_tokens_button">COLLECT</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--section class="section-content white-section">
+            <div class="container">
+
+                <div class="row container-row collect-amount">
+
+                    <div class="col ">
+                        
+
+                        <div class="wrapper-staking-list">
+                            <div class="item-staking-list">
+                                <h4 class="item-staking-title">Liquidity:</h4>
+                                <span class="big-text">$1230781.29</span>
+                            </div>
+                            <div class="item-staking-list">
+                                <h4 class="item-staking-title">Pair address:</h4>
+                                <a class="big-text">0x26a4...271b</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="wrapper-tetx-item-block">
+                            <p class="item-text ">
+                                If you have BNB coins and NEC tokens, you can add them to the liquidity pool on the
+                                PancakeSwap exchange for the BNB/NEC pair and receive NEC-LP (Cake LP) liquidity tokens.
+                                Using liquidity tokens, you can stake and receive new NEC tokens. You can add or remove
+                                liquidity at any time using both the BNBCapital interface and the PancakeSwap exchange.
+                            </p>
+                        </div>
+                        <a href="#" target="_blank" class="decoration-link">Add LP to Metamask</a>
+                    </div>
+                </div>
+            </div>
+        </section-->
+
+        <!--section class="section-content grey-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="wrapper-input-staking wrapper-input-liquidity">
+                            <h3 class="title-item-block">Add</h3>
+                            <div>
+                                <div class="amount-input">
+                                    <div class="title STAKE_AMOUNT">Amount :</div>
+                                    <div class="value">
+                                        <button> <span class="flipsBalance">0.0000</span> <span>NEC-LP</span></button>
+                                    </div>
+                                </div>
+                                <div class="container-input-liquidity">
+                                    <input type="number" class="staking-input" value="0" id="amountToStake">
+                                    <p>NEC-LP</p>
+                                </div>
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <div class="amount-input">
+                                    <div class="title STAKE_AMOUNT">Amount :</div>
+                                    <div class="value">
+                                        <button> <span class="flipsBalance">0.0000</span> <span>NEC-LP</span></button>
+                                    </div>
+                                </div>
+                                <div class="container-input-liquidity">
+                                    <input type="number" class="staking-input" value="0" id="amountToStake">
+                                    <p>NEC-LP</p>
+                                </div>
+                            </div>
+                            <div class="footer-input-staking">
+                                <button class="button-btn btn ">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="wrapper-input-staking wrapper-input-liquidity">
+                            <h3 class="title-item-block ">Remove</h3>
+                            <div class="amount-input">
+                                <div class="title STAKE_AMOUNT">Amount :</div>
+                                <div class="value">
+                                    <button> <span class="stakeAmount">0.0000</span> <span>NEC-LP</span></button>
+                                </div>
+                            </div>
+                            <div class="container-input-liquidity">
+                                <input type="number" class="staking-input" value="0" id="amountToUnstake">
+                                <p>NEC-LP</p>
+                            </div>
+                            <div class="wrapper-staking-list">
+                                <div class="item-staking-list">
+                                    <h4 class="item-staking-title">NEC:</h4>
+                                    <span class="big-text">$1230781.29</span>
+                                </div>
+                                <div class="item-staking-list">
+                                    <h4 class="item-staking-title">BNB:</h4>
+                                    <span class="big-text">$1230781.29</span>
+                                </div>
+                            </div>
+                            <div class="footer-input-staking">
+                                <button class="button-btn btn ">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <a href="#https://exchange.pancakeswap.finance/#/add/BNB/0x1CC2CBE99959D9620c60434B3272AC491752DEaA"
+                        class="decoration-link" style="margin: 40px auto;">Go to PancakeSwap</a>
+                </div>
+            </div>
+
+        </section-->
+
+        <div class="wrapper-social-list">
+            <ul class="social-list">
+                <li class="social-item">
+                    <a href="https://t.me/beehive_game" class="social-link telegram-icon" target="_blank"><span class="social-icon telegram-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <span class="social-icon telegram-chat-icon"></span>
+                    <ul class="social-sub-list">
+                        <li class="social-sub-item">
+                            <a href="https://t.me/BeeHives_game" class="social-link ru-icon" target="_blank">RU</a>
+                        </li>
+                        <li class="social-sub-item">
+                            <a href="https://t.me/BeeHive_game_EN" class="social-link en-icon" target="_blank">EN</a>
+                        </li>
+
+                        <!-- <li class="social-sub-item">
+                            <a href="https://t.me/BeeHive_game_ES" class="social-link es-icon" target="_blank">ES</a>
+                        </li> -->
+                        <!-- <li class="social-sub-item">
+                            <a href="https://t.me/beehive_game_IN" class="social-link in-icon" target="_blank">IDN</a>
+                        </li> -->
+                        <!-- <li class="social-sub-item">
+                            <a href="https://t.me/beehive_game_Philippines" class="social-link fil-icon" target="_blank">PHL</a>
+                        </li> -->
+                        <li class="social-sub-item">
+                            <a href="https://t.me/beehive_game_Pakistan" target="_blank" class="social-link pak-icon">PAK</a>
+                        </li>
+                        <li class="social-sub-item">
+                            <a href="https://t.me/BeeHive_Game_Italy" target="_blank" class="social-link it-icon">IT</a>
+                        </li>
+                        <!-- <li class="social-sub-item">
+                            <a href="https://t.me/beehive_game_TR" target="_blank" class="social-link tr-icon">TR</a>
+                        </li> -->
+                        <li class="social-sub-item">
+                            <a href="https://t.me/beehive_game_AF" target="_blank" class="social-link af-icon">AF</a>
+                        </li>
+                        <li class="social-sub-item">
+                            <a href="https://t.me/beehive_game_Iran" target="_blank" class="social-link ir-icon">IR</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="social-item">
+                    <a href="https://t.me/beehive_game" class="social-link telegram-icon" target="_blank"><span class="social-icon telegram-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://discord.gg/pVFVtPM" class="social-link diskord-icon" target="_blank"><span class="social-icon diskord-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://twitter.com/BeehiveDApps" class="social-link twitter-icon" target="_blank"><span class="social-icon twitter-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://www.facebook.com/BeeHiveGame" class="social-link fb-icon" target="_blank"><span class="social-icon fb-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://vk.com/beehive_game" class="social-link vk-icon" target="_blank"><span class="social-icon vk-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://medium.com/@anthonylapidlab/how-to-play-beehive-on-pc-and-phone-bd49a847dc97" class="social-link md-icon" target="_blank"><span class="social-icon md-icon"></span></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://www.youtube.com/beehivedapps" class="social-icon yt-icon" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <div class="wrapper-footer-content">
+                <div class="content-footer">
+                    <div class="top-footer-content">
+                        <div class="wrapper-top-footer-logo">
+                            <div class="logo">
+                                <img src="image/logo.png" alt="logo">
+                            </div>
+                            <a href="faq.html" class="footer-btn mobile-footer-btn">F.A.Q.</a>
+                        </div>
+                        <ul class="list-top-footer">
+                            <li class="item-footer-top-list">
+                                <p><span class="GAME_REQUIRES_EXTENSION">Для игры требуется браузерное
+                                        расширение</span>
+                                    <a href="https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp?hl=en" target="_blank">Binance Smart Chain </a>
+                                    <span class="OR"></span>
+                                    <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">MetaMask</a>
+                                </p>
+                            </li>
+                            <li class="item-footer-top-list">
+                                <p><span class="GAME_REQUIRES_MOBILE_SHORT">Для игры на мобильных устройствах
+                                        используйте</span>
+                                    <a href=" https://metamask.io/download.html" target="_blank">MetaMask</a>
+                                    <span class="OR"></span>
+                                    <a href=" https://trustwallet.com/" target="_blank">Trust Wallet</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <a href="faq.html" class="footer-btn">F.A.Q.</a>
+                    </div>
+                    <div class="bottom-footer-content">
+                        <div class="wrapper-info-game">
+                            <p>BeeHive Game © 2019</p>
+                        </div>
+                        <div class="container-list-footer">
+                            <ul class="list-social-footer">
+                                <!--li class="item-social-footer">
+                                    <a href="https://drive.google.com/file/d/1e1mSz1eFNCitDC_jitbUn_928bgBS9X3/view"
+                                        class="link-social audit CONTRACT_AUDIT">Аудит контракта</a>
+                                </li-->
+                                <li class="item-social-footer">
+                                    <a href="" class="link-social smart SMARTCONTRACT" name="link_contract_address" target="_blank">Смартконтракт</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="wrapper-modal modal-ok status-staking flythat" data-autoopen="false" id="tx-info">
+            <a href="#close" class="close-modal close flythat-close auth"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 id="tx-info-deposit" class="">MESSAGE</h2>
+                    </div>
+                </div>
+                <div class="wrapper-ok" style="display:none;" id="tx-info-success-img">
+                    <img class="auth" src="image/ok-medal.png" alt="ok">
+                </div>
+                <div class="img-reward error-img" id="tx-info-fail-img">
+                    <img src="image/error.png">
+                </div>
+                <h2 class="ok-title" style="display:none;" name="tx-info-success"><span class="ok-title EXPECT_TRANSACTION_1">Ожидайте успешного добавления</span> <u><a href="" class="ok-title EXPECT_TRANSACTION_2" id="tx-info-tx" target="_blank">транзакции</a></u>
+                    <span class="ok-title EXPECT_TRANSACTION_3">в блокчейн</span>
+                </h2>
+                <h2 class="ok-title ERROR_TRANSACTION" name="tx-info-fail">Ошибка отправки транзакции в блокчейн</h2>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close auth CLOSE">Закрыть</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="bootstrap-4.2.1/js/bootstrap.bundle.js"></script>
+<script src="bootstrap-4.2.1/js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/jquery.jcarousel.min.js"></script>
+<script src="js/jquery.jcarousel-swipe.js"></script>
+<script src="js/jcarousel.responsive.js"></script>
+<script src="js/jcarousel.responsive1.js"></script>
+<script src="js/jquery.flythat.js"></script>
+<script src="js/main.js"></script>
+<script src="js/lottie-player.js"></script>
+<script src="lib/ethers-5.0.umd.min.js" type="application/javascript"></script>
+<script src="js/eth/common.js"></script>
+<script src="js/eth/ethereum-3.js?=15"></script>
+<script src="js/language.js"></script>
+<script src="js/eth/action-1.js?t=5"></script>
+<script src="js/eth/events.js?t=1"></script>
+<script src="js/eth/staking.js?t=35"></script>
+
+
+</html>
