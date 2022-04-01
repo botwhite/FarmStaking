@@ -35,7 +35,7 @@ $('#stakeBtn').on('click', async () => {
     wait = true;
     await TOKEN_CONTRACT.approve(CONTRACT_ADDRESS, ethers.BigNumber.from(2).pow(256).sub(1));
   }
-
+ 
   setTimeout(function callStaking() {
     INTERACT_CONTRACT.stake(
       ethers.utils.parseEther(amountStr),
