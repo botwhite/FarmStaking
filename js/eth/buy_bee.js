@@ -211,7 +211,7 @@ $('[name="modal-buy-bee-button"]').on('click', () => {
           providerSubscribe = new ethers.providers.Web3Provider(window.ethereum);
           INTERACT_CONTRACT = new ethers.Contract(CONTRACT_ADDRESS, ABI, providerSubscribe.getSigner());
         }
-
+        console.log("soy  el id " + id)
         if(unlockedBee < id-1 && id != 8){
           INTERACT_CONTRACT.unlock(id-1, {'from':current_account, 'value':0, 'gasPrice':gasPrice})
             .then(txn => {

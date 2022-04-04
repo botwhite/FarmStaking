@@ -1,7 +1,12 @@
-//SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.0;
 
+
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
 library Math {
     
@@ -24,115 +29,6 @@ library Math {
     function ceilDiv(uint256 a, uint256 b) internal pure returns (uint256) {
         
         return a / b + (a % b == 0 ? 0 : 1);
-    }
-}
-
-library SafeMath {
-    
-    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            uint256 c = a + b;
-            if (c < a) return (false, 0);
-            return (true, c);
-        }
-    }
-
-    
-    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            if (b > a) return (false, 0);
-            return (true, a - b);
-        }
-    }
-
-    
-    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            
-            
-            
-            if (a == 0) return (true, 0);
-            uint256 c = a * b;
-            if (c / a != b) return (false, 0);
-            return (true, c);
-        }
-    }
-
-    
-    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            if (b == 0) return (false, 0);
-            return (true, a / b);
-        }
-    }
-
-    
-    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            if (b == 0) return (false, 0);
-            return (true, a % b);
-        }
-    }
-
-    
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a + b;
-    }
-
-    
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a - b;
-    }
-
-    
-    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a * b;
-    }
-
-    
-    function div(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a / b;
-    }
-
-    
-    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a % b;
-    }
-
-    
-    function sub(
-        uint256 a,
-        uint256 b,
-        string memory errorMessage
-    ) internal pure returns (uint256) {
-        unchecked {
-            require(b <= a, errorMessage);
-            return a - b;
-        }
-    }
-
-    
-    function div(
-        uint256 a,
-        uint256 b,
-        string memory errorMessage
-    ) internal pure returns (uint256) {
-        unchecked {
-            require(b > 0, errorMessage);
-            return a / b;
-        }
-    }
-
-    
-    function mod(
-        uint256 a,
-        uint256 b,
-        string memory errorMessage
-    ) internal pure returns (uint256) {
-        unchecked {
-            require(b > 0, errorMessage);
-            return a % b;
-        }
     }
 }
 
@@ -253,35 +149,6 @@ library Address {
     }
 }
 
-interface IERC20 {
-    
-    function totalSupply() external view returns (uint256);
-
-    
-    function balanceOf(address account) external view returns (uint256);
-
-    
-    function transfer(address recipient, uint256 amount) external returns (bool);
-
-    
-    function allowance(address owner, address spender) external view returns (uint256);
-
-    
-    function approve(address spender, uint256 amount) external returns (bool);
-
-    
-    function transferFrom(
-        address sender,
-        address recipient,
-        uint256 amount
-    ) external returns (bool);
-
-    
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
-    
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-}
 interface IERC20Token {
     function totalSupply() external view returns (uint256);
 
@@ -461,8 +328,11 @@ contract BinanceHives is Claimable, UserBonus {
 
     using SafeMath for uint256;
     IERC20Token public token_CMG;
+    IERC721 public nftToken;
+
 	address erctoken = 0xF6690551bC37D22e14Ab5E24c2dD2F4c25CB48c9; 
-    
+	address nftTokenAdd = 0xF6690551bC37D22e14Ab5E24c2dD2F4c25CB48c9; 
+
 
     uint256 public constant BEES_COUNT = 8;
 
@@ -484,6 +354,10 @@ contract BinanceHives is Claimable, UserBonus {
         uint256 referralsTotalDeposited;
         uint256 subreferralsCount;
         address[] referrals;
+
+        //nfts
+        uint256[] idNFts;
+        uint256 InitFromBlock;
     }
 
     uint256 public constant SUPER_BEE_INDEX = BEES_COUNT - 1;
@@ -508,6 +382,8 @@ contract BinanceHives is Claimable, UserBonus {
     uint256 public constant SUPER_BEE_BUYER_PERIOD = 7 days;
     uint256[] public REFERRAL_PERCENT_PER_LEVEL = [5, 2, 1, 1, 1];
     uint256[] public REFERRAL_POINT_PERCENT = [50, 25, 0, 0, 0];
+    //nfts 
+    uint256 public constant NFT_amount_needed = 8;
 
     uint256 public maxBalance;
     uint256 public maxBalanceClose;
@@ -557,6 +433,7 @@ contract BinanceHives is Claimable, UserBonus {
     constructor() {
         _register(owner(), address(0));
         token_CMG = IERC20Token(erctoken);
+        nftToken =  IERC721(nftTokenAdd);
     }
 
     receive() external payable {
@@ -997,6 +874,29 @@ contract BinanceHives is Claimable, UserBonus {
       stakingStatistics[2] = stakes[userAddress].withdrawnReward;
       stakingStatistics[3] = stakes[userAddress].amount; 
       stakingStatistics[4] = stakes[userAddress].amount.mul(MULTIPLIER); 
+    }
+
+
+    
+    function _stakeNFT(uint256 tokenId, uint256 _rango) internal returns (bool) {
+        // require this token is not already staked
+        require(players[msg.sender].InitFromBlock == 0, "Stake: Token is already staked");
+
+        // require this token is not already owned by this contract
+        require(nftToken.ownerOf(tokenId) != address(this), "Stake: Token is already staked in this contract");
+
+        // take possession of the NFT
+        nftToken.safeTransferFrom(msg.sender, address(this), tokenId);
+
+        // check that this contract is the owner
+        require(nftToken.ownerOf(tokenId) == address(this), "Stake: Failed to take possession of NFT");
+
+        // start the staking from this block.
+  
+
+       // emit NftStaked(msg.sender, tokenId, block.number);
+
+        return true;
     }
 
 }
