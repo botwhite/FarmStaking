@@ -30,7 +30,7 @@ function DEBUG(o){
 
 function getCoinsPerEth(contract){
 	return new Promise(function(ok, fail){
-		contract.COINS_PER_BNB().then(amount => {
+		contract.COINS_PER_Token().then(amount => {
 			ok({'waxEqual1eth':amount, 'honeyEqual1eth':amount});
 		}).catch(error => {
 			fail(error);
@@ -82,14 +82,14 @@ function getMedalsPoints(contract){
 
 function getBeeMonthlyPercents(contract){
 	return new Promise(function(ok, fail){
-		contract.BEES_COUNT().then(bees_count => {
+		contract.souls_COUNT().then(souls_COUNT => {
 			let counter = 0;
 			let error;
 			bee_monthly_percents = [];
 			unlockBeePrice = [];
 			bee_levels_prices = [];
-			for(let i = 0; i < bees_count; i++){
-			    contract.BEES_MONTHLY_PERCENTS(i).then(function(monthlyPercents){
+			for(let i = 0; i < souls_COUNT; i++){
+			    contract.souls_MONTHLY_PERCENTS(i).then(function(monthlyPercents){
 			    	bee_monthly_percents[i] = monthlyPercents;
 			    }.bind(i)).catch(err => {
 			    	error = err;
@@ -97,7 +97,7 @@ function getBeeMonthlyPercents(contract){
 			    	counter++;
 			    });
 
-			    contract.BEES_LEVELS_PRICES(i).then(function(unlockPrice){
+			    contract.souls_LEVELS_PRICES (i).then(function(unlockPrice){
 			    	unlockBeePrice[i] =  unlockPrice / Math.pow(10, 18);
 			    }.bind(i)).catch(err => {
 			    	error = err;
@@ -105,7 +105,7 @@ function getBeeMonthlyPercents(contract){
 			    	counter++;
 			    });
 
-			    contract.BEES_PRICES(i).then(function(levelPrice){
+			    contract.souls_PRICES(i).then(function(levelPrice){
 			    	bee_levels_prices[i] =  Math.ceil(levelPrice / Math.pow(10, 18));
 			    }.bind(i)).catch(err => {
 			    	error = err;
@@ -115,7 +115,7 @@ function getBeeMonthlyPercents(contract){
 			}
 
 			let flagBeesMonthlyPercents = setInterval(function(){
-				if(3*bees_count > counter){
+				if(3*souls_COUNT > counter){
 					return;
 				}
 
@@ -175,9 +175,9 @@ function getQualityHoneyPercents(contract){
 
 function getFirstBeeAirdropAmount(contract){
 	return new Promise(function(ok, fail){
-		contract.FIRST_BEE_AIRDROP_AMOUNT().then(airdropAmount => {
-			first_bee_airdrop_amount = airdropAmount / Math.pow(10,18);
-			ok({'first_bee_airdrop_amount':first_bee_airdrop_amount});
+		contract.FIRST_soul_AIRDROP_AMOUNT().then(airdropAmount => {
+			FIRST_soul_AIRDROP_AMOUNT = airdropAmount / Math.pow(10,18);
+			ok({'FIRST_soul_AIRDROP_AMOUNT':FIRST_soul_AIRDROP_AMOUNT});
 		}).catch(err => {
 			fail(err);
 		});
@@ -192,17 +192,17 @@ function calculateProfitAtHour(bees, bee_monthly_percents, bee_levels_prices){
 	return result;
 }
 
-function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = false, unlockedBee = 0, superBeeUnlocked = false){
+function fillBeesWaxes(playersouls = [], airdropCollected = false, registered = false, unlockedBee = 0, superBeeUnlocked = false){
 	for(let bee_type = 1; bee_type <= 8; bee_type++){
 		let bee_type_wax = '';
 
 		for(let i = 1; i <= 32; i++){
 			let number_wax = (i < 10 ? ''+0+i : ''+i);
 			let bee_img = '';
-			if(playerBees[bee_type-1] >= i)
-				bee_img = '<img src="image/by-bee.png">';
+			if(playersouls[bee_type-1] >= i)
+				bee_img = '<img src="image/by-soul.png">';
 
-			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-bee">'+
+			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-soul">'+
 			                    bee_img+
 			                    '<div class="hexagon">'+
 			                    '<span class="namber-wax">'+number_wax+'</span>'+
@@ -218,34 +218,34 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			continue;
 		}
 
-		if((bee_type != 2 || playerBees[bee_type-1] != 32) && unlockedBee < bee_type-1){
+		if((bee_type != 2 || playersouls[bee_type-1] != 32) && unlockedBee < bee_type-1){
 			$('#bee_type_button_'+bee_type).addClass('red-btn');
 			// $('#bee_type_button_'+bee_type).addClass('none-active');
 			bees_can_unlock[bee_type-1] = false;
-			$('#bee_type_button_'+bee_type).removeClass('bay-bee-btn');
+			$('#bee_type_button_'+bee_type).removeClass('bay-soul-btn');
 			$('#bee_type_button_'+bee_type).html('Unlock');
 		}
 
-		if(bee_type != 8 && playerBees[bee_type-2] == 32){
+		if(bee_type != 8 && playersouls[bee_type-2] == 32){
 			bees_can_unlock[bee_type-1] = true;
 			$('#bee_type_button_'+bee_type).removeClass('none-active');
-			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
+			$('#bee_type_button_'+bee_type).addClass('bay-soul-btn');
 			if(unlockedBee < bee_type-1){
 				$('#bee_type_button_'+bee_type).html('Unlock');
 				$('#bee_type_button_'+bee_type).addClass('UNLOCK');
 				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');
 			} else {
 				$('#bee_type_button_'+bee_type).removeClass('red-btn');
-				$('#bee_type_button_'+bee_type).html('Buy a bee');
+				$('#bee_type_button_'+bee_type).html('Buy a soul');
 				$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 				$('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 			}
 		}
 
-		if(bee_type != 8 && playerBees[bee_type-1] == 32){
+		if(bee_type != 8 && playersouls[bee_type-1] == 32){
 			$('#bee_type_button_'+bee_type).removeClass('red-btn');
 			$('#bee_type_button_'+bee_type).addClass('none-active');
-			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
+			$('#bee_type_button_'+bee_type).addClass('bay-soul-btn');
 			$('#bee_type_button_'+bee_type).addClass('COLLECTED');
 			$('#bee_type_button_'+bee_type).removeClass('COLLECT');
 			$('#bee_type_button_'+bee_type).html('Collected');
@@ -253,9 +253,9 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 
 		if(bee_type == 8 && superBeeUnlocked){
 			$('#bee_type_button_'+bee_type).removeClass('none-active');
-			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
+			$('#bee_type_button_'+bee_type).addClass('bay-soul-btn');
 			$('#bee_type_button_'+bee_type).removeClass('red-btn');
-			$('#bee_type_button_'+bee_type).html('Buy a bee');
+			$('#bee_type_button_'+bee_type).html('Buy a soul');
 			$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 			$('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 		}
@@ -271,11 +271,11 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 		$('#bee_type_1 > div').html(wax + '<div class="drop-big">'+
             '<img src="image/big-drop.png"/>'+
             '<div class="text-drop">'+
-                '<span class="info-big-drop" name="first_bee_airdrop_amount">1000</span>'+
+                '<span class="info-big-drop" name="FIRST_soul_AIRDROP_AMOUNT">1000</span>'+
             '</div>'+
         '</div>');
 
-        $('[name="first_bee_airdrop_amount"]').html(first_bee_airdrop_amount);
+        $('[name="FIRST_soul_AIRDROP_AMOUNT"]').html(FIRST_soul_AIRDROP_AMOUNT);
         $.get('js/eth/airdrop_collect.js');
 	} else {
 		$('#bee_type_1 > div').removeClass('no-active-round');

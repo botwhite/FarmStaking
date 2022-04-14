@@ -22,7 +22,7 @@ $('#modal-collect-airdrop-init-button').click(function(){
             $('#tx-info-withdraw').hide();
             $('#tx-info-quality-upgrade').hide();
             $('#tx-info-airdrop').show();
-            $('#tx-info-buy-bee').hide();
+            $('#tx-info-buy-soul').hide();
             $('#tx-info-collect-medal').hide();
 
             $('#tx-info').flythat("show");
@@ -55,7 +55,7 @@ $('#collect-medal').click(function(){
             $('#tx-info-withdraw').hide();
             $('#tx-info-quality-upgrade').hide();
             $('#tx-info-airdrop').hide();
-            $('#tx-info-buy-bee').hide();
+            $('#tx-info-buy-soul').hide();
             $('#tx-info-collect-medal').show();
 
             $('#tx-info').flythat("show");

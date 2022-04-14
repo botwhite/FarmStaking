@@ -26,7 +26,7 @@ $('[name="modal-referrals-init-button"]').click(function(){
                              '          <span class="date-table">'+storage[current_account]['referrals']['refs'][addr].join+'</span>'+
                              '      </td>'+
                              '      <td>'+
-                             '          <span class="bee-home"><a class="about-bee" href="https://'+NETWORK_URL+'bscscan.com/address/'+addr+'" target="_blank">'+addr+'</a></span>'+
+                             '          <span class="soul-home"><a class="about-soul" href="https://'+NETWORK_URL+'bscscan.com/address/'+addr+'" target="_blank">'+addr+'</a></span>'+
                              '      </td>'+
                              '      <td>'+
                              '          <span class="reit-referal">'+storage[current_account]['referrals']['refs'][addr].level+'</span>'+

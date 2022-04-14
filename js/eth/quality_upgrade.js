@@ -78,7 +78,7 @@ $('#modal-quantity-update-button').click(function(){
             $('#tx-info-withdraw').hide();
             $('#tx-info-quality-upgrade').show();
             $('#tx-info-airdrop').hide();
-            $('#tx-info-buy-bee').hide();
+            $('#tx-info-buy-soul').hide();
             $('#tx-info-collect-medal').hide();
             $('#tx-info-reward').hide();
 

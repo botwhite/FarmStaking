@@ -16,8 +16,8 @@
     .container-modal {
         min-height: 385px;
     }
-    .my-bee-home,
-    .my-bee-home span {
+    .my-soul-home,
+    .my-soul-home span {
         text-align: center;
         font-size: 20px;
     }
@@ -66,14 +66,14 @@
     .medal-input img {
         width: 100%;
     }
-    .count-bee {
+    .count-soul {
         font-size: 26px !important;
     }
-    .count-bee-btn {
+    .count-soul-btn {
         width: 35px;
         height: 35px;
     }
-    .pay-count-bee {
+    .pay-count-soul {
         width: 35px;
         height: 35px;
         font-size: 20px;
@@ -125,29 +125,29 @@
     .nuber-position {
         padding-right: 34px;
     }
-    .pay-bee .container-modal {
+    .pay-soul .container-modal {
         padding-top: 64px;
     }
-    .about-bee {
+    .about-soul {
         max-width: 400px;
         margin-bottom: 10px;
         font-size: 14px;
     }
-    .img-bee {
+    .img-soul {
         max-width: 220px;
         width: 100%;
         display: block;
     }
-    .img-bee img {
+    .img-soul img {
         width: 100%;
         height: auto;
         display: block;
     }
-    .my-bee-home {
+    .my-soul-home {
         margin-top: 15px;
         margin-bottom: 8px;
     }
-    .green-bee-btn,
+    .green-soul-btn,
     .violet-btn {
         width: 190px !important;
         height: 50px;
@@ -171,7 +171,7 @@
         font-size: 18px;
         margin-bottom: 20px;
     }
-    .container-pay-bee {
+    .container-pay-soul {
         padding: 8px 10px;
     }
     .summa-dohod img {
@@ -232,21 +232,21 @@
         height: 525px;
         padding-top: 72px;
     }
-    .cryptobee .img-bee {
+    .cryptobee .img-soul {
         max-width: 182px;
     }
-    .cryptobee .my-bee-home {
+    .cryptobee .my-soul-home {
         font-size: 24px;
     }
     .item-about-cryptobee p {
         font-size: 18px;
     }
-    .price-bee:before {
+    .price-soul:before {
         width: 34px;
         height: 32px;
         top: -2px;
     }
-    .price-bee {
+    .price-soul {
         padding-left: 43px;
     }
     .item-about-cryptobee span {
@@ -271,7 +271,7 @@
     .item-about-cryptobee:last-child {
         margin-bottom: 17px;
     }
-    .cryptobee .my-bee-home {
+    .cryptobee .my-soul-home {
         margin-top: 20px;
     }
     .cryptobee .plus {
@@ -485,7 +485,7 @@
         height: 105px;
         top: 2px;
     }
-    .bee:before {
+    .soul:before {
         width: 125px;
         height: 125px;
     }
@@ -615,7 +615,7 @@
         height: 46px;
         width: 40px;
     }
-    .active-bee img {
+    .active-soul img {
         display: block;
         width: 41px;
         height: 38px;
@@ -906,7 +906,7 @@
             opacity: 0;
         }
     }
-    .new-game-modal .green-bee-btn {
+    .new-game-modal .green-soul-btn {
         bottom: 0px;
     }
     .error-img img {
@@ -978,7 +978,7 @@
         padding-left: 0;
         padding-right: 0;
     }
-    .container-bee-carousel-item {
+    .container-soul-carousel-item {
         padding: 0;
     }
     .center-change .lotery-wax {
@@ -1001,7 +1001,7 @@
     .your-reit span {
         font-size: 32px;
     }
-    .limit-bee {
+    .limit-soul {
         font-size: 16px;
         margin-top: 12px;
     }
@@ -1118,7 +1118,7 @@
         max-width: 300px;
         margin-bottom: 25px;
     }
-    .carousel-bee .carousel-indicators li {
+    .carousel-soul .carousel-indicators li {
         width: 20px;
         height: 20px;
         margin-right: 10px;
@@ -1251,48 +1251,48 @@
     .airdrop .img-reward {
         margin-top: 94px;
     }
-    .pay-bee .container-modal {
+    .pay-soul .container-modal {
         padding-top: 0;
     }
     .header-modal {
         box-shadow: none;
     }
-    .about-bee {
+    .about-soul {
         margin-top: 10px;
         line-height: 15px;
     }
-    .img-bee {
+    .img-soul {
         align-items: center;
     }
     .flythat img {
         max-width: 140px;
     }
-    .my-bee-home,
-    .my-bee-home span {
+    .my-soul-home,
+    .my-soul-home span {
         font-size: 18px;
     }
-    .my-bee-home {
+    .my-soul-home {
         margin-top: 12px;
         margin-bottom: 10px;
     }
-    .my-bee-home span.count-bee {
+    .my-soul-home span.count-soul {
         font-size: 22px;
     }
-    .green-bee-btn {
+    .green-soul-btn {
         width: 238px;
         height: 40px;
         font-size: 16px;
         margin: 0 auto;
         border-radius: 10px;
     }
-    .new-game-modal .green-bee-btn {
+    .new-game-modal .green-soul-btn {
         bottom: 22px;
     }
-    .green-bee-btn:after,
+    .green-soul-btn:after,
     .violet-btn:after {
         border-radius: 10px;
     }
-    .about-bee {
+    .about-soul {
         font-size: 14px;
     }
     .wrapper-bottom-footer-modal {
@@ -1301,7 +1301,7 @@
         padding: 3px;
         z-index: 1000;
     }
-    .container-pay-bee {
+    .container-pay-soul {
         padding: 5px 7px;
         max-width: 100%;
     }
@@ -1317,10 +1317,10 @@
     .cryptobee .header-modal {
         max-width: 100%;
     }
-    .cryptobee .my-bee-home {
+    .cryptobee .my-soul-home {
         font-size: 20px;
     }
-    .price-bee:before {
+    .price-soul:before {
         width: 31px;
         height: 29px;
     }
@@ -1330,7 +1330,7 @@
     .item-about-cryptobee span {
         font-size: 20px;
     }
-    .price-bee {
+    .price-soul {
         padding-left: 37px;
         position: relative;
     }
@@ -1358,28 +1358,28 @@
         max-width: 100%;
         background: transparent;
     }
-    .more-resourse .img-bee {
+    .more-resourse .img-soul {
         margin-top: 60px;
     }
-    .pay-bee-more .img-bee {
+    .pay-soul-more .img-soul {
         margin-top: 20px;
     }
-    .pay-bee-more img {
+    .pay-soul-more img {
         max-width: 136px;
     }
     .more-resourse img {
         max-width: 134px;
     }
-    .pay-bee .title-modal h2 {
+    .pay-soul .title-modal h2 {
         font-size: 20px;
     }
     .summa-dohod img {
         max-width: 30px;
     }
-    .pay-bee-more .balance-footer-block {
+    .pay-soul-more .balance-footer-block {
         bottom: 28px;
     }
-    .pay-bee .balance-footer-block {
+    .pay-soul .balance-footer-block {
         bottom: 98px;
     }
     .buy-wax {
@@ -1414,7 +1414,7 @@
         font-size: 18px;
         color: #7b3701;
     }
-    .pay-count-bee {
+    .pay-count-soul {
         border: 2px solid #60be19;
         background-color: #fff;
     }
@@ -2254,7 +2254,7 @@
     .paseca .wrapper-footer-input + .close-modal-mobile {
         margin-top: 15px;
     }
-    .modal-bee-footer-mobile {
+    .modal-soul-footer-mobile {
         display: flex;
         min-height: 80px;
         padding-bottom: 0;
@@ -2412,7 +2412,7 @@
     .item-representative:nth-child(4n) {
         margin-right: 30px;
     }
-    .about-bee {
+    .about-soul {
         margin-bottom: 10px;
     }
 }
@@ -2505,8 +2505,8 @@
     }
     .jcarousel-control-prev,
     .jcarousel-control-next,
-    .carousel-bee .carousel-control-prev-icon,
-    .carousel-bee .carousel-control-next-icon {
+    .carousel-soul .carousel-control-prev-icon,
+    .carousel-soul .carousel-control-next-icon {
         width: 25px;
         height: 49px;
     }
@@ -2566,7 +2566,7 @@
     .section-bonus {
         padding: 70px 0;
     }
-    .carousel-bee .carousel-indicators li {
+    .carousel-soul .carousel-indicators li {
         width: 15px;
         height: 15px;
         margin-right: 15px;
@@ -2576,7 +2576,7 @@
         font-size: 18px;
         line-height: 28px;
     }
-    .text-header-about-bee {
+    .text-header-about-soul {
         font-size: 18px;
     }
     .text-about-game {
@@ -2736,7 +2736,7 @@
     .wrapper-active {
         left: 176px;
     }
-    .img-container-bee img {
+    .img-container-soul img {
         max-width: 160px;
         width: 100%;
     }
@@ -2751,19 +2751,19 @@
         max-width: 75%;
         text-align: center;
     }
-    .item-all-bee:nth-child(2n) {
+    .item-all-soul:nth-child(2n) {
         margin-right: 0;
     }
-    .item-all-bee {
+    .item-all-soul {
         max-width: 235px;
     }
-    .result-bee-title,
-    .title-price-bee,
+    .result-soul-title,
+    .title-price-soul,
     .title-about-medal {
         font-size: 14px;
     }
-    .price-bee-text,
-    .product-bee-text,
+    .price-soul-text,
+    .product-soul-text,
     .block-tetx-medal-result,
     .big-text {
         color: #e76402;
@@ -2828,18 +2828,18 @@
     .tabs li a {
         margin: 25px 0;
     }
-    .pay-count-bee {
+    .pay-count-soul {
         width: 38px;
         height: 38px;
         padding: 0;
         font-size: 16px;
         margin-bottom: 12px;
     }
-    .count-bee-btn {
+    .count-soul-btn {
         width: 31px;
         height: 32px;
     }
-    .limit-bee {
+    .limit-soul {
         font-size: 16px;
         margin-top: 9px;
     }
@@ -2896,10 +2896,10 @@
     .wrapper-modal.new-round-modal.airdrop {
         height: 57vh;
     }
-    .wrapper-modal.pay-bee {
+    .wrapper-modal.pay-soul {
         height: 57vh;
     }
-    .wrapper-modal.pay-bee .balance-footer-block {
+    .wrapper-modal.pay-soul .balance-footer-block {
         bottom: 96px;
     }
     .wrapper-modal.cryptobee {
@@ -2971,7 +2971,7 @@
         top: 2px;
         right: 17px;
     }
-    .modal-bee-footer-mobile {
+    .modal-soul-footer-mobile {
         min-height: 50px;
         padding-bottom: 8px;
     }
@@ -3008,7 +3008,7 @@
         max-width: 200px;
         bottom: 54px;
     }
-    .container-pay-bee {
+    .container-pay-soul {
         padding: 3px 0;
         border-radius: 9px;
     }
@@ -3022,29 +3022,29 @@
         height: 41px;
         padding-top: 3px;
     }
-    .about-bee {
+    .about-soul {
         margin-top: 11px;
         line-height: 15px;
         margin-bottom: 5px;
     }
-    .cryptobee .my-bee-home {
+    .cryptobee .my-soul-home {
         font-size: 16px;
     }
-    .my-bee-home {
+    .my-soul-home {
         margin-top: 10px;
         margin-bottom: 7px;
     }
-    .price-bee:before {
+    .price-soul:before {
         width: 21px;
         height: 19px;
     }
-    .price-bee:before {
+    .price-soul:before {
         top: 0px;
     }
     .item-about-cryptobee span {
         font-size: 18px;
     }
-    .price-bee {
+    .price-soul {
         padding-left: 27px;
         position: relative;
     }
@@ -3080,7 +3080,7 @@
         position: relative;
         padding-left: 24px;
     }
-    .cryptobee .about-bee {
+    .cryptobee .about-soul {
         padding-bottom: 5px;
     }
     .cryptobee .close-modal-mobile {
@@ -3091,7 +3091,7 @@
     .cryptobee .wrapper-bottom-footer-modal {
         bottom: 17px;
     }
-    .cryptobee .green-bee-btn {
+    .cryptobee .green-soul-btn {
         top: inherit;
         position: absolute;
         bottom: 18px;
@@ -3100,7 +3100,7 @@
         width: 216px;
         height: 37px;
     }
-    .cryptobee .green-bee-btn::after {
+    .cryptobee .green-soul-btn::after {
         display: none;
     }
     .footer-modal-mobile {
@@ -3193,7 +3193,7 @@
         padding-left: 33px;
         position: relative;
     }
-    .green-bee-btn,
+    .green-soul-btn,
     .violet-btn {
         height: 35px;
         font-size: 14px;
@@ -3226,21 +3226,21 @@
     .airdrop .img-reward {
         margin-top: 40px;
     }
-    .about-bee {
+    .about-soul {
         text-align: center;
         max-width: 595px;
     }
-    .my-bee-home,
-    .my-bee-home span {
+    .my-soul-home,
+    .my-soul-home span {
         font-size: 16px;
     }
-    .my-bee-home {
+    .my-soul-home {
         margin-bottom: 0;
     }
-    .count-bee {
+    .count-soul {
         font-size: 24px !important;
     }
-    .pay-bee .balance-footer-block {
+    .pay-soul .balance-footer-block {
         bottom: 71px;
     }
     .more-nead {
@@ -3517,7 +3517,7 @@
         max-width: 196px;
         border-radius: 10px;
     }
-    .container-pay-bee {
+    .container-pay-soul {
         padding: 2px;
         border-radius: 7px;
     }
@@ -3542,34 +3542,34 @@
     .wrapper-content-box {
         margin-bottom: 7px;
     }
-    .about-bee {
+    .about-soul {
         font-size: 12px;
     }
-    .green-bee-btn,
+    .green-soul-btn,
     .violet-btn {
         width: 190px;
     }
     .summa-dohod img {
         max-width: 15px;
     }
-    .pay-bee .container-pay-bee {
+    .pay-soul .container-pay-soul {
         padding: 0;
         border-radius: 7px;
     }
-    .pay-bee .balance-footer-block {
+    .pay-soul .balance-footer-block {
         bottom: 66px;
     }
-    .count-bee {
+    .count-soul {
         font-size: 20px !important;
     }
-    .my-bee-home,
-    .my-bee-home span {
+    .my-soul-home,
+    .my-soul-home span {
         font-size: 14px;
     }
-    .my-bee-home {
+    .my-soul-home {
         margin-top: 8px;
     }
-    .cryptobee .green-bee-btn {
+    .cryptobee .green-soul-btn {
         width: 197px;
     }
     .close-modal-mobile {
@@ -3699,7 +3699,7 @@
     .buy-honey-bank {
         max-width: 235px;
     }
-    .green-bee-btn,
+    .green-soul-btn,
     .violet-btn {
         width: 180px;
         height: 30px;
@@ -3732,11 +3732,11 @@
     .airdrop .img-reward {
         margin-top: 19px;
     }
-    .about-bee {
+    .about-soul {
         margin-top: 10px;
         line-height: 15px;
     }
-    .cryptobee .green-bee-btn {
+    .cryptobee .green-soul-btn {
         width: 184px;
         font-size: 12px;
     }
@@ -3747,7 +3747,7 @@
         width: 186px;
         font-size: 12px;
     }
-    .limit-bee {
+    .limit-soul {
         font-size: 13px;
         margin-top: 6px;
     }
@@ -4020,14 +4020,14 @@
         padding-right: 0px;
         padding-left: 0px;
     }
-    .carousel-bee .carousel-control-prev,
-    .carousel-bee .carousel-control-next {
+    .carousel-soul .carousel-control-prev,
+    .carousel-soul .carousel-control-next {
         width: 12%;
     }
-    .container-bee-carousel-item {
+    .container-soul-carousel-item {
         padding: 0;
     }
-    .item-all-bee {
+    .item-all-soul {
         margin-right: 0;
     }
     .container-questions {
@@ -4080,7 +4080,7 @@
         font-weight: bold;
         font-size: 14px;
     }
-    .limit-bee {
+    .limit-soul {
         font-size: 14px;
     }
     .score {
@@ -4590,7 +4590,7 @@
     .table-modal tbody tr td span {
         font-size: 11px;
     }
-    .bee-home {
+    .soul-home {
         max-width: 76px;
     }
     .activ-honey:before {
@@ -4679,14 +4679,14 @@
     .container-list-statistic {
         margin-bottom: 66px;
     }
-    .about-bee {
+    .about-soul {
         font-size: 13px;
         max-width: 340px;
     }
     .item-about-cryptobee p {
         font-size: 14px;
     }
-    .price-bee:before {
+    .price-soul:before {
         width: 25px;
         height: 24px;
     }
@@ -4750,10 +4750,10 @@
     .wrapper-modal {
         z-index: 9999999999 !important;
     }
-    .cryptobee .img-bee img {
+    .cryptobee .img-soul img {
         max-width: 105px;
     }
-    .my-bee-home {
+    .my-soul-home {
         margin-top: 5px;
         margin-bottom: 10px;
     }
@@ -4849,14 +4849,14 @@
     .buy-wax .balance-footer-block {
         bottom: 80px;
     }
-    .pay-bee .balance-footer-block {
+    .pay-soul .balance-footer-block {
         bottom: 80px;
     }
 
     .wrapper-modal.new-round-modal-2 {
         height: 100%;
     }
-    .wrapper-modal.pay-bee {
+    .wrapper-modal.pay-soul {
         height: 100%;
     }
     .wrapper-modal.cryptobee {
@@ -4988,7 +4988,7 @@
     .landing-header {
         padding: 10px 5px;
     }
-    .img-container-bee img {
+    .img-container-soul img {
         max-width: 133px;
         width: 100%;
     }
@@ -5025,7 +5025,7 @@
     .buy-wax .balance-footer-block {
         bottom: 82px;
     }
-    .pay-bee .balance-footer-block {
+    .pay-soul .balance-footer-block {
         bottom: 82px;
     }
 }
@@ -5034,7 +5034,7 @@
     .wrapper-modal.new-round-modal-2 {
         height: 100%;
     }
-    .wrapper-modal.pay-bee {
+    .wrapper-modal.pay-soul {
         height: 100%;
     }
     .wrapper-modal.cryptobee {
@@ -5052,7 +5052,7 @@
     .wrapper-modal.new-round-modal-2 {
         height: 100%;
     }
-    .wrapper-modal.pay-bee {
+    .wrapper-modal.pay-soul {
         height: 100%;
     }
     .wrapper-modal.cryptobee {
@@ -5070,7 +5070,7 @@
     .buy-wax .balance-footer-block {
         bottom: 93px;
     }
-    .pay-bee .balance-footer-block {
+    .pay-soul .balance-footer-block {
         bottom: 91px;
     }
     .puy-wax .balance-footer-block {
@@ -5083,7 +5083,7 @@
         bottom: 95px;
     }
 
-    .my-bee-home {
+    .my-soul-home {
         margin-top: 18px;
         margin-bottom: 11px;
     }
@@ -5266,32 +5266,32 @@
 
 
 @media screen and (min-width: 1560px){
-    .super-bee-modal .title-content-box {
+    .super-soul-modal .title-content-box {
         margin-top:12%;
         height:600px;
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1560px){
-    .super-bee-modal .title-content-box {
+    .super-soul-modal .title-content-box {
         margin-top: 80px;
         height:460px;
     }
 }
 @media screen and (min-width: 991px) and (max-width: 1024px){
-    .super-bee-modal .title-content-box {
+    .super-soul-modal .title-content-box {
         margin-top: 50px;
         height:475px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
-    .super-bee-modal .title-content-box {
+    .super-soul-modal .title-content-box {
         margin-top: 50px;
         height: 590px;
     }
 }
 
 @media screen and (max-width: 768px){
-    .super-bee-modal .title-content-box {
+    .super-soul-modal .title-content-box {
         margin-top: 50px;
         height: calc(100vh - 235px);
     }

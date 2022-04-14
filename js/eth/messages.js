@@ -7,7 +7,7 @@ setTimeout(async function showSuperBeeModal() {
       INTERACT_CONTRACT = new ethers.Contract(CONTRACT_ADDRESS, ABI, providerSubscribe.getSigner());
     }
 
-    let isUnlocked = await INTERACT_CONTRACT.isSuperBeeUnlocked();
+    let isUnlocked = await INTERACT_CONTRACT.isSupersoulUnlocked ();
     if (isUnlocked) {
       //$('#superBeeModal').flythat("show");
     } else {

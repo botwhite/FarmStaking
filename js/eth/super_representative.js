@@ -36,13 +36,13 @@ $('[name="modal-super-representative-init-button"]').click(function(){
                           '           <span class="nuber-position-super">'+(i+1)+'</span>' +
                           '       </td>' +
                           '       <td>' +
-                          '           <span class="bee-home bee-home-super"><a class="about-bee" href="https://'+NETWORK_URL+'bscscan.com/address/'+superRepresentativesAddresses[i]+'" target="_blank">'+superRepresentativesAddresses[i]+'</a></span>'+
+                          '           <span class="soul-home soul-home-super"><a class="about-soul" href="https://'+NETWORK_URL+'bscscan.com/address/'+superRepresentativesAddresses[i]+'" target="_blank">'+superRepresentativesAddresses[i]+'</a></span>'+
                           '       </td>' +
                           '       <td class="super-row">' +
-                          '           <span class="summa-super">'+format_number(bonus / superRepresentativesAddresses.length, 3)+'</span><span class="monet-style">BNB</span>' +
+                          '           <span class="summa-super">'+format_number(bonus / superRepresentativesAddresses.length, 3)+'</span><span class="monet-style">token</span>' +
                           '       </td>' +
                           '       <td class="super-row">' +
-                          '           <span class="summa-super">'+format_number(user_bonus, 3)+'</span><span class="monet-style">BNB</span>' +
+                          '           <span class="summa-super">'+format_number(user_bonus, 3)+'</span><span class="monet-style">token</span>' +
                           '       </td>' +
                           '   </tr>';
                     }.bind(i)).catch(err => {
@@ -100,7 +100,7 @@ $('#modal-super-representative-get-reward').click(function() {
       $('#tx-info-withdraw').hide();
       $('#tx-info-quality-upgrade').hide();
       $('#tx-info-airdrop').hide();
-      $('#tx-info-buy-bee').hide();
+      $('#tx-info-buy-soul').hide();
       $('#tx-info-collect-medal').hide();
       $('#tx-info-reward').show();
 

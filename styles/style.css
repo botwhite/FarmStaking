@@ -882,8 +882,8 @@ summary {
     background-size: contain;
     top: 10px;
 }
-.bee:before {
-    background: url("../image/bee.png") no-repeat;
+.soul:before {
+    background: url("../image/soul.png") no-repeat;
     width: 160px;
     height: 153px;
     background-size: contain;
@@ -1784,7 +1784,7 @@ summary {
 .btn-blue::after,
 .green-btn::after,
 .red-btn:after,
-.bay-bee-btn:after {
+.bay-soul-btn:after {
     content: "";
     position: absolute;
     -webkit-box-shadow: 0px 0px 0px 5px rgba(107, 180, 66, 1);
@@ -1798,7 +1798,7 @@ summary {
     height: 100%;
     border-radius: 10px;
 }
-.bay-bee-btn {
+.bay-soul-btn {
     width: 121px;
 }
 .lotery-game:after {
@@ -1877,7 +1877,7 @@ summary {
     top: 3px;
     display: none;
 }
-.active-bee img {
+.active-soul img {
     display: block;
 }
 .namber-wax {
@@ -2653,19 +2653,19 @@ tbody tr {
 .container-modal {
     min-height: 517px;
 }
-.img-bee {
+.img-soul {
     margin: 0 auto;
     justify-content: center;
     display: flex;
     align-items: center;
 }
-.pay-bee .title-modal h2 {
+.pay-soul .title-modal h2 {
     font-size: 23px;
 }
-.pay-bee .container-modal {
+.pay-soul .container-modal {
     padding-top: 90px;
 }
-.about-bee {
+.about-soul {
     font-size: 16px;
     font-weight: normal;
     color: #4d4d4d;
@@ -2682,25 +2682,25 @@ tbody tr {
     width: 100%;
     margin: 0 auto;
 }
-.my-bee-home {
+.my-soul-home {
     margin-top: 38px;
     margin-bottom: 17px;
 }
-.my-bee-home,
-.my-bee-home span {
+.my-soul-home,
+.my-soul-home span {
     text-align: center;
     font-size: 20px;
     color: #326909;
     font-weight: bold;
 }
-.my-bee-home {
+.my-soul-home {
     color: #5dc137;
 }
 
-.all-bee {
+.all-soul {
     margin-right: 5px;
 }
-.green-bee-btn,
+.green-soul-btn,
 .violet-btn {
     width: 212px;
     height: 65px;
@@ -2721,7 +2721,7 @@ tbody tr {
     box-shadow: 1px -6px 0px -1px rgba(225, 124, 207, 0.7) inset, 1px 6px 0px -1px rgba(166, 31, 190, 0.7) inset;
     color: #fff;
 }
-.green-bee-btn:after {
+.green-soul-btn:after {
     content: "";
     position: absolute;
     -webkit-box-shadow: 0px 0px 0px 5px rgba(155, 155, 155, 0.31);
@@ -2735,7 +2735,7 @@ tbody tr {
     height: 100%;
     border-radius: 15px;
 }
-.green-bee-btn:hover {
+.green-soul-btn:hover {
     background: linear-gradient(to bottom, rgba(250, 189, 4, 1) 0%, rgba(246, 217, 27, 1) 100%);
     box-shadow: 1px -6px 0px -1px rgba(248, 231, 92, 0.7) inset, 1px 6px 0px -1px rgba(238, 175, 1, 0.7) inset;
 }
@@ -2762,7 +2762,7 @@ tbody tr {
     max-width: 277px;
     width: 100%;
 }
-.container-pay-bee {
+.container-pay-soul {
     background-color: #5ba232;
     max-width: 253px;
     width: 100%;
@@ -2827,7 +2827,7 @@ tbody tr {
     justify-content: center;
     margin-bottom: 35px;
 }
-.more-nead + .green-bee-btn {
+.more-nead + .green-soul-btn {
     margin-bottom: 36px;
 }
 .more-nead p {
@@ -2851,7 +2851,7 @@ tbody tr {
     max-width: 356px;
     background: linear-gradient(to top, rgba(228, 82, 27, 1) 70%, rgba(220, 104, 40, 1) 100%);
 }
-.pay-bee-more {
+.pay-soul-more {
     height: 702px;
 }
 .more-many {
@@ -3081,14 +3081,14 @@ tbody tr {
     margin-bottom: 15px;
     max-width: 90%;
 }
-.super-bee-modal .title-content-box {
+.super-soul-modal .title-content-box {
     margin-top: 70px;
     overflow: hidden scroll;
     padding-left: 40px;
     padding-right: 40px;
     color: #643006 !important;
 }
-.super-bee-modal .title-content-box b {
+.super-soul-modal .title-content-box b {
     color: #643006 !important;
 }
 .title-max-level {
@@ -3125,10 +3125,10 @@ tbody tr {
 .cryptobee .header-modal .title-modal h2 {
     font-size: 24px;
 }
-.cryptobee .my-bee-home {
+.cryptobee .my-soul-home {
     font-size: 26px;
 }
-.cryptobee .about-bee {
+.cryptobee .about-soul {
     text-align: center;
 }
 .cryptobee-btn {
@@ -3170,18 +3170,18 @@ tbody tr {
     color: #326909;
     font-weight: bold;
 }
-.price-bee {
+.price-soul {
     padding-left: 47px;
     position: relative;
 }
-.my-bee-home .count-bee {
+.my-soul-home .count-soul {
     font-size: 40px;
     border-radius: 10px;
     display: inline-block;
     position: relative;
     margin-right: 5px;
 }
-.price-bee:before {
+.price-soul:before {
     content: "";
     position: absolute;
     left: 0;
@@ -3489,10 +3489,10 @@ a.ok-title:hover {
     justify-content: center;
 }
 .close-modal-mobile,
-.modal-bee-footer-mobile {
+.modal-soul-footer-mobile {
     display: none;
 }
-.bee-home {
+.soul-home {
     max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3562,7 +3562,7 @@ a.ok-title:hover {
     color: #4d4d4d;
     font-weight: bold;
 }
-.new-game-modal .green-bee-btn {
+.new-game-modal .green-soul-btn {
     right: 0;
     left: 0;
     top: inherit;
@@ -3725,7 +3725,7 @@ a.ok-title:hover {
 .header-nav-list .nav-item {
     margin-right: 30px;
 }
-.img-container-bee img {
+.img-container-soul img {
     max-width: 211px;
     width: 100%;
 }
@@ -3743,7 +3743,7 @@ a.ok-title:hover {
     color: #4d4d4d;
     margin-bottom: 40px;
 }
-.container-bee-carousel-item {
+.container-soul-carousel-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3752,7 +3752,7 @@ a.ok-title:hover {
     padding: 10px;
     position: relative;
 }
-.bottom-item-bee {
+.bottom-item-soul {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -3763,19 +3763,19 @@ a.ok-title:hover {
     z-index: 100;
     position: relative;
 }
-.carousel-bee {
+.carousel-soul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.carousel-bee .carousel-control-prev-icon {
+.carousel-soul .carousel-control-prev-icon {
     background-image: url("../image/left-arrow-white.png");
     background-size: contain;
     width: 30px;
     height: 58px;
     opacity: 1;
 }
-.carousel-bee .carousel-control-next-icon {
+.carousel-soul .carousel-control-next-icon {
     background-image: url("../image/right-arrow-white.png");
     background-size: contain;
     width: 30px;
@@ -3821,17 +3821,17 @@ a.ok-title:hover {
     height: 6px;
 }
 
-.carousel-bee .carousel-indicators li {
+.carousel-soul .carousel-indicators li {
     width: 25px;
     height: 25px;
     border-radius: 100%;
     background-color: rgba(73, 73, 73, 0.8);
     margin-right: 20px;
 }
-.carousel-bee .carousel-indicators li:last-child {
+.carousel-soul .carousel-indicators li:last-child {
     margin-right: 0;
 }
-.carousel-bee .carousel-indicators .active {
+.carousel-soul .carousel-indicators .active {
     background-color: #4b9926;
 }
 .light-bg-body {
@@ -3979,7 +3979,7 @@ a.ok-title:hover {
     background-color: #ffffff;
     padding: 80px 0 50px;
 }
-.text-header-about-bee {
+.text-header-about-soul {
     font-size: 20px;
     color: #4d4d4d;
     text-align: center;
@@ -3996,13 +3996,13 @@ a.ok-title:hover {
     font-size: 16px;
     color: #16b60a;
 }
-.title-footer-about-bee {
+.title-footer-about-soul {
     font-size: 20px;
     color: #326909;
     font-weight: bold;
 }
-.price-bee-text,
-.product-bee-text,
+.price-soul-text,
+.product-soul-text,
 .block-tetx-medal-result,
 .big-text {
     color: #16b60a;
@@ -4019,26 +4019,26 @@ a.ok-title:hover {
     font-size: 26px;
     margin-right: 5px;
 }
-.result-bee-title,
-.title-price-bee,
+.result-soul-title,
+.title-price-soul,
 .title-about-medal {
     color: #4d4d4d;
     font-size: 16px;
     font-weight: bold;
     margin-right: 5px;
 }
-.status-pay-bee {
+.status-pay-soul {
     margin: 10px 0;
 }
-.result-bee-product,
-.status-pay-bee {
+.result-soul-product,
+.status-pay-soul {
     display: flex;
     align-items: center;
 }
-.container-img-bee {
+.container-img-soul {
     margin-bottom: 25px;
 }
-.item-all-bee {
+.item-all-soul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -4048,16 +4048,16 @@ a.ok-title:hover {
     margin-right: 30px;
     margin-top: 60px;
 }
-.item-all-bee:nth-child(4n) {
+.item-all-soul:nth-child(4n) {
     margin-right: 0;
 }
-.footer-about-bee {
+.footer-about-soul {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.list-all-bee {
+.list-all-soul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -4787,11 +4787,11 @@ a.ok-title:hover {
     box-shadow: 1px -6px 0px -1px rgba(246, 224, 53, 0.7) inset, 1px 6px 0px -1px rgba(238, 176, 1, 0.7) inset;
     color: #000;
 }
-.container-img-bee img {
+.container-img-soul img {
     max-width: 160px;
     width: 100%;
 }
-.container-img-bee lottie-player {
+.container-img-soul lottie-player {
     width: 170px !important;
     height: 153px !important;
 }
@@ -5048,11 +5048,11 @@ a.ok-title:hover {
         14px -14px 4px #ffffff, -14px 14px 4px #ffffff, 14px 14px 4px #ffffff;
     margin-bottom: 40px;
 }
-.carousel-bee .carousel-indicators {
+.carousel-soul .carousel-indicators {
     bottom: 22px;
 }
-.carousel-bee .carousel-control-prev,
-.carousel-bee .carousel-control-next {
+.carousel-soul .carousel-control-prev,
+.carousel-soul .carousel-control-next {
     width: 7%;
 }
 .banner {
@@ -5495,13 +5495,13 @@ body.dialogShowing {
     padding: 15px 0;
 }
 
-.wrapper-pay-bee-input {
+.wrapper-pay-soul-input {
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
 }
-.wrapper-pay-bee-input p {
+.wrapper-pay-soul-input p {
     color: #326909;
     font-weight: bolder;
     margin-right: 10px;
@@ -5587,7 +5587,7 @@ body.dialogShowing {
     border-radius: 10px;
     overflow: hidden;
 }
-.pay-count-bee {
+.pay-count-soul {
     width: 43px;
     text-align: center;
     height: 43px;
@@ -5623,7 +5623,7 @@ body.dialogShowing {
     padding: 10px;
 }
 
-.count-bee-btn {
+.count-soul-btn {
     width: 45px;
     height: 43px;
     background: linear-gradient(to bottom, rgba(160, 224, 86, 1) 0%, rgba(97, 183, 35, 1) 100%);
@@ -5633,7 +5633,7 @@ body.dialogShowing {
     color: #fff;
     font-size: 20px;
 }
-.count-bee-btn:hover {
+.count-soul-btn:hover {
     background: linear-gradient(to bottom, rgba(97, 183, 35, 1) 0%, rgba(160, 224, 86, 1) 100%);
     box-shadow: 1px -6px 0px -1px rgba(167, 226, 101, 0.7) inset, 1px 6px 0px -1px rgba(94, 176, 36, 0.7) inset;
 }
@@ -5651,7 +5651,7 @@ body.dialogShowing {
     align-items: center;
     top: 130px;
     color: #fff;
-    background: url("../image/bnb.png") no-repeat;
+    background: url("../image/token.png") no-repeat;
     background-size: contain;
     z-index: 10000000;
     display: flex;
@@ -6107,7 +6107,7 @@ body.dialogShowing {
     top: 0;
     background-size: contain;
 }
-.limit-bee {
+.limit-soul {
     color: #5dc137;
     text-align: center;
     font-size: 20px;

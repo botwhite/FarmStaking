@@ -99,7 +99,7 @@ let current_account;
 let totalDeposited = 0;
 let totalWithdrawed = 0;
 let isGetPlayerBees = false;
-let playerBees = [];
+let playersouls = [];
 let qualityLevel = 0;
 let balanceHoney = 0;
 let balanceWax = 0;
@@ -319,7 +319,7 @@ async function run(){
                 }
 
                 clearInterval(flagProfit);
-                let profit = calculateProfitAtHour(playerBees, bee_monthly_percents, bee_levels_prices);
+                let profit = calculateProfitAtHour(playersouls, bee_monthly_percents, bee_levels_prices);
                 let waxHour = (profit * (100 - quality_honey_percents[qualityLevel])) / 100;
                 let honeyHour = (profit * quality_honey_percents[qualityLevel]) / 100;
                 $('#waxHour').html(format_number(waxHour, 1));
@@ -336,19 +336,19 @@ async function run(){
             console.log("ERROR", "web3.players", err);
         });
 
-        CONTRACT.isSuperBeeUnlocked().then(isUnlocked => {
+        CONTRACT.isSupersoulUnlocked ().then(isUnlocked => {
             superBeeUnlocked = isUnlocked;
         }).catch(err => {
-            console.log("ERROR", "web3.isSuperBeeUnlocked", err);
+            console.log("ERROR", "web3.isSupersoulUnlocked ", err);
         });
         
-        CONTRACT.playerBees(current_account).then(bees => {
+        CONTRACT.playersouls(current_account).then(bees => {
             for(let i = 0; i < bees.length; i++){
-                playerBees[i] = Number.parseInt(bees[i]);
+                playersouls[i] = Number.parseInt(bees[i]);
             }
             isGetPlayerBees = true;
         }).catch(err => {
-            console.log("ERROR", "web3.playerBees", err);
+            console.log("ERROR", "web3.playersouls", err);
         });
 
         flagBeesInfo = setInterval(function(){
@@ -357,12 +357,12 @@ async function run(){
             }
 
             clearInterval(flagBeesInfo);
-            if(JSON.stringify(playerBees) !== JSON.stringify(last_playerBees) || airdropCollected !== last_airdropCollected || registered !== last_registered || unlockedBee !== last_unlockedBee){
-                last_playerBees = playerBees;
+            if(JSON.stringify(playersouls) !== JSON.stringify(last_playerBees) || airdropCollected !== last_airdropCollected || registered !== last_registered || unlockedBee !== last_unlockedBee){
+                last_playerBees = playersouls;
                 last_airdropCollected = airdropCollected;
                 last_registered = registered;
                 last_unlockedBee = unlockedBee;
-                fillBeesWaxes(playerBees, airdropCollected, registered, unlockedBee, superBeeUnlocked);
+                fillBeesWaxes(playersouls, airdropCollected, registered, unlockedBee, superBeeUnlocked);
             }
         }, 1000);
 
@@ -610,7 +610,7 @@ function clearAllPlayerVariables(){
     totalDeposited = 0;
     totalWithdrawed = 0;
     isGetPlayerBees = false;
-    playerBees = [];
+    playersouls = [];
     qualityLevel = 0;
     balanceHoney = 0;
     balanceWax = 0;

@@ -364,7 +364,7 @@ contract BinanceHives is Claimable, UserBonus {
     uint256 public constant TRON_BEE_INDEX = BEES_COUNT - 2;
     uint256 public constant MEDALS_COUNT = 10;
     uint256 public constant QUALITIES_COUNT = 6;
-    uint256[BEES_COUNT] public BEES_PRICES = [0e18, 1500e18, 7500e18, 30000e18, 75000e18, 250000e18, 750000e18, 100000e18];
+    uint256[BEES_COUNT] public souls_PRICES = [0e18, 1500e18, 7500e18, 30000e18, 75000e18, 250000e18, 750000e18, 100000e18];
     uint256[BEES_COUNT] public BEES_LEVELS_PRICES = [0e18, 0e18, 11250e18, 45000e18, 112500e18, 375000e18, 1125000e18, 0];
     uint256[BEES_COUNT] public BEES_MONTHLY_PERCENTS = [0, 220, 223, 226, 229, 232, 235, 333];
     uint256[MEDALS_COUNT] public MEDALS_POINTS = [0e18, 50000e18, 190000e18, 510000e18, 1350000e18, 3225000e18, 5725000e18, 8850000e18, 12725000e18, 23500000e18];
@@ -422,8 +422,8 @@ contract BinanceHives is Claimable, UserBonus {
     event MedalAwarded(address indexed user, uint256 indexed medal);
     event QualityUpdated(address indexed user, uint256 indexed quality);
     event RewardCollected(address indexed user, uint256 honeyReward, uint256 waxReward);
-    event BeeUnlocked(address indexed user, uint256 bee);
-    event BeesBought(address indexed user, uint256 bee, uint256 count);
+    event BeeUnlocked(address indexed user, uint256 soul);
+    event BeesBought(address indexed user, uint256 soul, uint256 count);
 
     
     event Staked(address indexed user, uint256 amount);
@@ -587,7 +587,7 @@ contract BinanceHives is Claimable, UserBonus {
         balanceWax = balanceWax.add(waxReward);
     }
 
-    function unlock(uint256 bee) public payable payRepBonusIfNeeded {
+    function unlock(uint256 soul) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
 
         if (msg.value > 0) {
@@ -596,20 +596,20 @@ contract BinanceHives is Claimable, UserBonus {
 
         collect();
 
-        require(bee < SUPER_BEE_INDEX, "No more levels to unlock"); 
-        require(player.bees[bee - 1] == MAX_BEES_PER_TARIFF, "Prev level must be filled");
-        require(bee == player.unlockedBee + 1, "Trying to unlock wrong bee type");
+        require(soul < SUPER_BEE_INDEX, "No more levels to unlock"); 
+        require(player.bees[soul - 1] == MAX_BEES_PER_TARIFF, "Prev level must be filled");
+        require(soul == player.unlockedBee + 1, "Trying to unlock wrong soul type");
 
-        if (bee == TRON_BEE_INDEX) {
+        if (soul == TRON_BEE_INDEX) {
             require(player.medals >= 9);
         }
-        _payWithWaxAndHoney(msg.sender, BEES_LEVELS_PRICES[bee]);
-        player.unlockedBee = bee;
-        player.bees[bee] = 1;
-        emit BeeUnlocked(msg.sender, bee);
+        _payWithWaxAndHoney(msg.sender, BEES_LEVELS_PRICES[soul]);
+        player.unlockedBee = soul;
+        player.bees[soul] = 1;
+        emit BeeUnlocked(msg.sender, soul);
     }
 
-    function buyBees(uint256 bee, uint256 count) public payable payRepBonusIfNeeded {
+    function buyBees(uint256 soul, uint256 count) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
 
         if (msg.value > 0) {
@@ -618,22 +618,22 @@ contract BinanceHives is Claimable, UserBonus {
 
         collect();
 
-        require(bee > 0 && bee < BEES_COUNT, "Don't try to buy bees of type 0");
-        if (bee == SUPER_BEE_INDEX) {
+        require(soul > 0 && soul < BEES_COUNT, "Don't try to buy bees of type 0");
+        if (soul == SUPER_BEE_INDEX) {
             require(changeSuperBeeStatus(), "SuperBee is not unlocked yet");
             require(block.timestamp.sub(player.registeredDate) < SUPER_BEE_BUYER_PERIOD, "You should be registered less than 7 days ago");
         } else {
-            require(bee <= player.unlockedBee, "This bee type not unlocked yet");
+            require(soul <= player.unlockedBee, "This soul type not unlocked yet");
         }
 
-        require(player.bees[bee].add(count) <= MAX_BEES_PER_TARIFF);
-        player.bees[bee] = player.bees[bee].add(count);
+        require(player.bees[soul].add(count) <= MAX_BEES_PER_TARIFF);
+        player.bees[soul] = player.bees[soul].add(count);
         totalBeesBought = totalBeesBought.add(count);
-        uint256 honeySpent = _payWithWaxAndHoney(msg.sender, BEES_PRICES[bee].mul(count));
+        uint256 honeySpent = _payWithWaxAndHoney(msg.sender, souls_PRICES[soul].mul(count));
 
         _distributeFees(msg.sender, honeySpent, 0, referrerOf(msg.sender, address(0)));
 
-        emit BeesBought(msg.sender, bee, count);
+        emit BeesBought(msg.sender, soul, count);
     }
 
     function updateQualityLevel() public payRepBonusIfNeeded {
@@ -656,7 +656,7 @@ contract BinanceHives is Claimable, UserBonus {
         uint256 total = 0;
         for (uint i = 1; i < BEES_COUNT; i++) {
             total = total.add(
-                player.bees[i].mul(BEES_PRICES[i]).mul(BEES_MONTHLY_PERCENTS[i]).div(100)
+                player.bees[i].mul(souls_PRICES[i]).mul(BEES_MONTHLY_PERCENTS[i]).div(100)
             );
         }
 

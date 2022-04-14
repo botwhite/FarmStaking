@@ -24,7 +24,7 @@ $('[name="modal-rate-init-button"]').click(function(){
                         '          <span class="nuber-position">'+(i+1)+'</span>'+ 
                         '      </td>'+
                         '      <td>'+
-                        '          <span class="bee-home"><a class="about-bee" href="https://'+NETWORK_URL+'bscscan.com/address/'+storage["rate"]['rating'][i].address+'" target="_blank">'+storage["rate"]['rating'][i].address+'</a></span>'+
+                        '          <span class="soul-home"><a class="about-soul" href="https://'+NETWORK_URL+'bscscan.com/address/'+storage["rate"]['rating'][i].address+'" target="_blank">'+storage["rate"]['rating'][i].address+'</a></span>'+
                         '      </td>'+
                         '      <td>'+
                         '          <span class="doxod"></span>+<span class="summa activ-honey">'+format_number(storage["rate"]['rating'][i].profit)+'</span>'+

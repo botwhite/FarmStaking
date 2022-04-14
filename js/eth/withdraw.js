@@ -90,7 +90,7 @@ $('#modal-withdraw-button').on('click', () => {
             $('#tx-info-withdraw').show();
             $('#tx-info-quality-upgrade').hide();
             $('#tx-info-airdrop').hide();
-            $('#tx-info-buy-bee').hide();
+            $('#tx-info-buy-soul').hide();
             $('#tx-info-collect-medal').hide();
             $('#tx-info-reward').hide();
 
