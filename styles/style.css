@@ -922,8 +922,8 @@ summary {
     background-size: 100%;
     background-position: bottom;
     bottom: 5px;
-    right: -50px;
-    width: 110%;
+    
+    width: 100%;
     height: 100%;
     z-index: 152;  
     /*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/
@@ -1039,8 +1039,8 @@ summary {
     background-position: left;
     background-size: cover;
     position: absolute;
-    bottom: 65px;
-    left: -55px;
+    bottom: 45px;
+    left: 0px;
     max-width: 360px;
 }
 .upgrade {
@@ -1050,6 +1050,7 @@ summary {
     top: -150px;
     left: 0;
     right: 0;
+    display: none;
 }
 .text-block-upgrade {
     background-color: rgba(147, 147, 147, 0.5);

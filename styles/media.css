@@ -4189,7 +4189,7 @@
     .mehanizm-opossum,
     .mehanizm-beek,
     .mehanizm-ai {
-        bottom: -32px;
+        bottom: -70px;
     }
     .active-bank img {
         max-width: 93px;
@@ -5199,7 +5199,7 @@
     }
 }
 
-@media screen and (min-width: 540px) and (max-width: 1200px) {
+@media screen and (min-width: 416px) and (max-width: 1200px) {
     .item-result span {
         font-size: 35px;
     }
