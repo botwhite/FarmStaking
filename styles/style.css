@@ -903,7 +903,7 @@ summary {
     top: 5px;
 }
 /*----------------------end statistic-------------------*/
-
+ 
 /*----------------------start mechanism------------------*/
 
 .mechanism {
@@ -1338,7 +1338,7 @@ summary {
     position: absolute;
     left: 105px;
     background-color: #7f7e81;
-    border: #0e495e solid 1px;
+    border: #0e495e solid 1px; 
 }
 .window:before {
     content: "";
@@ -1624,6 +1624,9 @@ summary {
     margin-left: 140px;
     display: flex;
     flex-direction: column;
+}
+.item-rounds:after{
+    z-index: -2;
 }
 .item-rounds {
     background: url("../image/window-round.png") no-repeat;

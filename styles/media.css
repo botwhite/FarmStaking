@@ -519,17 +519,21 @@
         top: 43%;
     }
     .trumpet-left {
+        
         background-position: 88px;
         top: -5px;
     }
     .trumpet-top {
+        
         background-size: 81%;
     }
     .trumpet-wax {
+        
         height: 116px;
         background-size: contain;
     }
     .trumpet-honey {
+        
         height: 116px;
         background-size: contain;
         right: 70px;
