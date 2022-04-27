@@ -921,8 +921,7 @@ summary {
     background: url("../image/green.png") no-repeat;
     background-size: 100%;
     background-position: bottom;
-    bottom: 5px;
-    
+    bottom: -20px;    
     width: 100%;
     height: 100%;
     z-index: 152;  
@@ -1337,6 +1336,8 @@ summary {
     height: 100%;
     position: absolute;
     left: 105px;
+    background-color: #7f7e81;
+    border: #0e495e solid 1px;
 }
 .window:before {
     content: "";
