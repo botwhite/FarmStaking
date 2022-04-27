@@ -922,11 +922,11 @@ summary {
     background-size: 100%;
     background-position: bottom;
     bottom: 5px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 87px;
-    z-index: 152;
+    right: -50px;
+    width: 110%;
+    height: 100%;
+    z-index: 152;  
+    /*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 }
 .pipes {
     max-width: 978px;
@@ -1035,20 +1035,19 @@ summary {
 }
 .mehanizm-ai {
     width: 100%;
-    background: url("../image/ai.png") no-repeat;
+    background: url(../image/ai.png) no-repeat;
     background-position: left;
-    height: 337px;
+    background-size: cover;
     position: absolute;
-    bottom: 50px;
-    left: 32px;
-    max-width: 180px;
-    width: 100%;
+    bottom: 65px;
+    left: -55px;
+    max-width: 360px;
 }
 .upgrade {
     width: 110px;
     margin: 0 auto;
     position: absolute;
-    top: 62px;
+    top: -150px;
     left: 0;
     right: 0;
 }
@@ -1309,7 +1308,7 @@ summary {
 }
 
 .active-bank {
-    z-index: 150;
+    z-index: 150; 
 }
 /*-----------------------end mechanism--------------------*/
 

@@ -543,12 +543,13 @@
         width: 100%;
     }
     .wrapper-active-honey {
-        right: -7px;
+        right: 0
+        ;
     }
     .wrapper-active {
         height: 370px;
         bottom: 50px;
-        left: 395px;
+        left: 390px;
     }
     .wrapper-content-round::before,
     .wrapper-content-round .wrapper-lottie {
