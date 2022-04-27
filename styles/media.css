@@ -568,7 +568,7 @@
     }
     .item-rounds {
         max-width: 640px;
-        height: 260px;
+        height: 340px;
         background-size: contain;
         margin-top: 87px;
     }
@@ -3876,7 +3876,7 @@
     .mehanizm-ai {
         max-width: 131px;
         background-size: contain;
-        bottom: 0;
+        bottom: -60px;
         height: 293px;
     }
     .active-bank img {
