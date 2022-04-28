@@ -249,7 +249,7 @@ button {
 .bg-body {
     position: relative;
     z-index: 0;
-    background-color: #f5f8fa;
+    background-color: #322f37;
 }
 .bg-body:before {
     content: "";
@@ -903,7 +903,38 @@ summary {
     top: 5px;
 }
 /*----------------------end statistic-------------------*/
- 
+ /*animation*/
+ @keyframes animat {
+    0% {
+      transform: rotate(-3deg); }
+  
+    50% {
+      transform: translate(0px, -30px) rotate(3deg); }
+  
+    100% {
+      transform: translate(0px, 0px) rotate(-3deg); } }
+  
+ .sprite-career { 
+    background: transparent no-repeat;
+    position: relative;
+    display: block;
+    visibility: visible;
+    margin: 0 auto;
+    transform: scale(1, 1);
+    left: 50%;
+    margin-left: -175px;
+    width: 350px;
+    height: 200px;
+    background-image: url(https://animalmade.com/files/css/../images/sprite/sprite-animal-career.png);
+    animation: career_amb 3s steps(30) infinite;
+}
+@keyframes career_amb {
+  from {
+    background-position: 0px; }
+
+  to {
+    background-position: -10500px; } }
+
 /*----------------------start mechanism------------------*/
 
 .mechanism {
@@ -1160,27 +1191,13 @@ summary {
     justify-content: flex-end;
 }
 .drop-wax {
-    width: 50px;
-    height: 47px;
+    width: 75px;
+    height: 150px;
     background: url("../image/drop-wax.png") no-repeat;
     background-size: contain;
-    margin: 0 auto;
+    margin: 0 65px ;
     margin-bottom: 34px;
-    animation: animationFrames linear 2s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation: animationFrames linear 2s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% 50%;
-    -moz-animation: animationFrames linear 2s;
-    -moz-animation-iteration-count: infinite;
-    -moz-transform-origin: 50% 50%;
-    -o-animation: animationFrames linear 2s;
-    -o-animation-iteration-count: infinite;
-    -o-transform-origin: 50% 50%;
-    -ms-animation: animationFrames linear 2s;
-    -ms-animation-iteration-count: infinite;
-    -ms-transform-origin: 50% 50%;
+    animation: drop linear 2s infinite; 
 }
 
 @keyframes animationFrames {
@@ -1288,13 +1305,13 @@ summary {
     }
 }
 .drop-honey {
-    width: 38px;
-    height: 60px;
+    width: 150px;
+    height: 150px;
     background: url("../image/drop-honey.png") no-repeat;
     background-size: contain;
-    margin: 0 auto;
+    margin: 0  65px;
     margin-bottom: 34px;
-    animation: drop 0.8s linear infinite;
+    animation: drop 1.5s linear infinite;
 }
 @keyframes drop {
     0% {
@@ -1846,11 +1863,12 @@ summary {
     background-position: center;
 }
 .hexagon {
+    background-image: url("../image/masoquista.png");
+    background-size: contain;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     height: 62px;
     width: 54px;
-    background: linear-gradient(to bottom, rgba(251, 211, 83, 1) 0%, rgba(253, 190, 26, 1) 100%);
     transform: rotate(90deg);
     position: relative;
     display: flex;
