@@ -1644,8 +1644,12 @@ summary {
 }
 .item-rounds:after{
     z-index: -2;
-}
-.item-rounds {
+} 
+
+.item-rounds2:after{
+    z-index: -2;
+} 
+.item-rounds{
     background: url("../image/window-round.png") no-repeat;
     max-width: 840px;
     width: 100%;
@@ -1653,7 +1657,7 @@ summary {
     background-position: 100% bottom;
     margin-top: 15px;
     position: relative;
-}
+} 
 .item-rounds:nth-child(2n + 1) {
     padding-left: 211px;
     position: relative;
@@ -1691,6 +1695,54 @@ summary {
     background: url("../image/bottom-tryba.png") no-repeat;
     background-size: contain;
 }
+/**/
+.item-rounds2{
+    background: url("../image/FOOD-02.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+} 
+.item-rounds2:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds2:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds2:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds2:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds2:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+/**/
 .wrapper-content-round {
     width: 100%;
     padding-top: 110px;
@@ -1839,37 +1891,21 @@ summary {
     cursor: default;
 }
 .sotu-container {
-    max-width: 724px;
+    max-width: 1200px;
     width: 100%;
     height: 201px;
+    left: -35px;
     margin: 0 auto;
     margin-top: 20px;
     background: url("../image/bg-sotu.png") no-repeat;
     background-size: contain;
     position: relative;
 }
-.sotu-container::before {
-    content: "";
-    position: absolute;
-    background: url("../image/border-sotu.png") no-repeat;
-    background-size: contain;
-    width: 716px;
-    height: 201px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: 0 auto;
-    background-position: center;
-}
 .hexagon {
     background-image: url("../image/masoquista.png");
     background-size: contain;
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    height: 62px;
-    width: 54px;
-    transform: rotate(90deg);
+    height: 90px;
+    width: 90px;
     position: relative;
     display: flex;
     align-items: center;
