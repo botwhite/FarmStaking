@@ -249,7 +249,7 @@ button {
 .bg-body {
     position: relative;
     z-index: 0;
-    background-color: #f5f8fa;
+    background-color: #4b455d;
 }
 .bg-body:before {
     content: "";
@@ -918,14 +918,14 @@ summary {
 .mechanism:after {
     content: "";
     position: absolute;
-    background: url("../image/green.png") no-repeat;
-    background-size: 100%;
+    background: url(../image/green.png) no-repeat;
+    background-size: cover;
     background-position: bottom;
     bottom: 5px;
-    left: 0;
+    left: -10%;
     right: 0;
-    width: 100%;
-    height: 87px;
+    width: 120%;
+    height: 100%;
     z-index: 152;
 }
 .pipes {
@@ -974,8 +974,8 @@ summary {
     height: 337px;
     position: absolute;
     bottom: 50px;
-    left: 32px;
-    max-width: 180px;
+    left: 5px !important;    ;
+    max-width: 240px !important;
     width: 100%;
 }
 .mehanizm-bear {
@@ -1036,7 +1036,8 @@ summary {
 .mehanizm-ai {
     width: 100%;
     background: url("../image/ai.png") no-repeat;
-    background-position: left;
+    background-position: center;
+    background-size: cover;
     height: 337px;
     position: absolute;
     bottom: 50px;
