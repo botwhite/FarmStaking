@@ -1670,6 +1670,341 @@ summary {
     background: url("../image/bottom-tryba.png") no-repeat;
     background-size: contain;
 }
+
+.item-rounds1 {
+    background: url("../image/lust.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+    z-index: 99;
+} 
+.item-rounds1:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds1:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds1:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds1:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+.item-rounds2 {
+    background: url("../image/window-round.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+}
+.item-rounds2:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds2:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds2:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds2:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds2:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+
+.item-rounds3 {
+    background: url("../image/window-round.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+}
+.item-rounds3:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds3:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds3:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds3:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds3:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+.item-rounds4 {
+    background: url("../image/window-round.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+}
+.item-rounds4:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds4:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds4:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds4:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds4:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+.item-rounds5 {
+    background: url("../image/window-round.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+}
+.item-rounds5:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds5:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds5:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds5:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds5:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+.item-rounds6 {
+    background: url("../image/window-round.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+}
+.item-rounds6:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds6:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds6:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds6:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds6:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+.item-rounds7 {
+    background: url("../image/window-round.png") no-repeat;
+    max-width: 840px;
+    width: 100%;
+    height: 460px;
+    background-position: 100% bottom;
+    margin-top: 15px;
+    position: relative;
+}
+.item-rounds7:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
+.item-rounds7:nth-child(2n + 1)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 211px;
+    height: 52px;
+    top: 57%;
+    background: url("../image/trumpet-round-big.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds7:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds7:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds7:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+ 
+
 .wrapper-content-round {
     width: 100%;
     padding-top: 110px;
