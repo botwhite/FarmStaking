@@ -205,7 +205,7 @@ function fillBeesWaxes(playersouls = [], airdropCollected = false, registered = 
 			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-soul">'+
 			                    bee_img+
 			                    '<div class="hexagon">'+
-			                    '<span class="namber-wax">'+number_wax+'</span>'+
+			                    '<span class="namber-wax"></span>'+
 			                    '</div>'+
 			                    '<div class="trx-rounde">'+
 			                        '<span>+0,0925</span>'+

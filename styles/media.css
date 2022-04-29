@@ -631,8 +631,8 @@
         top: 5px;
     }
     .hexagon {
-        height: 46px;
-        width: 40px;
+        height: 75px;
+        width: 75px;
     }
     .active-soul img {
         display: block;
@@ -1960,11 +1960,11 @@
         position: relative;
     }
     .hexagon {
-        height: 39px;
-        width: 33px;
+        height: 50px;
+        width: 50px;
     }
     .hexagon-container img {
-        max-width: 34px;
+        max-width: 60px;
     }
     .hexagon-1 {
         left: 20px;

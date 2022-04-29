@@ -1197,7 +1197,7 @@ summary {
     background-size: contain;
     margin: 0 65px ;
     margin-bottom: 34px;
-    animation: drop linear 2s infinite; 
+    animation: drop linear 3s infinite; 
 }
 
 @keyframes animationFrames {
@@ -1311,7 +1311,7 @@ summary {
     background-size: contain;
     margin: 0  65px;
     margin-bottom: 34px;
-    animation: drop 1.5s linear infinite;
+    animation: drop 3s linear infinite;
 }
 @keyframes drop {
     0% {
@@ -1698,6 +1698,7 @@ summary {
 /**/
 .item-rounds2{
     background: url("../image/FOOD-02.png") no-repeat;
+    background-size: contain;
     max-width: 840px;
     width: 100%;
     height: 460px;
@@ -1891,7 +1892,12 @@ summary {
     cursor: default;
 }
 .sotu-container {
-    max-width: 1200px;
+    margin-top: -10px !important;
+    margin-left: 80px!important;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px !important;
+    ;
     width: 100%;
     height: 201px;
     left: -35px;
@@ -1900,16 +1906,18 @@ summary {
     background: url("../image/bg-sotu.png") no-repeat;
     background-size: contain;
     position: relative;
-}
+} 
 .hexagon {
     background-image: url("../image/masoquista.png");
+    background-repeat: no-repeat;
     background-size: contain;
-    height: 90px;
-    width: 90px;
+    height: 75px !important ;
+    width: 75px !important;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 .hexagon::after {
     content: "";
@@ -1935,6 +1943,10 @@ summary {
     left: -3px;
     top: 3px;
     display: none;
+}
+.active-soul{  
+    flex: 1 1 10%; 
+    padding: 0 !important;
 }
 .active-soul img {
     display: block;
