@@ -618,8 +618,8 @@
         padding-left: 171px;
     }
     .item-rounds2 {
-        max-width: 640px;
-        height: 260px;
+        max-width: 750px;
+        height: 380px;
         background-size: contain;
         margin-top: 87px;
     }
@@ -2204,7 +2204,7 @@
 
 
     .item-rounds1 {
-        max-width: 650px;
+        max-width: 750px;
         width: 95%;
         height: 270px;
         background-size: contain;
@@ -2213,9 +2213,9 @@
     }
 
     .item-rounds2 {
-        max-width: 540px;
+        max-width: 750px;
         width: 95%;
-        height: 222px;
+        height: 302px;
         background-size: contain;
         padding-top: 100px;
         margin: 0 auto;
