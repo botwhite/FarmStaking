@@ -517,9 +517,10 @@
         width: 180px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds1:nth-child(2n + 1)::after {
-        width: 180px;
+        width: 165px;
         height: 45px;
         top: 43%; 
         z-index: -100;
@@ -528,45 +529,53 @@
         width: 180px;
         height: 45px;
         top: 43%;
+        z-index: -100;
     }  
     .item-rounds3:nth-child(2n + 1)::after {
-        width: 180px;
+        width: 130px;
         height: 45px;
         top: 43%;
+        z-index: -100;
     }  
     .item-rounds4:nth-child(2n + 1)::after {
         width: 180px;
         height: 45px;
         top: 43%;
+        z-index: -100;
     }  
     .item-rounds5:nth-child(2n + 1)::after {
         width: 180px;
         height: 45px;
         top: 43%;
+        z-index: -100;
     }  
     .item-rounds6:nth-child(2n + 1)::after {
         width: 180px;
         height: 45px;
         top: 43%;
+        z-index: -100;
     }
     .item-rounds7:nth-child(2n + 1)::after {
         width: 180px;
         height: 45px;
         top: 43%;
+        z-index: -100;
     }
     .trumpet-left {
         background-position: 88px;
         top: -5px;
     }
     .trumpet-top {
-        background-size: 81%;
+        background-size: 84%;
     }
     .trumpet-wax {
-        height: 116px;
+        top: -8px;
+        height: 200px;
         background-size: contain;
+        z-index: 1;
     }
     .trumpet-honey {
-        height: 116px;
+        height: 200px;
         background-size: contain;
         right: 70px;
     }
@@ -870,6 +879,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds:nth-child(2n) {
         padding-left: 86px;
@@ -889,6 +899,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds1:nth-child(2n) {
         padding-left: 86px;
@@ -907,6 +918,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds2:nth-child(2n) {
         padding-left: 86px;
@@ -925,6 +937,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds3:nth-child(2n) {
         padding-left: 86px;
@@ -943,6 +956,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds4:nth-child(2n) {
         padding-left: 86px;
@@ -961,6 +975,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds5:nth-child(2n) {
         padding-left: 86px;
@@ -979,6 +994,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds6:nth-child(2n) {
         padding-left: 86px;
@@ -997,6 +1013,7 @@
         width: 98px;
         height: 45px;
         top: 43%;
+        
     }
     .item-rounds7:nth-child(2n) {
         padding-left: 86px;
@@ -1990,11 +2007,12 @@
         height: 30px;
     }
     .trumpet-honey {
-        height: 116px;
+        height: 180px;
         background-size: contain;
         right: -4px;
     }
     .trumpet-wax {
+        height: 180px;
         left: 0;
     }
     .bg-body::before,
@@ -3778,7 +3796,7 @@
     .trumpet-wax {
         left: 0;
         background-size: contain;
-        height: 112px;
+        height: 180px;
     }
 }
 @media screen and (max-width: 700px) and (min-width: 0px) {

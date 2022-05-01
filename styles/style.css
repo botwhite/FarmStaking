@@ -1687,6 +1687,7 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
+    z-index: -100;
 }
 .item-rounds1:nth-child(2n) {
     padding-left: 108px;
