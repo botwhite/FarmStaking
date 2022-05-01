@@ -2058,14 +2058,14 @@
         left: 11%;
     }
     .drop-honey {
-        width: 28px;
-        height: 50px;
+        width: 120px;
+        height: 100px;
         margin-bottom: 116px;
     }
     .drop-wax {
-        width: 40px;
-        height: 37px;
-        margin-bottom: 69px;
+        width: 120px;
+    height: 100px;
+    margin-bottom: 69px;
     }
     .game-rounds::before {
         background-position: 2.2% 100%;
