@@ -700,9 +700,9 @@
         height: 145px;
     }
     .sotu-container {    
-        max-width: 523px;
+        max-width: 555px;
         height: 188px;
-        margin: 35px 0 0 35px;
+        margin: 20px 0 0 30px;
     }
     .hexagon-1 {
         left: 13px;
@@ -721,8 +721,8 @@
         top: 5px;
     }
     .hexagon {
-        height: 46px;
-        width: 40px;
+        height: 65px;
+        width: 70px;
     }
     .active-bee img {
         display: block;

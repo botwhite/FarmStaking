@@ -2163,15 +2163,13 @@ summary {
     height: 201px;
     margin: 0 auto;
     margin-top: 20px;
-    background: url("../image/bg-sotu.png") no-repeat;
-    background-size: contain;
+     background-size: contain;
     position: relative;
 }
 .sotu-container::before {
     content: "";
     position: absolute;
-    background: url("../image/border-sotu.png") no-repeat;
-    background-size: contain;
+     background-size: contain;
     width: 716px;
     height: 201px;
     left: 0;
@@ -2181,18 +2179,16 @@ summary {
     margin: 0 auto;
     background-position: center;
 }
-.hexagon {
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+.hexagon { 
     height: 62px;
     width: 54px;
-    background: linear-gradient(to bottom, rgba(251, 211, 83, 1) 0%, rgba(253, 190, 26, 1) 100%);
-    transform: rotate(90deg);
+    background-image: url("../image/masoquista.png");
+    background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    }
 .hexagon::after {
     content: "";
     position: absolute;

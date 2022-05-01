@@ -202,15 +202,25 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			if(playerBees[bee_type-1] >= i)
 				bee_img = '<img src="image/by-bee.png">';
 
+				
 			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-bee">'+
-			                    bee_img+
-			                    '<div class="hexagon">'+
-			                    '<span class="namber-wax">'+number_wax+'</span>'+
-			                    '</div>'+
-			                    '<div class="trx-rounde">'+
-			                        '<span>+0,0925</span>'+
-			                    '</div>'+
-			                '</div>';
+			bee_img+
+			'<div class="hexagon">'+
+			'<span class="namber-wax"></span>'+
+			'</div>'+
+			'<div class="trx-rounde">'+
+				'<span>+0,0925</span>'+
+			'</div>'+
+		'</div>';
+			// bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-bee">'+
+			//                     bee_img+
+			//                     '<div class="hexagon">'+
+			//                     '<span class="namber-wax">'+number_wax+'</span>'+
+			//                     '</div>'+
+			//                     '<div class="trx-rounde">'+
+			//                         '<span>+0,0925</span>'+
+			//                     '</div>'+
+			//                 '</div>';
 		}
 		$('#bee_type_'+bee_type+' > div > div > .sotu-container').html(bee_type_wax);
 
