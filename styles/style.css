@@ -1273,14 +1273,14 @@ summary {
         -ms-transform: translate(-5px, 230px) rotate(180deg);
     }
 }
-.drop-honey {
+.drop-honey {    
     width: 120px;
     height: 150px;
-    background: url("../image/drop-honey.png") no-repeat;
+    background: url(../image/drop-honey.png) no-repeat;
     background-size: contain;
     margin: 0 auto;
     margin-bottom: 34px;
-    margin-left: 70px;
+    margin-left: 32px;
     animation: drop 2s linear infinite;
 }
 @keyframes drop {
