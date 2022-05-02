@@ -566,7 +566,9 @@
         top: -5px;
     }
     .trumpet-top {
-        background-size: 84%;
+        background-size: 81%;
+        top: -5px;
+        right: -5px;
     }
     .trumpet-wax {
         top: -8px;
@@ -2059,10 +2061,13 @@
         bottom: 29px;
         left: 11%;
     }
+    
     .drop-honey {
-        width: 120px;
-        height: 100px;
-        margin-bottom: 116px;
+    width: 120px;
+    height: 100px;
+    margin-bottom: 40px;
+    top: -70px;
+    position: relative;
     }
     .drop-wax {
         width: 120px;
@@ -2294,6 +2299,9 @@
         background-position: center;
         right: 3px;
         top: 3px;
+    }
+    #bee_type_1 > div > div.center-content-round > div{
+        margin-top: 0   !important;
     }
     .sotu-container {
         max-width: 453px;
