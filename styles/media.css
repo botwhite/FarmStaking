@@ -1271,6 +1271,7 @@
     }
 }
 
+
 @media only screen and (max-width: 1366px) and (orientation: portrait) {
     .wrapper-modal.error-modal {
         height: auto;
@@ -1376,6 +1377,18 @@
         height: 20px;
         margin-right: 10px;
     }
+}
+/* 375px */
+@media screen and (width: 375px) and (min-width: 0px){
+#bee_type_2 > div > div.center-content-round > div {
+    margin-left: 42px !important;
+    top: 1px !important;
+}
+#bee_type_3 > div > div.center-content-round > div {
+    margin-left: 36px !important;
+    top: 1px !important;
+}
+
 }
 @media screen and (max-width: 1000px) and (min-width: 0px) {
     .wrapper-modal {
