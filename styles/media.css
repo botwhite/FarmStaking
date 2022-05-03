@@ -520,7 +520,7 @@
         
     }
     .item-rounds1:nth-child(2n + 1)::after {
-        width: 165px;
+        width: 110px;
         height: 45px;
         top: 43%; 
         z-index: -100;
@@ -620,7 +620,7 @@
     }
  
     .item-rounds1 {
-        padding-left: 150px;
+        padding-left: 100px;
         max-width: 700px;
         height: 350px;
         background-size: contain;
@@ -2302,6 +2302,21 @@
     }
     #bee_type_1 > div > div.center-content-round > div{
         margin-top: 0   !important;
+    }
+    #bee_type_3 > div > div.center-content-round > div {
+        margin-left: 100px !important;
+    }
+    #bee_type_2 > div > div.header-round{
+        margin-top: -35px   !important;
+    }
+    #bee_type_3 > div > div.header-round{
+        margin-top: -35px   !important;
+    }
+    #bee_type_2 > div > div.center-content-round > div{
+        margin-left: 55px !important;
+    }
+    #bee_type_3 > div > div.center-content-round > div{
+        margin-left: 55px !important;
     }
     .sotu-container {
         max-width: 453px;
@@ -4548,7 +4563,7 @@
     .mehanizm-ai {
         background-size: contain;
         left: 15px;
-        max-width: 115px;
+        max-width: 120px !important;
     }
     .trumpet-honey {
         height: 107px;
@@ -4597,7 +4612,7 @@
     .mehanizm-opossum,
     .mehanizm-beek,
     .mehanizm-ai {
-        bottom: -32px;
+        bottom: -35px;
     }
     .active-bank img {
         max-width: 93px;
@@ -4670,7 +4685,7 @@
     }
 
     .item-rounds1 {
-        height: 143px;
+        height: 190px;
     }
 
     .item-rounds2 {
@@ -5406,6 +5421,14 @@
         height: 85px;
         margin-top: -5px;
     }
+    #bee_type_2 > div > div.center-content-round > div {
+        margin-left: 36px !important;
+        top: -35px;
+    }
+    #bee_type_3 > div > div.center-content-round > div {
+        margin-left: 36px !important;
+        top: -35px;
+    }
     .drop-big {
         width: 52px;
         bottom: -17px;
@@ -5415,7 +5438,7 @@
         background-position: left 34px top;
     }
     .header-round {
-        top: -71px;
+        top: -120px;
     }
     .cryptobee .flythat img {
         max-width: 120px;
