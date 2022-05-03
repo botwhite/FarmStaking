@@ -1741,6 +1741,7 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-small.png") no-repeat;
     background-size: contain;
+    z-index: -1;
 }
 .item-rounds2:last-child::after {
     content: "";
@@ -1932,6 +1933,7 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-small.png") no-repeat;
     background-size: contain;
+    z-index: -1;
 }
 .item-rounds6:last-child::after {
     content: "";

@@ -667,7 +667,7 @@
         padding-left: 171px;
     }
     .item-rounds6 {
-        max-width: 802px;
+        max-width: 750px;
         height: 360px;
         background-size: contain;
         margin-top: 57px;
@@ -717,7 +717,7 @@
     #bee_type_6 > div > div.center-content-round > div{
         max-width: 555px;
         height: 194px;
-        margin: 0 0 0 160px;
+        margin: 0 0 0 110px;
     }
     .sotu-container {
         max-width: 560px;
@@ -941,7 +941,7 @@
         
     }
     .item-rounds2:nth-child(2n) {
-        padding-left: 86px;
+        padding-left: 45px;
     }
     .game-rounds:before {
         bottom: 141px;
@@ -970,13 +970,11 @@
         top: 40%;
         height: 53px;
     }
-
     
     .item-rounds4:nth-child(2n)::after {
         width: 98px;
         height: 45px;
-        top: 43%;
-        
+        top: 43%; 
     }
     .item-rounds4:nth-child(2n) {
         padding-left: 55px;
@@ -1400,7 +1398,7 @@
 @media screen and (width: 375px) and (min-width: 0px){
 #bee_type_2 > div > div.center-content-round > div {
     margin-left: 42px !important;
-    top: 1px !important;
+    top: -25px !important;
 }
 #bee_type_3 > div > div.center-content-round > div {
     margin-left: 36px !important;
@@ -2371,6 +2369,7 @@
     }
     #bee_type_2 > div > div.center-content-round > div{
         margin-left: 50px !important;
+        top: -32px;
     }
 
     #bee_type_3 > div > div.header-round{
