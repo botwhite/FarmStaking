@@ -248,10 +248,13 @@ button {
 
 .bg-body {
     position: relative;
-    z-index: 0;
-    background-color: #4b455d;
+    z-index: 0; 
+    background-color: #4b455d;;
+    background-image: url('../image/bg-body.png')  !important;
+    background-size: auto;
+    background-repeat: repeat;
 }
-.bg-body:before {
+/* .bg-body:before {
     content: "";
     position: absolute;
     right: 0;
@@ -260,8 +263,8 @@ button {
     width: 132px;
     height: 100%;
     top: 0;
-}
-.bg-body:after {
+} */
+/* .bg-body:after {
     content: "";
     position: absolute;
     left: 0;
@@ -271,7 +274,7 @@ button {
     height: 100%;
     top: 0;
     transform: rotate(180deg);
-}
+} */
 
 article,
 aside,
@@ -1833,6 +1836,7 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-small.png") no-repeat;
     background-size: contain;
+    z-index: -1;
 }
 .item-rounds4:last-child::after {
     content: "";
@@ -2169,12 +2173,13 @@ summary {
 .hexagon { 
     height: 62px;
     width: 54px;
-    background-image: url("../image/masoquista.png");
-    background-size: cover;
+    background-image: url(../image/cara.png);
+    background-size: contain;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
     }
 .hexagon::after {
     content: "";
@@ -2204,6 +2209,7 @@ summary {
 }
 #bee_type_2 > div > div.center-content-round > div {
     margin-left: 90px !important;
+    margin-top: 20px;
 }
 #bee_type_3 > div > div.center-content-round > div{
     margin-left: 55px !important;
