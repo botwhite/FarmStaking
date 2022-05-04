@@ -205,7 +205,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				
 			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-bee">'+
 			bee_img+
-			'<div class="hexagon">'+
+			'<div class="hexagon H-bg">'+
 			'<span class="namber-wax"></span>'+
 			'</div>'+
 			'<div class="trx-rounde">'+

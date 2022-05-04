@@ -1948,7 +1948,7 @@ summary {
 
 
 .item-rounds7 {
-    background: url("../image/window-round.png") no-repeat;
+    background: url("../image/fraud.png") no-repeat;
     max-width: 840px;
     width: 100%;
     height: 460px;
@@ -1969,6 +1969,7 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
+    z-index: -1;
 }
 .item-rounds7:nth-child(2n) {
     padding-left: 108px;
@@ -1993,7 +1994,6 @@ summary {
     background: url("../image/bottom-tryba.png") no-repeat;
     background-size: contain;
 }
- 
 
 .wrapper-content-round {
     width: 100%;
@@ -2175,13 +2175,32 @@ summary {
 .hexagon { 
     height: 62px;
     width: 54px;
-    background-image: url(../image/cara.png);
     background-size: contain;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
+    }
+    
+    .H-bg{
+    background-image: url(../image/cara.png);
+    }
+    #bee_type_2 > div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
+    }
+    #bee_type_3 > div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
+    } #bee_type_4 > div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
+    } #bee_type_5 > div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
+    } #bee_type_6 > div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
+    } #bee_type_7 > div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
+    } #bee_type_8> div > div.center-content-round > div > div > .H-bg{
+        background-image: url(../image/cara2.png);
     }
 .hexagon::after {
     content: "";
