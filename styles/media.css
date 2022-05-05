@@ -1,4 +1,5 @@
 @media screen and (max-width: 3000px) and (min-width: 1024px) {
+    #bee_type_8 > div > div.center-content-round > div > div.hexagon-container.hexagon-2.active-bee > div.hexagon.H-bg
     .input-form {
         max-width: 130px;
         font-size: 25px;
@@ -719,17 +720,38 @@
         margin: 0 0 0 110px;
     }
     #bee_type_8 > div > div.center-content-round > div{
-        max-width: 560px;
-        height: 194px;
-        margin: -20px 0 0 185px;
+        max-width: 470px;
+        height: 310px;
+        margin: 100px 0 0 150px;
     }
 
   
     .sotu-container {
-        max-width: 560px;
-        height: 194px;
-        margin: 0 0 0 60px;
+        height: 194px !important;
+        max-width: 500px !important;
+        margin: 35px 0 0 90px !important;
     }
+    #bee_type_2 > div > div.center-content-round > div {
+        height: 195px !important;
+        max-width: 500px !important;
+        margin: 40px 0 0 90px !important;
+    }
+    #bee_type_3 > div > div.center-content-round > div {
+        height: 195px !important;
+        max-width: 500px !important;
+        margin: 40px 0 0 90px !important;
+    }
+    #bee_type_4 > div > div.center-content-round > div {
+        height: 195px !important;
+        max-width: 500px !important;
+        margin: 50px 0 0 90px !important;
+    }
+    #bee_type_8 > div > div.center-content-round > div {
+        height: 195px !important;
+        max-width: 500px !important;
+        margin: 85px 0 0 140px !important;
+    }
+    
     .hexagon-1 {
         left: 13px;
         top: 27px;
@@ -747,8 +769,8 @@
         top: 5px;
     }
     .hexagon {
-        height: 65px;
-        width: 70px;
+        height: 95px !important;
+        width: 65px !important;
     }
     .active-bee img {
         display: block;
@@ -2445,6 +2467,7 @@
         height: 39px;
         width: 33px;
     }
+    
     .hexagon-container img {
         max-width: 34px;
     }
