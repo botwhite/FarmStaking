@@ -4794,7 +4794,7 @@
 
     .item-rounds8 {
         margin-top: 120px;
-        height: 171px;
+        height: 200px;
     }
 
     
@@ -4822,10 +4822,33 @@
         right: 1px;
         top: 3px;
     }
+    #bee_type_3 > div > div.center-content-round > div {
+        
+        margin: -5px 0 0 60px !important;
+    }
+    #bee_type_7 > div > div.center-content-round > div{
+        max-width: 304px;
+        height: 85px;
+        margin-top: 10px !important;
+    }
+    #bee_type_2 > div > div.center-content-round > div{
+        top: -32px !important;
+        margin-left: 40px !important;
+    }
+    #bee_type_3 > div > div.center-content-round > div{
+        top: 0px !important;
+        margin-left: 40px !important;
+    }
+    #bee_type_8 > div > div.center-content-round > div{
+        margin-left: 45px !important;
+        top: 20px;
+    }
+    
     .sotu-container {
         max-width: 304px;
         height: 85px;
         margin-top: -14px;
+        
     }
     .hexagon {
         height: 27px;
@@ -5385,6 +5408,13 @@
         font-size: 14px;
     }
 }
+
+@media screen and (width: 414px) and (min-width: 0px){
+#bee_type_8 > div > div.center-content-round > div {
+    margin-left: 70px !important;
+    top: 20px;
+}
+}
 @media only screen and (max-width: 415px) {
     .buy-wax .balance-footer-block {
         bottom: 80px;
@@ -5519,8 +5549,8 @@
 
     #bee_type_8  {   
         max-width: 370px;
-        height: 90px;
-        margin-top: 125px;
+        height: 200px;
+        margin-top: 100px;
         }
 
     .drop-big {
