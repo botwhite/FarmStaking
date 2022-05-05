@@ -1405,6 +1405,7 @@
     margin-left: 36px !important;
     top: 1px !important;
 }
+ 
 #bee_type_4 > div > div.center-content-round > div {
     margin-left: 30px !important;
     top: 0px !important;
@@ -1439,6 +1440,20 @@
 }
 .item-rounds7 {
     padding-top: 130px !important;
+}
+
+.item-rounds8 {
+    padding-top: 130px !important;
+    
+}
+#bee_type_8 > div > div.header-round {
+    top: -250px;
+}
+#bee_type_8 > div > div.center-content-round > div {
+    max-width: 304px !important;
+    height: 85px !important;
+    margin-top: -100px !important;
+    margin-left: 45px !important;
 }
 
 }
@@ -2138,6 +2153,8 @@
         width: 120px;
     height: 100px;
     margin-bottom: 69px;
+    top: -70px;
+    position: relative;
     }
     .game-rounds::before {
         background-position: 2.2% 100%;
@@ -2379,6 +2396,7 @@
         margin-top: -35px   !important;
     }
     #bee_type_3 > div > div.center-content-round > div {
+        margin: -15px 0 0 60px !important;
         margin-left: 100px !important;
         margin-left: 55px !important;
     }
@@ -2397,7 +2415,19 @@
     #bee_type_6 > div > div.center-content-round > div{
         margin-left: 35px ;
     }
+    #bee_type_7 > div > div.center-content-round > div{
+    max-width: 304px;
+    height: 85px;
+    margin-top: 12px;
+    }
+    #bee_type_8 > div > div.center-content-round > div{
 
+    max-width: 304px;
+    height: 85px;
+    margin-top: 5px;
+    margin-left: 55px;
+    }
+    }
     .sotu-container {
         max-width: 453px;
         height: 120px;
@@ -4705,8 +4735,12 @@
         overflow: hidden;
     }
     .drop-wax {
-        width: 25px;
-        height: 23px;
+        width: 50px;
+        height: 65px;
+        margin: -25px auto;
+        margin-bottom: 100px;
+        left: 10px;
+        
     }
     .wrapper-active-honey {
         height: 233px;
@@ -4715,10 +4749,11 @@
         overflow: hidden;
     }
     .drop-honey {
-        width: 18px;
-        height: 45px;
-        margin: 0 auto;
-        margin-bottom: 103px;
+        width: 50px;
+        height: 65px;
+        margin: -25px auto;
+        margin-bottom: 100px;
+        left: 10px;
     }
     .header-round {
         max-width: 200px;
@@ -4739,6 +4774,9 @@
         width: 100px;
         height: 100px;
         left: 0;
+    }
+    #bee_type_8 > div > div.wrapper-lottie{
+        top:-200px
     }
     lottie-player {
         width: 100px !important;
@@ -4793,8 +4831,8 @@
     }
 
     .item-rounds8 {
-        margin-top: 120px;
-        height: 171px;
+        margin-top: 100px;
+        height: 200px;
     }
 
     
@@ -5507,11 +5545,10 @@
         top: -35px;
     }
     #bee_type_3 > div > div.center-content-round > div {
-        margin-left: 36px !important;
-        top: -35px;
+        margin-left: 34px !important;
+        top: 10px !important;
     }
     #bee_type_7 > div > div.center-content-round > div{
-
     max-width: 304px;
     height: 85px;
     margin-top: 5px;
