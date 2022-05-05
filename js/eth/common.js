@@ -1,3 +1,23 @@
+
+// Remove the transition class
+const fly = document.querySelector('.fly');
+fly.classList.remove('fly-transition');
+
+// Create the observer, same as before:
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      fly.classList.add('fly-transition');
+      return;
+    } 
+    fly.classList.remove('fly-transition');
+  });
+});
+
+observer.observe(document.querySelector('.fly-wrapper'));
+
+
+
 let bees_can_unlock = [true, true, false, false, false, false, false, false];
 
 function format_number(number, toFixed = 0){

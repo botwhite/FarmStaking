@@ -1675,7 +1675,10 @@ summary {
     margin-top: 15px;
     position: relative;
 }
- 
+.item-rounds1:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
 .item-rounds1:nth-child(2n + 1)::after {
     content: "";
     position: absolute;
@@ -1685,8 +1688,33 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
-}   
- 
+}
+.item-rounds1:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds1:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds1:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
+
+
+
 
 .item-rounds2 {
     background: url("../image/gluttony.png") no-repeat;
@@ -1710,7 +1738,10 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
-} 
+}
+.item-rounds2:nth-child(2n) {
+    padding-left: 108px;
+}
 .item-rounds2:nth-child(2n)::after {
     content: "";
     position: absolute;
@@ -1733,8 +1764,6 @@ summary {
     background-size: contain;
 }
 
-
-
 .item-rounds3 {
     background: url("../image/greedy.png") no-repeat;
     max-width: 840px;
@@ -1743,8 +1772,12 @@ summary {
     background-position: 100% bottom;
     margin-top: 15px;
     position: relative;
+    z-index: 99;
 }
- 
+.item-rounds3:nth-child(2n + 1) {
+    padding-left: 211px;
+    position: relative;
+}
 .item-rounds3:nth-child(2n + 1)::after {
     content: "";
     position: absolute;
@@ -1754,8 +1787,30 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
-}   
- 
+}
+.item-rounds3:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds3:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+}
+.item-rounds3:last-child::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 147px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/bottom-tryba.png") no-repeat;
+    background-size: contain;
+}
 
 .item-rounds4 {
     background: url("../image/violence.png") no-repeat;
@@ -1780,7 +1835,9 @@ summary {
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
 }
- 
+.item-rounds4:nth-child(2n) {
+    padding-left: 108px;
+}
 .item-rounds4:nth-child(2n)::after {
     content: "";
     position: absolute;
@@ -1921,7 +1978,8 @@ summary {
     height: 52px;
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
-    background-size: contain; 
+    background-size: contain;
+    z-index: -1;
 }
 .item-rounds7:nth-child(2n) {
     padding-left: 108px;
@@ -1950,17 +2008,13 @@ summary {
 
 
 .item-rounds8 {
-    background: url(../image/betrayal.png) no-repeat;
+    background: url("../image/laziness.png") no-repeat;
+    max-width: 840px;
     width: 100%;
+    height: 460px;
     background-position: 100% bottom;
+    margin-top: 15px;
     position: relative;
-    padding-left: 10px;
-    background-size: contain;
-    margin-top: 170px;
-    top: 22px;
-    max-width: 850px;
-    height: 400px;
-
 }
 .item-rounds8:nth-child(2n + 1) {
     padding-left: 211px;
@@ -1975,9 +2029,20 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
-} 
-#bee_type_8 > div > div.header-round{
-    top: -120px;
+}
+.item-rounds8:nth-child(2n) {
+    padding-left: 108px;
+}
+.item-rounds8:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    width: 110px;
+    height: 53px;
+    top: 57%;
+    background: url("../image/trumpet-round-small.png") no-repeat;
+    background-size: contain;
+    z-index: -1;
 }
 .item-rounds8:last-child::after {
     content: "";
@@ -1985,10 +2050,9 @@ summary {
     left: -38px;
     width: 147px;
     height: 53px;
-    top: 45%;
+    top: 57%;
     background: url("../image/bottom-tryba.png") no-repeat;
     background-size: contain;
-    z-index: -1;
 }
 
 .wrapper-content-round {
@@ -2229,7 +2293,7 @@ summary {
     margin-top: 20px;
 }
 #bee_type_3 > div > div.center-content-round > div{
-    margin: 25px 0 0 60px !important;
+    margin-left: 55px !important;
 }
 .active-bee img {
     display: block;
