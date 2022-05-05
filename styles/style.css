@@ -2534,19 +2534,16 @@ summary {
 /*--------------------start footer--------------------------*/
 
 .footer {
-    background-color: #55af26;
+    background-color: #072626;
     padding-top: 18px;
-    border-top: 2px solid #367d11;
+    border-top: 2px solid #0b4642;
     position: relative;
-    z-index: 100;
-    -webkit-box-shadow: 0px -9px 0px 0px rgba(220, 223, 225, 1);
-    -moz-box-shadow: 0px -9px 0px 0px rgba(220, 223, 225, 1);
-    box-shadow: 0px -9px 0px 0px rgba(220, 223, 225, 1);
-    margin-bottom: -20px;
+    z-index: 100; 
+    margin-bottom: -20px; 
 }
 .wrapper-footer-content {
-    border-top: 2px solid #367d11;
-    background-color: #488827;
+    border-top: 2px solid #0b4642;
+    background-color: #072626;
     padding: 25px 0 47px 0;
 }
 .content-footer {
