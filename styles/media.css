@@ -4765,8 +4765,32 @@
     }
     .fly-lust{
         transform: scale(0.5,0.5);
+      }
+    .fly-gluttony{
+        transform: scale(0.5,0.5);
+    }
+    .fly-greed{
+        transform: scale(0.5,0.5);
+    }
+    .fly-wrath{
+        transform: scale(0.5,0.5);
+    }
+    .fly-heresy{
+        transform: scale(0.5,0.5);
+    }
+    .fly-lazziness{
+        transform: scale(0.5,0.5);
+    }
+    .fly-fraud{
+        transform: scale(0.5,0.5);
+    }
 
-     }
+    .fly-treachery{
+        transform: scale(0.5,0.5);
+        top: -110px;
+        margin-bottom: -65px;
+    }
+     
     .item-rounds1 {
         height: 190px;
     }

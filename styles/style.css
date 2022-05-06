@@ -530,13 +530,13 @@ summary {
     outline: none;
 }
 .wax {
-    background-image: url("../image/wax.png");
+    background-image: url("../image/drop-honey.png");
     background-repeat: no-repeat;
     background-size: 40px 35px;
     background-position: 1% 50%;
 }
 .honey {
-    background-image: url("../image/honey.png");
+    background-image: url("../image/drop-honey.png");
     background-repeat: no-repeat;
     background-size: 35px 36px;
     background-position: 1% 50%;
@@ -834,6 +834,7 @@ summary {
     color: #ffffff;
     font-size: 20px;
     font-weight: bold;
+    z-index: 2;
 }
 
 .flip-price-percent {
@@ -867,38 +868,40 @@ summary {
     margin: 0 auto;
 }
 .investment:before {
-    background: url("../image/investment.png") no-repeat;
-    width: 102px;
-    height: 107px;
+    background: url("../image/boxes/01.png") no-repeat;
+    width: 250px !important;
+    height: 250px !important;
     background-size: contain;
-    top: 24px;
+    z-index: -1;
+    
 }
 .players:before {
-    background: url("../image/players.png") no-repeat;
-    width: 110px;
-    height: 129px;
+    background: url("../image/boxes/02.png") no-repeat;
+    width: 250px !important;
+    height: 250px !important;
     background-size: contain;
-    top: 10px;
+    z-index: -1;
 }
 .bee:before {
-    background: url("../image/bee.png") no-repeat;
-    width: 160px;
-    height: 153px;
+    background: url("../image/boxes/03.png") no-repeat;
+    width: 250px !important;
+    height: 250px !important;
     background-size: contain;
+    z-index: -1;
 }
 .won:before {
-    background: url("../image/won.png") no-repeat;
-    width: 101px;
-    height: 107px;
+    background: url("../image/boxes/04.png") no-repeat;
+    width: 250px !important;
+    height: 250px !important;
     background-size: contain;
-    top: 24px;
+    z-index: -1;
 }
 .hive:before {
-    background: url("../image/hive.png") no-repeat;
-    width: 95px;
-    height: 135px;
+    background: url("../image/boxes/05.png") no-repeat;
+    width: 250px !important;
+    height: 250px !important;
     background-size: contain;
-    top: 5px;
+    z-index: -1;
 }
 /*----------------------end statistic-------------------*/
 
@@ -6575,7 +6578,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
-.fly-lust {   
+.fly{   
     background: transparent no-repeat;
     position: relative;
     display: block;
@@ -6587,10 +6590,36 @@ input::-webkit-inner-spin-button {
     margin-left: -160px;
     width: 350px;
     height: 130px;
-    background-image: url(../image/Prueba.png);
     animation: career_amb 1s steps(30) infinite;
 }
-.fly-lust>a{
+.fly-lust{
+    background-image: url(../image/titles/1.png );
+ }
+ .fly-gluttony{
+     background-image: url(../image/titles/2.png);
+ }
+ .fly-greed{
+    background-image: url(../image/titles/3.png);
+}
+.fly-wrath{
+    background-image: url(../image/titles/4.png);
+}
+.fly-heresy{
+    background-image: url(../image/titles/5.png);
+}
+.fly-lazziness{
+    background-image: url(../image/titles/6.png);
+}
+.fly-fraud{
+    background-image: url(../image/titles/7.png);
+}
+
+.fly-treachery{
+    background-image: url(../image/titles/8.png);
+    top: -110px;
+    margin-bottom: -65px;
+}
+.fly>a{
     left: 330px;
     top: 36px;
     width: 8em;
