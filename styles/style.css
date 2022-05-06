@@ -249,7 +249,7 @@ button {
 .bg-body {
     position: relative;
     z-index: 0;  
-    background-color: #4b455d;;
+    background-color: #000000;;
     background-size: cover;
     background-image: url('../image/LARGA.jpg');
     background-repeat: repeat-y;
@@ -736,8 +736,7 @@ summary {
     position: relative;
     padding-bottom: 173px;
 }
-.section-game {
-    background: url("../image/bg-statistic.png") no-repeat;
+.section-game { 
     background-size: contain;
     width: 100%;
     min-height: 346px;
@@ -808,14 +807,8 @@ summary {
     border-radius: 10px;
 }
 .info-item {
-    border-radius: 20px;
-    border: 2px solid #478928;
     max-width: 173px;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(75, 154, 39, 1) 0%, rgba(90, 177, 44, 1) 100%);
-    -webkit-box-shadow: 0px 0px 0px 4px rgba(210, 238, 190, 0.7);
-    -moz-box-shadow: 0px 0px 0px 4px rgba(210, 238, 190, 0.7);
-    box-shadow: 0px 0px 0px 4px rgba(210, 238, 190, 0.7);
     padding: 7px;
     position: relative;
 }
@@ -6582,3 +6575,31 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+.fly-lust {   
+    background: transparent no-repeat;
+    position: relative;
+    display: block;
+    visibility: visible;
+    margin: -30px auto;
+    transform: scale(1, 1);
+    left: 50%;
+    top: -60px;
+    margin-left: -160px;
+    width: 350px;
+    height: 130px;
+    background-image: url(../image/Prueba.png);
+    animation: career_amb 1s steps(30) infinite;
+}
+.fly-lust>a{
+    left: 330px;
+    top: 36px;
+    width: 8em;
+}
+@keyframes career_amb {
+  from {
+    background-position: 0px; }
+
+  to {
+    background-position: -10500px; } 
+}
+
