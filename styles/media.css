@@ -644,8 +644,11 @@
         max-width: 750px;
         height: 380px;
         background-size: contain;
-        margin-top: 87px;
+        margin-top: 50px;
 } 
+.item-rounds8{
+    margin-top: 100px;
+}
     .item-rounds5:nth-child(2n + 1) {
         padding-left: 60px;
     }
