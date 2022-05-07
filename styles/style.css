@@ -6642,12 +6642,39 @@ input::-webkit-inner-spin-button {
     transform: scale(1, 1);
     left: -2%;
     top: 50px;
-    width: 1041px;
+    width: 1040px;
     height: 547px;
-    animation: title-ani 1.5s steps(30) infinite;
+    animation: title-ani 1.5s steps(30)  ;
+}
+.main-title2{
+    background-image: url(../image/title.png) !important;
+    background: transparent no-repeat;
+    background-size: cover;
+    position: relative;
+    display: block;
+    visibility: visible; 
+    transform: scale(1, 1);
+    left: -1%;
+    top: -493px;
+    width: 1040px;
+    height: 547px;
+    background-position: -30460px;
+    animation: fix 1.5s steps(1)  ;
 }
 
 @keyframes title-ani {
+    0%{display: none;}
     
-    100% {background-position: -31250px;} 
+    100% {
+        display: block;
+        background-position: -31500px;
+    }
+  }
+
+@keyframes fix {
+    0%{opacity: 0;}
+    100% {
+        background-position: -30460px;
+   opacity: 1;
+    }
   }
