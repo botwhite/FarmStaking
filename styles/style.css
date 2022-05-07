@@ -768,7 +768,7 @@ summary {
     align-items: center;
     padding: 14px 23px;
 }
-.header-section {
+.header-section { 
     background: linear-gradient(to bottom, rgba(140, 210, 100, 1) 0%, rgba(112, 199, 62, 1) 100%);
     max-width: 428px;
     width: 100%;
@@ -6677,4 +6677,7 @@ input::-webkit-inner-spin-button {
         background-position: -30460px;
    opacity: 1;
     }
+  }
+  .header-section{
+      display: none !important;
   }
