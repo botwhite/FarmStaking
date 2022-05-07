@@ -6645,7 +6645,7 @@ input::-webkit-inner-spin-button {
     top: 50px;
     width: 1040px;
     height: 547px;
-    animation: title-ani 1.5s steps(30)  ;
+    animation: title-ani 1.5s steps(30) ;
 }
 .main-title2{
     animation-delay: 5000ms !important;
@@ -6661,13 +6661,13 @@ input::-webkit-inner-spin-button {
     width: 1040px;
     height: 547px;
     background-position: -30460px;
-    animation: fix 1.5s steps(1);
+    animation: fix 1.5s steps(1) ;
     margin-bottom: -460px;
 }
 
 @keyframes title-ani { 
     100% {
-        background-position: -31500px;
+        background-position: -31500px ;
     } 
   }
 

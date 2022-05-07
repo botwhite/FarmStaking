@@ -454,16 +454,15 @@
         max-width: 135px;
         padding: 5px;
     }
-    .statistic-item {
-        max-width: 153px;
-    }
+   
     .list-statistic {
-        width: 70vw;
+        width: 110%;
         justify-content: space-between;
-        margin-left: -100px;
+        margin-left: -65px;
     }
     .result-info {
         font-size: 16px;
+        margin-top: 120px;
     }
     .result {
         padding: 10px 0;
@@ -475,7 +474,7 @@
     .statistic-item {
         padding-top: 100px;
         max-width: 250px;
-        margin: 20px 0 35px 25px;
+        margin: 90px 0 35px 25px;
     }
     .investment:before {
         width: 76px;
@@ -486,10 +485,12 @@
         width: 89px;
         height: 105px;
         top: 2px;
+        margin-top: 11px;
     }
     .bee:before {
         width: 125px;
         height: 125px;
+        margin-top: 14px;
     }
     .won:before {
         width: 76px;
@@ -499,7 +500,7 @@
     .hive:before {
         width: 74px;
         height: 100px;
-        top: 6px;
+        margin-top: 20px;
     }
     .score {
         padding: 10px 0;
@@ -1400,6 +1401,7 @@
         margin-right: 10px;
     }
 }
+
 /* 375px */
 @media screen and (width: 375px) and (min-width: 0px){
 #bee_type_2 > div > div.center-content-round > div {
@@ -5941,3 +5943,5 @@
     margin-top: 35px !important;
 }
 }
+
+ 
