@@ -6663,10 +6663,8 @@ input::-webkit-inner-spin-button {
     margin-bottom: -460px;
 }
 
-@keyframes title-ani {
-    0%{display: none;}
+@keyframes title-ani { 
     100% {
-       
         background-position: -31500px;
     } 
   }

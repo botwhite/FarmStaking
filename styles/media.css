@@ -4793,6 +4793,20 @@
         top: -110px;
         margin-bottom: -65px;
     }
+
+    .main-title{
+        margin-top: -100px !important;
+        transform: scale(0.3,0.3);
+        left: -88%;
+    }
+
+    .main-title2{
+        margin-top: -5px;
+        transform: scale(0.3,0.3);
+        left: -88%;
+        margin-bottom: -600px;
+
+    }
      
     .item-rounds1 {
         height: 190px;
