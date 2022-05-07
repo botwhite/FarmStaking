@@ -6640,17 +6640,14 @@ input::-webkit-inner-spin-button {
     display: block;
     visibility: visible;
     transform: scale(1, 1);
-    left: 10%;
+    left: -2%;
     top: 50px;
     width: 1041px;
     height: 547px;
-    animation: title-ani 1.5s steps(30) infinite ;
+    animation: title-ani 1.5s steps(30) infinite;
 }
 
 @keyframes title-ani {
-    from {
-      background-position: 0px; }
-  
-    to {
-      background-position: -31251px; } 
+    
+    100% {background-position: -31250px;} 
   }
