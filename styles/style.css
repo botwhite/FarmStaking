@@ -6659,16 +6659,16 @@ input::-webkit-inner-spin-button {
     width: 1040px;
     height: 547px;
     background-position: -30460px;
-    animation: fix 1.5s steps(1)  ;
+    animation: fix 1.5s steps(1);
+    margin-bottom: -460px;
 }
 
 @keyframes title-ani {
     0%{display: none;}
-    
     100% {
-        display: block;
+       
         background-position: -31500px;
-    }
+    } 
   }
 
 @keyframes fix {
