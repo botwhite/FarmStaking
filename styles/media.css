@@ -458,7 +458,9 @@
         max-width: 153px;
     }
     .list-statistic {
-        justify-content: center;
+        width: 70vw;
+        justify-content: space-between;
+        margin-left: -100px;
     }
     .result-info {
         font-size: 16px;
@@ -471,9 +473,9 @@
         margin-top: 90px;
     }
     .statistic-item {
-        padding-top: 86px;
-        max-width: 146px;
-        margin-right: 25px;
+        padding-top: 100px;
+        max-width: 250px;
+        margin: 20px 0 35px 25px;
     }
     .investment:before {
         width: 76px;

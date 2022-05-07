@@ -6633,6 +6633,7 @@ input::-webkit-inner-spin-button {
 }
 
 .main-title{
+    animation-delay: 5000ms !important;
     background-image: url(../image/title.png) !important;
     background: transparent no-repeat;
     background-size: cover;
@@ -6647,6 +6648,7 @@ input::-webkit-inner-spin-button {
     animation: title-ani 1.5s steps(30)  ;
 }
 .main-title2{
+    animation-delay: 5000ms !important;
     background-image: url(../image/title.png) !important;
     background: transparent no-repeat;
     background-size: cover;
