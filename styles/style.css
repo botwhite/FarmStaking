@@ -6632,3 +6632,25 @@ input::-webkit-inner-spin-button {
     background-position: -10500px; } 
 }
 
+.main-title{
+    background-image: url(../image/title.png) !important;
+    background: transparent no-repeat;
+    background-size: cover;
+    position: relative;
+    display: block;
+    visibility: visible;
+    transform: scale(1, 1);
+    left: 10%;
+    top: 50px;
+    width: 1041px;
+    height: 547px;
+    animation: title-ani 1.5s steps(30) infinite ;
+}
+
+@keyframes title-ani {
+    from {
+      background-position: 0px; }
+  
+    to {
+      background-position: -31251px; } 
+  }
