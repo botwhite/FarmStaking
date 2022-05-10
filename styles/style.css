@@ -6799,11 +6799,11 @@ input::-webkit-inner-spin-button {
   }
 
   }
-  ul > li:nth-child(odd){
-    animation: floatOdd 3s ease-in-out infinite; 
-  }
 
-  ul > li:nth-child(even){
+  .investment, .bee, .hive{
+    animation: floatOdd 3s ease-in-out infinite; 
+  } 
+  .players, .won{
     animation: floatEven 3s ease-in-out infinite; 
   }
   @keyframes floatOdd {
