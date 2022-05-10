@@ -4838,10 +4838,17 @@
         transform: scale(0.5,0.5);
     }
 
+
     .fly-treachery{
         transform: scale(0.5,0.5);
         top: -35px;
         margin-bottom: -65px;
+    }
+
+    .anim-1{
+        transform: scale(0.5,0.5);
+        margin-left: -12px;
+        margin-top: -20px;
     }
 
     .main-title{
