@@ -1483,8 +1483,10 @@
 }
 
 .fly-treachery{
-    top:-100px;
+        top: -95px !important;
+        margin-bottom: -65px; 
 }
+
 }
 @media screen and (max-width: 1000px) and (min-width: 0px) {
     .wrapper-modal {
@@ -2439,7 +2441,10 @@
         margin-top: -35px   !important;
     }
     #bee_type_6 > div > div.center-content-round > div{
-        margin-left: 35px ;
+     
+            margin-left: 50px;
+            margin-top: -19px;
+       
     }
 
     .sotu-container {
@@ -4814,15 +4819,18 @@
         transform: scale(0.5,0.5);
     }
     .fly-greed{
+        top: -85px;
         transform: scale(0.5,0.5);
     }
     .fly-wrath{
+        top: -50px;
         transform: scale(0.5,0.5);
     }
     .fly-heresy{
         transform: scale(0.5,0.5);
     }
     .fly-lazziness{
+        top: -85px;
         transform: scale(0.5,0.5);
     }
     .fly-fraud{
@@ -4831,7 +4839,7 @@
 
     .fly-treachery{
         transform: scale(0.5,0.5);
-        top: -110px;
+        top: -35px;
         margin-bottom: -65px;
     }
 
@@ -4874,11 +4882,11 @@
     }
 
     .item-rounds7 {
-        height: 175px;
+        height: 149px;
     }
 
     .item-rounds8 {
-        margin-top: 120px;
+        margin-top: 50px;
         height: 200px;
     }
 
@@ -4917,12 +4925,12 @@
         margin-top: 10px !important;
     }
     #bee_type_2 > div > div.center-content-round > div{
-        top: -32px !important;
-        margin-left: 40px !important;
+        top: -40px !important;
+    margin-left: 55px !important;
     }
     #bee_type_3 > div > div.center-content-round > div{
-        top: 0px !important;
-        margin-left: 40px !important;
+        top: -16px !important;
+        margin-left: 60px !important;
     }
     #bee_type_8 > div > div.center-content-round > div{
         margin-left: 45px !important;
@@ -4932,7 +4940,7 @@
     .sotu-container {
         max-width: 304px;
         height: 85px;
-        margin-top: -14px;
+        margin-top: 7px;
         
     }
     #bee_type_1 > div > div.center-content-round > div {
@@ -5978,6 +5986,16 @@
 @media screen and (width: 375px) and (min-width: 0px){
 #bee_type_1 > div > div.center-content-round > div {
     margin-top: 35px !important;
+}
+.fly-greed {
+    top: -70px;
+    transform: scale(0.5,0.5);
+}
+.fly-fraud {
+    top: -70px; 
+}
+.fly-lazziness {
+    top: -70px;
 }
 }
 
