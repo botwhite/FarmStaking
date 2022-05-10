@@ -6647,8 +6647,16 @@ input::-webkit-inner-spin-button {
     width: 1040px;
     height: 547px;
     animation: title-ani 1.5s steps(30) ;
+    z-index: 3;
 }
-.main-title2{
+.main-title:hover  {
+    animation: title-ani 1.5s steps(30) infinite;
+}
+
+.main-title:hover + .main-title2 {
+    opacity: 0;
+}
+.main-title2{ 
     animation-delay: 5000ms !important;
     background-image: url(../image/static-title.png) !important;
     background: transparent no-repeat;
@@ -6663,6 +6671,10 @@ input::-webkit-inner-spin-button {
     height: 547px;
     animation: fix 1.5s steps(1);
     margin-bottom: -484px;
+    z-index: 1;
+}
+.main-title2:hover{
+    opacity: 0;
 }
 
 @keyframes title-ani { 
