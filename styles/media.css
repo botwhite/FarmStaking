@@ -470,7 +470,7 @@
     }
     .section-game {
         min-height: 300px;
-        margin-top: 90px;
+        margin-top: 0px;
     }
     .statistic-item {
         padding-top: 100px;
