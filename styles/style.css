@@ -6694,10 +6694,10 @@ input::-webkit-inner-spin-button {
       display: none !important;
   }
 
-  .wrapper-lottie{
+  /* .wrapper-lottie{
       display: none !important;
       z-index: -9999999999 !important;
-  }
+  } */
 
   /*//////////////////////////////////*/
   @media screen and (min-width: 800px) {
@@ -6819,3 +6819,18 @@ input::-webkit-inner-spin-button {
     65%  { transform: translate(0, 0px); }
     to   { transform: translate(0, 15px); }    
   } 
+
+  .anim-1{
+    background-image: url(../image/animations/LustAss.png);
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    position: relative;
+    animation: frames60 2s steps(19) infinite;
+    margin-left: 65px;
+  }
+    @keyframes frames60 {
+        100%{
+            background-position: -31279px;
+        }
+    }
