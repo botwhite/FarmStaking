@@ -6681,3 +6681,8 @@ input::-webkit-inner-spin-button {
   .header-section{
       display: none !important;
   }
+
+  .wrapper-lottie{
+      display: none !important;
+      z-index: -9999999999 !important;
+  }
