@@ -6650,20 +6650,19 @@ input::-webkit-inner-spin-button {
 }
 .main-title2{
     animation-delay: 5000ms !important;
-    background-image: url(../image/title.png) !important;
+    background-image: url(../image/static-title.png) !important;
     background: transparent no-repeat;
     background-size: cover;
     position: relative;
     display: block;
     visibility: visible; 
     transform: scale(1, 1);
-    left: -1%;
-    top: -493px;
+    top: -495px;
+    left: -59px;
     width: 1040px;
     height: 547px;
-    background-position: -30460px;
-    animation: fix 1.5s steps(1) ;
-    margin-bottom: -460px;
+    animation: fix 1.5s steps(1);
+    margin-bottom: -484px;
 }
 
 @keyframes title-ani { 
@@ -6675,8 +6674,7 @@ input::-webkit-inner-spin-button {
 @keyframes fix {
     0%{opacity: 0;}
     100% {
-        background-position: -30460px;
-   opacity: 1;
+        opacity: 1;
     }
   }
   .header-section{
