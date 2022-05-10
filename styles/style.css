@@ -2176,23 +2176,23 @@ summary {
     }
     
     .H-bg{
-    background-image: url(../image/cara.png);
+    background-image: url(../image/faces/cara.png);
     }
     #bee_type_2 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/02.png);
     }
     #bee_type_3 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/03.png);
     } #bee_type_4 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/04.png);
     } #bee_type_5 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/05.png);
     } #bee_type_6 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/06.png);
     } #bee_type_7 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/07.png);
     } #bee_type_8> div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/cara2.png);
+        background-image: url(../image/faces/08.png);
     }
 .hexagon::after {
     content: "";
