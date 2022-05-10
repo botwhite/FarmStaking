@@ -6822,15 +6822,16 @@ input::-webkit-inner-spin-button {
 
   .anim-1{
     background-image: url(../image/animations/LustAss.png);
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     background-size: cover;
     position: relative;
-    animation: frames60 2s steps(19) infinite;
+    animation: frames60 2s steps(31) infinite;
     margin-left: 65px;
+    margin-top: -15px;
   }
     @keyframes frames60 {
         100%{
-            background-position: -31279px;
+            background-position: -30931px;
         }
     }
