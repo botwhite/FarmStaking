@@ -6826,7 +6826,7 @@ input::-webkit-inner-spin-button {
     width: 200px;
     background-size: cover;
     position: relative;
-    animation: frames60 2s steps(31) infinite;
+    animation: frames60 4s steps(31) infinite;
     margin-left: 65px;
     margin-top: -15px;
   }
