@@ -1682,6 +1682,7 @@ summary {
     top: 57%;
     background: url("../image/trumpet-round-big.png") no-repeat;
     background-size: contain;
+    
 }   
  
 
@@ -6800,8 +6801,9 @@ input::-webkit-inner-spin-button {
 
   }
 
-  .investment, .bee, .hive{
+  .investment, .bee, .hive  {
     animation: floatOdd 3s ease-in-out infinite; 
+
   } 
   .players, .won{
     animation: floatEven 3s ease-in-out infinite; 
@@ -6816,4 +6818,4 @@ input::-webkit-inner-spin-button {
     from { transform: translate(0, 15px); }
     65%  { transform: translate(0, 0px); }
     to   { transform: translate(0, 15px); }    
-  }
+  } 

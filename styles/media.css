@@ -459,6 +459,7 @@
         width: 110%;
         justify-content: space-between;
         margin-left: -65px;
+        margin-top: -150px;
     }
     .result-info {
         font-size: 16px;
