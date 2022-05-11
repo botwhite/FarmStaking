@@ -6830,8 +6830,18 @@ input::-webkit-inner-spin-button {
     margin-left: 65px;
     margin-top: -15px;
   }
+  .anim-2{
+    background-image: url(../image/animations/Gluttt.png) !important;
+    animation: frames60-2 6s steps(60) infinite;
+  }
     @keyframes frames60 {
         100%{
             background-position: -35920px;
         }
     }
+    @keyframes frames60-2 {
+        100%{
+            background-position: -35930px
+        }
+    }
+    
