@@ -4850,6 +4850,12 @@
         margin-left: -12px;
         margin-top: -20px;
     }
+    .anim-2{
+        transform: scale(0.5,0.5);
+        margin-left: -12px;
+        margin-top: -20px;
+    }
+
 
     .main-title{
         margin-top: -100px !important;
