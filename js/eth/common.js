@@ -50,7 +50,7 @@ function DEBUG(o){
 
 function getCoinsPerEth(contract){
 	return new Promise(function(ok, fail){
-		contract.COINS_PER_BNB().then(amount => {
+		contract.COINS_PER_Token().then(amount => {
 			ok({'waxEqual1eth':amount, 'honeyEqual1eth':amount});
 		}).catch(error => {
 			fail(error);
@@ -102,14 +102,14 @@ function getMedalsPoints(contract){
 
 function getBeeMonthlyPercents(contract){
 	return new Promise(function(ok, fail){
-		contract.BEES_COUNT().then(bees_count => {
+		contract.souls_COUNT().then(bees_count => {
 			let counter = 0;
 			let error;
 			bee_monthly_percents = [];
 			unlockBeePrice = [];
 			bee_levels_prices = [];
 			for(let i = 0; i < bees_count; i++){
-			    contract.BEES_MONTHLY_PERCENTS(i).then(function(monthlyPercents){
+			    contract.souls_MONTHLY_PERCENTS(i).then(function(monthlyPercents){
 			    	bee_monthly_percents[i] = monthlyPercents;
 			    }.bind(i)).catch(err => {
 			    	error = err;
@@ -117,7 +117,7 @@ function getBeeMonthlyPercents(contract){
 			    	counter++;
 			    });
 
-			    contract.BEES_LEVELS_PRICES(i).then(function(unlockPrice){
+			    contract.souls_LEVELS_PRICES(i).then(function(unlockPrice){
 			    	unlockBeePrice[i] =  unlockPrice / Math.pow(10, 18);
 			    }.bind(i)).catch(err => {
 			    	error = err;
@@ -125,7 +125,7 @@ function getBeeMonthlyPercents(contract){
 			    	counter++;
 			    });
 
-			    contract.BEES_PRICES(i).then(function(levelPrice){
+			    contract.souls_PRICES(i).then(function(levelPrice){
 			    	bee_levels_prices[i] =  Math.ceil(levelPrice / Math.pow(10, 18));
 			    }.bind(i)).catch(err => {
 			    	error = err;
@@ -195,7 +195,7 @@ function getQualityHoneyPercents(contract){
 
 function getFirstBeeAirdropAmount(contract){
 	return new Promise(function(ok, fail){
-		contract.FIRST_BEE_AIRDROP_AMOUNT().then(airdropAmount => {
+		contract.FIRST_soul_AIRDROP_AMOUNT().then(airdropAmount => {
 			first_bee_airdrop_amount = airdropAmount / Math.pow(10,18);
 			ok({'first_bee_airdrop_amount':first_bee_airdrop_amount});
 		}).catch(err => {

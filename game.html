@@ -103,7 +103,7 @@
                                 </li>
                                 <li class="item-menu">
                                     <div class="btn-back-wrapper">
-                                        <a class="button-btn EVENTS" name="modal-history-init-button">События</a>
+                                        <a class="button-btn" name="modal-history-init-button">Stake</a>
                                     </div>
                                 </li>
                             </ul>
@@ -197,10 +197,13 @@
             <div class="right-block">
                 <div class="left-header-content">
                     <div class="btn-back-wrapper">
-                        <a class="button-btn btn-light-blue EVENTS" name="modal-history-init-button">События</a>
+                        <a class="button-btn btn-light-blue"  onclick="NftApro()">Approve</a>
                     </div>
                     <div class="btn-back-wrapper">
-                        <a class="button-btn btn-header BEE_GARDEN" name="modal-referrals-init-button">Пасека</a>
+                        <a class="button-btn btn-light-blue"  onclick="Stake()">Stake</a>
+                    </div>
+                    <div class="btn-back-wrapper">
+                        <a class="button-btn btn-header "  onclick="UnStake()">UnStake</a>
                     </div>
                     <div class="drop-down-lg">
                         <div class="btn-drop-down">
@@ -951,6 +954,10 @@
                 </div>
                 <p class="error-honey NOT_ENOUGH_BALANCE" id="modal-deposit-not-enough" style="display:none;">Недостаточно BNB на балансе аккаунта!</p>
                 <button type="button" class="button-buy-wax button-btn green-btn green-bee-btn buy-honey-btn" id="modal-deposit-button"><div><div><span class="BUY_WAX_BTN">Купить</span><span id="modal-deposit-button-value">500 000</span></div><div><span class="WAX_ ">воска</span></div></div></button>
+                <button type="button" class="button-buy-wax button-btn green-btn green-bee-btn buy-honey-btn" id="modal-deposit-button" onclick="approveToken()">Approve</div></button>
+                
+                
+                
                 <div class="balance-footer-block">
                     <span class="WALLET_BALANCE">Баланс кошелька:</span>
                 </div>
@@ -1709,6 +1716,7 @@
 <script src="js/eth/referrals.js"></script>
 <script src="js/eth/rates.js"></script>
 <script src="js/eth/history.js"></script>
+<script src="js/eth/control.js"></script>
 <script src="js/eth/games_history.js"></script>
 <!-- <script src="js/eth/lottery.js"></script> -->
 <script src="js/eth/super_representative.js?t=4"></script>
