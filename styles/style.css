@@ -52,10 +52,27 @@
     font-weight: 800;
     font-style: normal;
 }
+@font-face {
+    font-family: "Gloria";
+    src: url("../fonts/GloriaHallelujah-Regular.eot") format("embedded-opentype"),
+        url("../fonts/GloriaHallelujah-Regular.woff2") format("woff2"),
+        url("../fonts/GloriaHallelujah-Regular.woff") format("woff"),
+        url("../fonts/GloriaHallelujah-Regular.ttf") format("truetype"),
+        url("../fonts/GloriaHallelujah-Regular.svg") format("svg");
+}
+@font-face {
+    font-family: Gloria-A;
+    src: url(../fonts/gloria-hallelujah-v15-latin-regular.woff2) format("woff2"),
+        url(../fonts/gloria-hallelujah-v15-latin-regular.woff) format("woff"),
+        url(../fonts/gloria-hallelujah-v15-latin-regular.ttf) format("truetype"),
+        url(../fonts/gloria-hallelujah-v15-latin-regular.svg) format("svg");
+
+  }
 
 * {
     font-size: 14px;
     color: #ffffff;
+    font-family: Gloria-A !important;
 }
 body,
 div,
@@ -141,7 +158,8 @@ video {
     border: 0;
     font: inherit;
     font-size: 100%;
-    vertical-align: baseline;
+    vertical-align: baseline; 
+
 }
 
 html {
@@ -2102,7 +2120,7 @@ summary {
     box-shadow: 1px -6px 0px -1px rgba(251, 103, 106, 0.8) inset, 1px 6px 0px -1px rgba(159, 16, 69, 0.8) inset;
     color: #fff;
 }
-.btn-blue::after,
+/* .btn-blue::after,
 .green-btn::after,
 .red-btn:after,
 .bay-bee-btn:after {
@@ -2118,7 +2136,7 @@ summary {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-}
+} */
 .bay-bee-btn {
     width: 121px;
 }
