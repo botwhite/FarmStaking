@@ -6840,6 +6840,36 @@ input::-webkit-inner-spin-button {
     background-image: url(../image/animations/Gluttt.png) !important;
     animation: frames60-2 6s steps(60) infinite;
   }
+  .anim-3{
+    background-image: url(../image/animations/grreed-01.png) !important;
+    animation: frames60-3 6s steps(60) infinite;
+  }
+  .anim-4{
+    background-image: url(../image/animations/Wrath-01.png) !important;
+    animation: frames60-3 6s steps(60) infinite;
+  }
+  .anim-5{
+    background-image: url(../image/animations/heresy-01.png) !important;
+    animation: frames60-3 6s steps(60) infinite;
+    margin-left: 120px;
+    margin-top: -40px;
+  }
+  .anim-6{
+    background-image: url(../image/animations/pereza-01.png) !important;
+    animation: frames60-3 6s steps(60) infinite;
+  }
+  .anim-7{
+    background-image: url(../image/animations/Fraude-01.png) !important;
+    animation: frames60-3 6s steps(60) infinite;
+    margin-left: 120px;
+    margin-top: -40px;  
+}
+.anim-8{
+    background-image: url(../image/animations/Capas-01.png) !important;
+    animation: frames60-3 6s steps(60) infinite;
+    margin-left: 120px;
+    margin-top: -40px;  
+  }
     @keyframes frames60 {
         100%{
             background-position: -35920px;
@@ -6850,4 +6880,12 @@ input::-webkit-inner-spin-button {
             background-position: -35930px
         }
     }
-    
+    @keyframes frames60-3 {
+        100%{
+            background-position: -35921px
+        }
+    }
+
+    #toggle{
+        display: none;
+    }
