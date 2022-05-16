@@ -6848,7 +6848,7 @@ input::-webkit-inner-spin-button {
   .anim-4{
     background-image: url(../image/animations/Wrath-01.png) !important;
     animation: frames60-3 6s steps(60) infinite;
-    transform: scale(1.3);
+    transform: scale(1.2);
   
 }
   .anim-5{
@@ -6869,7 +6869,7 @@ input::-webkit-inner-spin-button {
     background-image: url(../image/animations/Fraude-01.png) !important;
     animation: frames60-3 6s steps(60) infinite;
     margin-left: 120px;
-    margin-top: -40px;  
+    margin-top: -10px;  
     transform: scale(1.3);
 
 }
