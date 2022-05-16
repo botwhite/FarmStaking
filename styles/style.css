@@ -1051,9 +1051,10 @@ summary {
     width: 110px;
     margin: 0 auto;
     position: absolute;
-    top: 62px;
+    top: -95px;
     left: 0;
     right: 0;
+    z-index: 9999999;
 }
 .text-block-upgrade {
     background-color: rgba(147, 147, 147, 0.5);
