@@ -303,7 +303,7 @@ function subscribeRewardCollected() {
 
 function subscribeBeesBought() {
     console.log("Subscribe to the `BeesBought` event");
-    INTERACT_CONTRACT.on("BeesBought",
+    INTERACT_CONTRACT.on("soulsBought",
       (user, bee, count, event) => {
         console.log("emitted `BeesBought` event", event);
         let uniqueId = `BeesBought-${event.blockNumber}`;
@@ -382,7 +382,7 @@ function subscribeQualityUpdated() {
 
 function subscribeBeeUnlocked() {
     console.log("Subscribe to the `BeeUnlocked` event");
-    INTERACT_CONTRACT.on("BeeUnlocked",
+    INTERACT_CONTRACT.on("soulUnlocked",
       (user, bee, event) => {
         console.log("emitted `BeeUnlocked` event", event);
 

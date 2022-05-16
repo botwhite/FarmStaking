@@ -336,13 +336,13 @@ async function run(){
             console.log("ERROR", "web3.players", err);
         });
 
-        CONTRACT.isSuperBeeUnlocked().then(isUnlocked => {
+        CONTRACT.isSupersoulUnlocked().then(isUnlocked => {
             superBeeUnlocked = isUnlocked;
         }).catch(err => {
             console.log("ERROR", "web3.isSuperBeeUnlocked", err);
         });
         
-        CONTRACT.playerBees(current_account).then(bees => {
+        CONTRACT.playersouls(current_account).then(bees => {
             for(let i = 0; i < bees.length; i++){
                 playerBees[i] = Number.parseInt(bees[i]);
             }
