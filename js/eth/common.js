@@ -220,8 +220,8 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			let number_wax = (i < 10 ? ''+0+i : ''+i);
 			let bee_img = '';
 			if(playerBees[bee_type-1] >= i)
-				bee_img = '<img src="image/by-bee.png">';
-
+				// bee_img = '<img src="image/by-bee.png">';
+				bee_img = '<div class="bee-div '+'face_'+bee_type+'"> </div>';
 				
 			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-bee">'+
 			bee_img+
@@ -266,7 +266,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');
 			} else {
 				$('#bee_type_button_'+bee_type).removeClass('red-btn');
-				$('#bee_type_button_'+bee_type).html('Buy a bee');
+				$('#bee_type_button_'+bee_type).html('Buy a sinner');
 				$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 				$('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 			}
@@ -285,7 +285,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			$('#bee_type_button_'+bee_type).removeClass('none-active');
 			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
 			$('#bee_type_button_'+bee_type).removeClass('red-btn');
-			$('#bee_type_button_'+bee_type).html('Buy a bee');
+			$('#bee_type_button_'+bee_type).html('Buy a sinner');
 			$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 			$('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 		}

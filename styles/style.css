@@ -2185,7 +2185,7 @@ summary {
     margin: 0 auto;
     background-position: center;
 }
-.hexagon { 
+.hexagon, .face_1{ 
     height: 62px;
     width: 54px;
     background-size: contain;
@@ -2197,23 +2197,30 @@ summary {
     }
     
     .H-bg{
-    background-image: url(../image/faces/cara.png);
+    background-image: url(../image/faces/OFF/00-01.png);
     }
     #bee_type_2 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/OFF/00-02.png);
+
     }
     #bee_type_3 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/03.png);
+        background-image: url(../image/faces/OFF/00-03.png);
+
     } #bee_type_4 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/04.png);
+        background-image: url(../image/faces/OFF/00-04.png);
+
     } #bee_type_5 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/05.png);
+        background-image: url(../image/faces/OFF/00-05.png);
+
     } #bee_type_6 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/06.png);
+        background-image: url(../image/faces/OFF/00-06.png);
+
     } #bee_type_7 > div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/07.png);
+        background-image: url(../image/faces/OFF/00-07.png);
+
     } #bee_type_8> div > div.center-content-round > div > div > .H-bg{
-        background-image: url(../image/faces/08.png);
+        background-image: url(../image/faces/OFF/00-08.png);
+
     }
 .hexagon::after {
     content: "";
@@ -6916,4 +6923,19 @@ input::-webkit-inner-spin-button {
 
     #toggle{
         display: none;
+    } 
+    .face_1{
+    height: 62px;
+    width: 54px;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url(../image/faces/cara.png);
+     
+    } 
+    .face_1+.hexagon{
+        display: none !important;
     }

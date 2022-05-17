@@ -753,7 +753,7 @@
         left: 52px;
         top: 5px;
     }
-    .hexagon {
+    .hexagon, .face_1 {
         height: 65px;
         width: 70px;
     }
@@ -4991,7 +4991,7 @@
     #bee_type_1 > div > div.center-content-round > div {
         margin-top: 20px !important;
     }
-    .hexagon {
+    .hexagon, .face_1 {
         height: 27px;
         width: 32px;
     }
