@@ -330,7 +330,7 @@ summary {
     z-index: 999999999 !important;
 }
 .center-block {
-    background: url("../image/center-header.png") no-repeat;
+    /* background: url("../image/center-header.png") no-repeat; */
     width: 1000px;
     background-size: 100% 100%;
 }
@@ -344,7 +344,7 @@ summary {
 .button-lottery {
     position: absolute;
     transform: translate(-50%, 0%);
-    left: 50%;
+    left: 35%;
     background: linear-gradient(to top, rgba(75, 154, 39, 1) 0%, rgba(90, 177, 44, 1) 100%);
     border: 1px solid #478928;
     border-radius: 20px;
@@ -357,6 +357,8 @@ summary {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    top:25% !important;
+
 }
 
 /* .button-lottery:active{
@@ -6736,14 +6738,15 @@ input::-webkit-inner-spin-button {
     Hamburger
   **/
   .hamburger {
-    position: absolute;
+
+    position:fixed;
     top: 10em;
     left: 5%;
     margin-left: -2em;
     margin-top: -45px;
     width: 2em;
     height: 45px;
-    z-index: 5;
+    z-index: 1010;
   }
   
   .hamburger div {
@@ -6760,13 +6763,13 @@ input::-webkit-inner-spin-button {
   Nav Styles
   **/
   .nav-b {
-    position: relative;
+    padding: 10%;
+    user-select: none;
     width: 100%;
     height: 100%; 
     top: -100%; left: 0; right: 0; bottom: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    transform: scale(0); 
+    transition: all .7s ease-in-out; 
   }
   .nav-b-wrapper {
     position: relative;
@@ -6795,7 +6798,7 @@ input::-webkit-inner-spin-button {
     width: 0.25em;
     background-color: white;
     left: -0.5em;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   nav a:hover {
     color: white;
@@ -6819,18 +6822,35 @@ input::-webkit-inner-spin-button {
     transform: rotate(45deg);
     margin-top: -7px;
   }
-  #toggle:checked + .hamburger + .overlay {
-    top: 0;
+  #toggle:checked + .hamburger + .overlay{
     transform: scale(1);
+    top: 0;
+  
   }
 
-  
-  
   #toggle:checked + .hamburger + .nav-b {
     top: 0;
-   /* transform: scale(1); */
+}
+ 
+  .overlay{
+      background-image: url(../image/menu-drops-down.svg);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      height: 150vh;
+      width: 100vw;
+      top: -1900px; 
+      position: fixed;
+      z-index: 1005;
+      margin-top: -30px;
+      display: flex; 
+        
   }
-
+  .in-nav{
+      display: flex;
+      margin-left: -8%;
+  }
+  
+  
   }
 
   .investment, .bee, .hive  {
@@ -6924,18 +6944,96 @@ input::-webkit-inner-spin-button {
     #toggle{
         display: none;
     } 
-    .face_1{
-    height: 62px;
-    width: 54px;
-    background-size: contain;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-image: url(../image/faces/cara.png);
-     
-    } 
-    .face_1+.hexagon{
+        .face_1{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/cara.png);
+        } 
+        .face_2{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        } 
+        .face_3{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        }
+        .face_4{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        }
+        .face_5{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        }
+        .face_6{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        }
+        .face_7{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        }
+        .face_8{
+        height: 62px;
+        width: 54px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url(../image/faces/02.png);
+        }     
+    .face_1+.hexagon , .face_2+.hexagon, .face_3+.hexagon, .face_4+.hexagon ,.face_5+.hexagon, .face_6+.hexagon, .face_7+.hexagon ,.face_8+.hexagon{
         display: none !important;
     }
+
+
