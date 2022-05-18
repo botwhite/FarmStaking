@@ -221,7 +221,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			let bee_img = '';
 			if(playerBees[bee_type-1] >= i)
 				// bee_img = '<img src="image/by-bee.png">';
-				bee_img = '<div class="bee-div '+'face_'+bee_type+'"> </div>';
+				bee_img = '<div class="bee-div '+'face_'+bee_type+' hexagon"> </div>';
 				
 			bee_type_wax += '<div class="hexagon-container hexagon-'+i+' active-bee">'+
 			bee_img+
