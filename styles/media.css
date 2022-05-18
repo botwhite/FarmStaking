@@ -6036,6 +6036,9 @@
 }
 @media screen and (max-width: 997px) and (min-width: 0px) {
     
+    #website2 > footer > div.wrapper-footer-content > div > div > img{
+        transform: scale(0.5,0.5);
+     }
     .container-list-stat-item{
         margin-top: 70px;
         margin-left: -25px;

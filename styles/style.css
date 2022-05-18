@@ -2585,7 +2585,7 @@ summary {
 .top-footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .item-footer-top-list p {
     font-weight: normal;
@@ -3312,6 +3312,7 @@ tbody tr {
 }
 .wax-span-change::before {
     background: url("../image/wax.png") no-repeat;
+    background-size: contain;
     width: 40px;
     height: 36px;
 }
