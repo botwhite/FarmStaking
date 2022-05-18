@@ -4623,6 +4623,7 @@
     }
     .wrapper-input {
         max-width: 366px;
+        height: 3em;
     }
     .input-form {
         max-width: 164px;
@@ -4782,7 +4783,7 @@
         white-space: nowrap;
     }
     .button-btn {
-        height: 47px;
+        height: 2em;
     }
     .wrapper-content-round::before,
     .wrapper-content-round .wrapper-lottie {
@@ -5657,6 +5658,7 @@
     }
     .wrapper-input {
         max-width: 312px;
+        height: 3em;
     }
     .wrapper-content-round.no-active-round::after {
         left: 13px;
