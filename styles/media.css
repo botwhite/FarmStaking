@@ -5675,11 +5675,11 @@
     }
     #bee_type_2 > div > div.center-content-round > div {
         margin-left: 36px !important;
-        top: -35px;
+        top: -35px !important;
     }
     #bee_type_3 > div > div.center-content-round > div {
         margin-left: 36px !important;
-        top: -35px;
+        top: 0 !important;
     }
     #bee_type_7 > div > div.center-content-round > div{
 
@@ -6071,6 +6071,9 @@
     .super-bee-modal .title-content-box {
         margin-top: 50px;
         height: calc(100vh - 235px);
+    }
+    .no-mov{
+        display: none;
     }
 }
 @media screen and (width: 375px) and (min-width: 0px){
