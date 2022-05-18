@@ -6035,6 +6035,14 @@
     }
 }
 @media screen and (max-width: 997px) and (min-width: 0px) {
+    
+    .container-list-stat-item{
+        margin-top: 70px;
+        margin-left: -25px;
+    }
+    .result{
+        background-color: transparent;
+    }
     .button-lottery {
         top: 205px;
         margin: 20px auto;

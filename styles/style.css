@@ -842,7 +842,6 @@ summary {
     margin: 7px 0;
 }
 .result {
-    background: linear-gradient(to bottom, rgba(70, 142, 30, 1) 0%, rgba(75, 154, 29, 1) 100%);
     border-radius: 10px;
     padding: 16px 0;
 }
@@ -6842,8 +6841,7 @@ input::-webkit-inner-spin-button {
       display: flex;
       margin-left: -8%;
   }
-  
-  
+    
   }
 
   .investment, .bee, .hive  {
