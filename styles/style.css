@@ -317,11 +317,11 @@ summary {
 /*----------------------style header-------------------*/
  
 .header {
-    max-width: 100%;
+    max-width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    background: url("../image/bg-header.jpg") repeat-x;
+    /* background: url("../image/bg-header.jpg") repeat-x; */
     min-height: 192px;
     position: relative;
     z-index: 10000000;
@@ -6722,6 +6722,11 @@ input::-webkit-inner-spin-button {
 
   /*//////////////////////////////////*/
   @media screen and (min-width: 800px) {
+       
+    .in-nav{
+        margin-left: 15%;
+    }
+
       
 #toggle {
     display: none;
@@ -6840,8 +6845,13 @@ input::-webkit-inner-spin-button {
   }
   .in-nav{
       display: flex;
-      margin-left: -8%;
+      margin-left: 15%;
   }
+  .in-nav-2{
+    display: flex;
+    margin-left: -55%;
+    margin-top: 8%;
+}
     
   }
 

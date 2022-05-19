@@ -5959,8 +5959,7 @@
 
 @media screen and (min-width: 1560px) {
     .button-lottery {
-        top: 150px;
-        margin: 20px auto;
+        margin: 65px 15%;
         height: 55px;
         align-items: flex-end;
     }
@@ -6061,6 +6060,11 @@
     }
 }
 
+@media screen and (min-width: 900px){
+    .in-nav{
+        
+    }
+}
 
 @media screen and (min-width: 1560px){
     .super-bee-modal .title-content-box {
@@ -6096,6 +6100,40 @@
     .no-mov{
         display: none;
     }
+    .in-nav{
+        background: none;
+        display: flex;
+        margin-left: 15%;
+    }
+    .in-nav-2{
+        display: flex;
+        margin-left: 0%;
+        margin-top: -40%;
+  }
+  .header{
+      z-index: -1;
+    min-height: 305px;
+    margin-top: -150px;
+  }
+  .button-lottery{
+    top: 10% !important;
+    left: 195px;
+    width: 70%;
+    border-radius: 25px;
+  }
+  .mobile-menu {
+    
+    top: 150px;
+  
+}
+.header-mobile .close-modal {
+    top: 20px;
+}
+.top-progress {
+    margin-left: 100px;
+    margin-top:  45px;
+   
+}
 }
 @media screen and (width: 375px) and (min-width: 0px){
 #bee_type_1 > div > div.center-content-round > div {
