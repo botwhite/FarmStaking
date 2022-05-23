@@ -6834,16 +6834,16 @@ input::-webkit-inner-spin-button {
 }
  
   .overlay{
-      background-image: url(../image/menu-drops-down.svg);
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-      height: 150vh;
-      width: 100vw;
-      top: -1900px; 
-      position: fixed;
-      z-index: 1005;
-      margin-top: -30px;
-      display: flex; 
+    background-image: url(../image/menu-drops-down.svg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 80vw;
+    top: -1900px;
+    position: fixed;
+    z-index: 1005;
+    margin-top: -30px;
+    display: flex;
+    background-size: contain;
         
   }
   .in-nav{
