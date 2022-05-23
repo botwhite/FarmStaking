@@ -6977,7 +6977,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/03.png);
         }
         .face_4{
         height: 62px;
@@ -6988,7 +6988,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/04.png);
         }
         .face_5{
         height: 62px;
@@ -6999,7 +6999,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/05.png);
         }
         .face_6{
         height: 62px;
@@ -7010,7 +7010,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/06.png);
         }
         .face_7{
         height: 62px;
@@ -7021,7 +7021,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/07.png);
         }
         .face_8{
         height: 62px;
@@ -7032,7 +7032,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url(../image/faces/02.png);
+        background-image: url(../image/faces/08.png);
         }     
     .face_1+.hexagon , .face_2+.hexagon, .face_3+.hexagon, .face_4+.hexagon ,.face_5+.hexagon, .face_6+.hexagon, .face_7+.hexagon ,.face_8+.hexagon{
         display: none !important;
