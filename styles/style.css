@@ -2724,6 +2724,8 @@ summary {
 .header-modal {
     background-image: url('../image/mehanizm-text.png');
       border-radius: 15px;
+      background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7039,3 +7041,9 @@ input::-webkit-inner-spin-button {
     }
 
 
+    .in-nav{
+     z-index: 1000;
+    }
+    .in-nav-2{
+    z-index: 2000;
+  }
