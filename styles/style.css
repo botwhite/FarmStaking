@@ -2519,6 +2519,7 @@ summary {
     background-color: rgba(252, 248, 242, 0.8);
     z-index: 100;
     border-radius: 25px;
+    display: none;
 }
 .drop-big {
     position: absolute;
