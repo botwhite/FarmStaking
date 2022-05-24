@@ -6108,6 +6108,9 @@
 }
 
 @media screen and (max-width: 768px){
+    .active-mobile-menu>.btn-back-mobile-wrapper {
+       top: 30px !important;
+    }
     .super-bee-modal .title-content-box {
         margin-top: 50px;
         height: calc(100vh - 235px);
