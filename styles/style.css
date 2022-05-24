@@ -7057,7 +7057,8 @@ input::-webkit-inner-spin-button {
 
 
     .in-nav{
-     z-index: 1000;
+        left: -100px;
+        z-index: 1000;
     }
     .in-nav-2{
     z-index: 2000;

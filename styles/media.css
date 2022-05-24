@@ -6182,3 +6182,9 @@
         margin-bottom: -670px;
         }
   }
+
+  @media screen and (min-width: 1220px){
+      .overlay{
+          background-size: cover;
+      }
+  } 
