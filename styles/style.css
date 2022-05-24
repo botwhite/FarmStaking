@@ -517,7 +517,7 @@ summary {
 .wrapper-input {
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom,#7b3701, #7b3701);
+    background-color: #198d8d ;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 25px;
@@ -3483,7 +3483,7 @@ tbody tr {
 }
 .next-level,
 .next-level span {
-    color: #16b60a;
+    color:  #fec52a ;
 }
 .cryptobee {
     padding-top: 95px;
