@@ -1344,7 +1344,7 @@ summary {
 }
 .window {
     width: 34px;
-    height: 100%;
+    height: 101%;
     position: absolute;
     left: 105px;
 }

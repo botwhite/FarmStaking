@@ -1212,7 +1212,7 @@
     .tryba-drop:nth-child(36),
     .tryba-drop:nth-child(37),
     .tryba-drop:nth-child(38) {
-        display: none;
+        
     }
     .wrapper-reffer-link {
         max-width: 483px;
@@ -1383,7 +1383,7 @@
     .tryba-drop:nth-child(30),
     .tryba-drop:nth-child(31),
     .tryba-drop:nth-child(32) {
-        display: none;
+       
     }
 }
 @media screen and (max-width: 1024px) and (min-width: 0px) {
