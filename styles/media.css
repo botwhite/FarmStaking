@@ -2933,7 +2933,10 @@
     }
     .center-block {
         width: 70%;
+        margin-top: 0;
+        height: 1px;
     }
+    
 }
 @media screen and (max-width: 1024px) and (min-width: 0px) {
     .navbar-landing-nav .list-nav {
@@ -5248,6 +5251,7 @@
     }
     .container-game {
         padding-bottom: 40px;
+        padding-top: 45%;
     }
     .content-footer {
         max-width: 340px;
@@ -6132,6 +6136,7 @@
     left: 195px;
     width: 70%;
     border-radius: 25px;
+    margin-top: 210px;
   }
   .mobile-menu {
     
