@@ -6172,3 +6172,17 @@
           background-size: cover;
       }
   } 
+
+  @media screen and (min-width: 1444px) {
+
+    .in-nav-2{
+    transform: scale(1.5);
+    top: 110px !important;
+    left: -800px !important;
+    height: 25%;
+    }
+    .header{
+        transform: scale(1.5);
+        left: 10%;
+    }
+  }
