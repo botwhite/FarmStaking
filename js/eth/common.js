@@ -295,7 +295,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 		$('#bee_type_1 > div').addClass('no-active-round');
 
 		$('#bee_type_1 > div > div > a').removeClass('COLLECTED');
-		$('#bee_type_1 > div > div > a').addClass('COLLECT');
+		// $('#bee_type_1 > div > div > a').addClass('COLLECT');
 
 		let wax = $('#bee_type_1 > div').html();
 		$('#bee_type_1 > div').html(wax + '<div class="drop-big">'+
