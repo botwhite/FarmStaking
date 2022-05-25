@@ -11,7 +11,7 @@ var balanceJuegoNft = []
 
 
 const tokenAddress = '0x0894d01CE9B88091b8cF391A2B6623263c58e3FF'
-const contratojjuego = '0xbad775160d9d6a9ba89c24a0e30a93532aefa058'
+const contratojjuego = '0xb6eeb39C2Edf0fD214865A7ce24deBBD59398CE4'
 const NftsAddress = '0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579'
 
 
@@ -100,6 +100,7 @@ const getAccounts = async () => {
     balanceJuegoNft = await contract.methods.MyNft(accounts[0]).call()
 
 
+
     
     for(var i = 0; i < balanceNFT; i++){
 
@@ -177,10 +178,17 @@ const getAccounts = async () => {
  
 function Stake() {
 
+    const element= []
+    var nfts = document.getElementById("nftscant").value;
 
-    console.log(misNftsID[0])
+    for (let e = 0; e < nfts ; e++) {
+       element[e] = misNftsID[e];
+      
+    }
+    console.log(element)
 
-    contract.methods.InsertNFT([misNftsID[0]]).send({ from: accounts[0] }).then(result => {
+
+    contract.methods.InsertNFT(element).send({ from: accounts[0] }).then(result => {
       
   
     }).catch((err) => {
