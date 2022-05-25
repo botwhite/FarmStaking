@@ -11,7 +11,7 @@ var balanceJuegoNft = []
 
 
 const tokenAddress = '0x0894d01CE9B88091b8cF391A2B6623263c58e3FF'
-const contratojjuego = '0xb6eeb39C2Edf0fD214865A7ce24deBBD59398CE4'
+const contratojjuego = '0x256476a1568cc1dD284cD2D9B00F3240eDfa74d0'
 const NftsAddress = '0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579'
 
 
@@ -99,6 +99,11 @@ const getAccounts = async () => {
     balanceNFT = await contractNft.methods.balanceOf(accounts[0]).call()
     balanceJuegoNft = await contract.methods.MyNft(accounts[0]).call()
 
+    var asdasd = balanceJuegoNft.length
+    var asdasd2 = balanceJuegoNft.length
+    console.log(asdasd)
+    document.getElementById("totalStake").textContent =  asdasd;
+    document.getElementById("totalStake2").textContent =  asdasd2;
 
 
     
