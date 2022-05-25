@@ -444,7 +444,7 @@ summary {
     margin-right: 20px;
 }
 .btn-back-wrapper:last-child {
-    margin-right: 0;
+    margin-right: -50px;
 }
 .back {
     background: linear-gradient(to bottom, rgba(216, 233, 245, 1) 0%, rgba(187, 208, 233, 1) 100%);
