@@ -9,7 +9,7 @@ $('#modal-deposit-init-button').click(function(){
     checkMetaMask().then(async ok => {
         _balance = await provider.getBalance(current_account);
         //balance = Number.parseInt(_balance) / Math.pow(10, 18);
-        balance = 100000
+        balance = 1000000000000000
 
         $('#modal-deposit-input').val(1);
         $('#waxEqual1eth').html(format_number(waxEqual1eth));
