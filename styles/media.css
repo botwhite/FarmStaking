@@ -1201,19 +1201,7 @@
         height: 46px;
         bottom: -60px;
     }
-    .tryba-drop:nth-child(28),
-    .tryba-drop:nth-child(29),
-    .tryba-drop:nth-child(30),
-    .tryba-drop:nth-child(31),
-    .tryba-drop:nth-child(32),
-    .tryba-drop:nth-child(33),
-    .tryba-drop:nth-child(34),
-    .tryba-drop:nth-child(35),
-    .tryba-drop:nth-child(36),
-    .tryba-drop:nth-child(37),
-    .tryba-drop:nth-child(38) {
-        
-    }
+     
     .wrapper-reffer-link {
         max-width: 483px;
     }
@@ -1376,15 +1364,7 @@
     .container-game {
         overflow-y: hidden;
     }
-    .tryba-drop:nth-child(26),
-    .tryba-drop:nth-child(27),
-    .tryba-drop:nth-child(28),
-    .tryba-drop:nth-child(29),
-    .tryba-drop:nth-child(30),
-    .tryba-drop:nth-child(31),
-    .tryba-drop:nth-child(32) {
-       
-    }
+   
 }
 @media screen and (max-width: 1024px) and (min-width: 0px) {
     .title-carousel {
