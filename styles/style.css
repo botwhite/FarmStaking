@@ -2523,6 +2523,7 @@ summary {
     display: none;
 }
 .drop-big {
+    display: none;
     position: absolute;
     z-index: 103;
     left: 44%;
@@ -2532,6 +2533,8 @@ summary {
     height: 159px;
 }
 .text-drop {
+    display: none;
+
     position: absolute;
     left: 0;
     right: 0;
@@ -7072,6 +7075,7 @@ input::-webkit-inner-spin-button {
       height: 1px;
   }
   .top-up-input{
+    border: none;
     background-color: #198d8d;
     width: 60%;
     border-radius: 10px;

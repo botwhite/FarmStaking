@@ -6088,6 +6088,10 @@
 }
 
 @media screen and (max-width: 768px){
+    .top-up-input{
+        width: 100%;
+        font-size: 25px;
+    }
     .active-mobile-menu>.btn-back-mobile-wrapper {
        top: 30px !important;
     }
