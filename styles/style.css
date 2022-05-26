@@ -7099,7 +7099,7 @@ input::-webkit-inner-spin-button {
   .splash-wrapper{
     position: fixed;
         left: -200px;
-        /* animation-delay: 2000ms !important; */
+        animation-delay: 60000ms !important; 
         z-index: 999999999;
     animation: 
     show-splash ease-in-out 10s;
