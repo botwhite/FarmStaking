@@ -7082,3 +7082,39 @@ input::-webkit-inner-spin-button {
     text-align: center;
     font-size: 18px;
   }
+
+  .splash{
+    background-image: url(../image/animations/LustAss.png);
+    animation: frames60 6s steps(60) infinite;
+  
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    z-index: 999999999;
+    transform: scale(5);
+    margin: 400px; 
+
+
+}
+  .splash-wrapper{
+    position: fixed;
+        left: -200px;
+        /* animation-delay: 2000ms !important; */
+        z-index: 999999999;
+    animation: 
+    show-splash ease-in-out 10s infinite;
+    opacity: 0;
+    }
+
+   @keyframes show-splash {
+    from { transform: translate(-100%,  0px);
+            opacity: 1;     
+         }
+    65%  { transform: translate( 0%,  0px);
+           opacity: 1; 
+         }
+    to   { transform: translate(-100%,  0px); 
+           opacity: 1;
+        }    
+  }
+        
