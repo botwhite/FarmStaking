@@ -108,15 +108,17 @@ $('[name="bee_type_button"]').click(function(event){
                 }
             }
 
-            if(!bees_can_unlock[element.split('bee_type_button_')[1]-1] || (element.split('bee_type_button_')[1]-1 == 6 && medal < 9)){
+            if(!bees_can_unlock[element.split('bee_type_button_')[1]-1] || (element.split('bee_type_button_')[1]-1 == 7)){
                 $('#modal-unlock-bee-about-first').hide();
                 $('#modal-unlock-bee-about-failed').hide();
                 $('#modal-unlock-bee-about-last').hide();
-
+                console.log(id)
                 if(element.split('bee_type_button_')[1]-1 == 1){
                     $('#modal-unlock-bee-about-first').show();    
                 } else if(element.split('bee_type_button_')[1]-1 == 7){
                     $('#modal-unlock-bee-about-last').show();
+                   
+
                 } else {
                     $('#modal-unlock-bee-about-failed').show();
                 }
