@@ -7102,7 +7102,7 @@ input::-webkit-inner-spin-button {
         /* animation-delay: 2000ms !important; */
         z-index: 999999999;
     animation: 
-    show-splash ease-in-out 10s infinite;
+    show-splash ease-in-out 10s;
     opacity: 0;
     }
 
@@ -7113,6 +7113,9 @@ input::-webkit-inner-spin-button {
     65%  { transform: translate( 0%,  0px);
            opacity: 1; 
          }
+    85%  { transform: translate( 0%,  0px);
+            opacity: 1; 
+          }
     to   { transform: translate(-100%,  0px); 
            opacity: 1;
         }    
