@@ -7090,7 +7090,7 @@ input::-webkit-inner-spin-button {
     height: 200px;
     width: 200px;
     background-size: cover;
-    z-index: 999999999;
+    z-index: 999999;
     transform: scale(5);
     margin: 400px; 
 
