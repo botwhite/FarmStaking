@@ -428,6 +428,9 @@
         min-height: 165px;
         background-size: 100% 94px;
     }
+    #website2 > div.overlay.nav-b > div.in-nav.header.item{
+        left: -135px;
+    }
     .left-block,
     .right-block {
         max-height: 86px;

@@ -6774,7 +6774,7 @@ input::-webkit-inner-spin-button {
     margin-top: -45px;
     width: 2em;
     height: 45px;
-    z-index: 1010;
+    z-index: 50010;
   }
   
   .hamburger div {
@@ -6867,7 +6867,7 @@ input::-webkit-inner-spin-button {
     width: 80vw;
     top: -1900px;
     position: fixed;
-    z-index: 1005;
+    z-index: 5005;
     margin-top: -30px;
     display: flex;
     background-size: contain;
@@ -7090,7 +7090,7 @@ input::-webkit-inner-spin-button {
     height: 200px;
     width: 200px;
     background-size: cover;
-    z-index: 999999;
+    z-index: 4999;
     transform: scale(5);
     margin: 400px; 
 
@@ -7099,8 +7099,8 @@ input::-webkit-inner-spin-button {
   .splash-wrapper{
     position: fixed;
         left: -200px;
-        animation-delay: 60000ms !important; 
-        z-index: 999999999;
+        /* animation-delay: 60000ms !important;  */
+        z-index: 4999;
     animation: 
     show-splash ease-in-out 10s;
     opacity: 0;
