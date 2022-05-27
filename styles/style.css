@@ -7116,7 +7116,7 @@ input::-webkit-inner-spin-button {
     height: 200px;
     width: 200px;
     background-size: cover;
-    z-index: 4999;
+    z-index: -1;
     transform: scale(5);
     margin: 400px; 
 
@@ -7124,27 +7124,35 @@ input::-webkit-inner-spin-button {
 }
   .splash-wrapper{
     position: fixed;
-        left: -200px;
-        animation-delay: 60000ms !important; 
-        z-index: 4999;
+    left: -200px;
+    animation-delay: 60000ms !important; 
+    z-index: -1;
     animation: 
-    show-splash ease-in-out 10s;
+    show-splash ease-in-out 10s  ;
     opacity: 0;
+
     }
 
    @keyframes show-splash {
     from { transform: translate(-100%,  0px);
-            opacity: 1;     
+            opacity: 1;
+            z-index: 99999;     
          }
     65%  { transform: translate( 0%,  0px);
            opacity: 1; 
+           z-index: 99999;     
+
          }
     85%  { transform: translate( 0%,  0px);
             opacity: 1; 
-          }
-    to   { transform: translate(-100%,  0px); 
-           opacity: 1;
-        }    
+            z-index: 99999;     
+          
+        }
+    to   { 
+        transform: translate(-100%,  0px); 
+        opacity: 1;
+        z-index: -1000;    
+    }    
   }
         
 .new-menu-wrapper{
@@ -7190,3 +7198,6 @@ input::-webkit-inner-spin-button {
     justify-content: center; 
 } 
  
+#modal-unlock-bee > div > button.button-btn.green-btn.green-bee-btn.cryptobee-btn{
+    height: 4em !important;
+}
