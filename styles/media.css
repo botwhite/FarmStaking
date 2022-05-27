@@ -1962,7 +1962,9 @@
         align-items: center;
     }
     .item-menu .button-btn {
-        width: 300px;
+        width: 273px;
+        height: 2em;
+        margin-left: -45px;
     }
     .item-menu .reit {
         margin-bottom: 20px;
@@ -4462,6 +4464,11 @@
     }
 }
 @media screen and (max-width: 540px) and (min-width: 0px) {
+    div.wrapper-mobile-menu > ul > li:nth-child(2){
+        margin-bottom: 15px;
+        width: 80%;
+        margin-left: 40px;
+    }
     .top-progress {
         max-width: 382px;
         margin-left: 100px;
@@ -4541,6 +4548,7 @@
 @media screen and (max-width: 415px) and (min-width: 0px) {
     .btn-back-mobile-wrapper {
         left: 20px;
+        top: -150px;
     }
     .mobile-banner {
         width: 100%;
@@ -5233,8 +5241,7 @@
         height: 37px;
     }
     .container-game {
-        padding-bottom: 40px;
-        padding-top: 45%;
+        padding-bottom: 40px; 
     }
     .content-footer {
         max-width: 340px;
@@ -5296,6 +5303,7 @@
     }
     .item-menu .reit {
         margin-bottom: 20px;
+        margin-left: 20px;
     }
     .table-modal {
         max-width: 340px;
@@ -5459,6 +5467,7 @@
     }
     .container-bottom-input {
         margin-top: 30px;
+        margin-left: 50px;
     }
     .wrapper-modal {
         z-index: 9999999999 !important;
@@ -6092,8 +6101,8 @@
 
 @media screen and (max-width: 768px){
     .top-up-input{
-        width: 100%;
-        font-size: 25px;
+        width: 90%;
+        font-size: 18px;
     }
     .active-mobile-menu>.btn-back-mobile-wrapper {
        top: 30px !important;
@@ -6137,7 +6146,7 @@
     top: 20px;
 }
 .top-progress {
-    margin-left: 100px;
+    margin-left: 110px;
     margin-top:  45px;
    
 }
@@ -6170,7 +6179,7 @@
         }
   }
 
-  @media screen and (min-width: 1220px){
+  @media screen and (min-width: 1440px){
       .overlay{
           background-size: cover;
       }

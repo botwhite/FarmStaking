@@ -6741,6 +6741,25 @@ input::-webkit-inner-spin-button {
     position: relative;
   }
 
+  @media screen and (max-width: 800px) {
+      .splash-wrapper{
+          display: none !important;
+      }
+      .splash{
+            display: none !important;
+      }
+      .new-menu-top{
+            display: none !important;
+      }
+      .new-menu-mid{
+          margin-top: 30px;
+      }
+      .new-menu-bottom {
+        margin-top: 15px;
+        margin-left: 100px;
+    }
+  }
+
   @media screen and (min-width: 800px) {
 
     .in-nav{
@@ -6886,6 +6905,12 @@ input::-webkit-inner-spin-button {
 }
   
   } 
+  @media screen and (min-width: 1200px) {
+    .new-menu-wrapper{
+    transform: scale(1.5);
+    margin-top: 150px;
+    }  
+  }
 
   .investment, .bee, .hive  {
     animation: floatOdd 3s ease-in-out infinite; 
@@ -7123,20 +7148,17 @@ input::-webkit-inner-spin-button {
   }
         
 .new-menu-wrapper{
-    width: 70%;
-    border: red solid 1px;
+    width: 70%; 
     height: 40%;
 }
-.new-menu-top{
-    border: yellow solid 1px;
+.new-menu-top{ 
     height: 20%;
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
 }
-.new-menu-mid{
-    border: blue solid 1px;
+.new-menu-mid{ 
     height: 33%;
     display: flex;
     
@@ -7147,8 +7169,7 @@ input::-webkit-inner-spin-button {
     margin-left: 50px;
     margin-top: -35px !important;
 }
-.new-menu-bottom{
-    border: orangered solid 1px;
+.new-menu-bottom{ 
     height: 33%;
     display: flex;
     justify-content: center;
