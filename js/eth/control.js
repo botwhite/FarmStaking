@@ -11,7 +11,7 @@ var balanceJuegoNft = []
 
 
 const tokenAddress = '0x0894d01CE9B88091b8cF391A2B6623263c58e3FF'
-const contratojjuego = '0x256476a1568cc1dD284cD2D9B00F3240eDfa74d0'
+const contratojjuego = '0x149dD7dcF975f61Eb46800675Fbff83374cb8e16'
 const NftsAddress = '0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579'
 
 
@@ -214,8 +214,16 @@ const NftApro = async () => {
 }
 
 const UnStake = async () => {
-  console.log(balanceJuegoNft[0])
-  contract.methods.WithdrawNft([balanceJuegoNft[0]],accounts[0]).send({ from: accounts[0] }).then(result => {
+
+  const element= []
+  var nfts = document.getElementById("nftscant").value;
+
+  for (let e = 0; e < nfts ; e++) {
+     element[e] = balanceJuegoNft[e];
+    
+  }
+  console.log(element)
+  contract.methods.WithdrawNft(element,accounts[0]).send({ from: accounts[0] }).then(result => {
    
 
   }).catch((err) => {
