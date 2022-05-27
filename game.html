@@ -36,23 +36,16 @@
             <div class="bottom-bun"></div>
           </label>
    
-        <div class="overlay nav-b ">
-            <div class="in-nav header item"> 
-                <div class="left-block">
-                    <div class="btn-back-wrapper">
-                        <a href="index.html" class="button-btn back">
-                            <span class="TO_SITE">На сайт</span>
-                        </a>
-                    </div>
-                    <div class="btn-back-wrapper" style="display:block;">
-                         
-                            <!-- <span class="SUPER_REPRESENTATIVE">Super Rep</span> -->
-                            <input type="number"  placeholder="0" class="top-up-input">
-                       
-                    </div>
-                </div>
-                <div class="right-block">
-                    <div class="left-header-content">
+        <div class="overlay nav-b">
+            <div class="new-menu-wrapper">
+                    <div class="new-menu-top">
+                        <div class="btn-back-wrapper">
+                            <a href="https://underworldweirdos.com/" class="button-btn back">
+                                <span class=" ">Homepage</span>
+                            </a>
+                        </div> 
+                                <input type="number"  placeholder="0" class="top-up-input">
+                      
                         <div class="btn-back-wrapper">
                             <a class="button-btn btn-light-blue"  onclick="NftApro()">Approve</a>
                         </div>
@@ -62,146 +55,34 @@
                         <div class="btn-back-wrapper">
                             <a class="button-btn btn-light-blue btn-header "  onclick="UnStake()">UnStake</a>
                         </div> 
-                    </div>
-                </div> 
-            </div>
-            <div class="in-nav-2  in-nav item">
-            <div class="center-block">
-                <div class="mobile-menu">
-                    <div class="btn-back-mobile-wrapper">
-                        <button type="button" class="button-btn btn-menu"></button>
-                    </div>
-                    <div class="wrapper-mobile-list nav-b">
-                        <div class="header-mobile">
-                            <h2 class="title-header-mobile MENU">Меню</h2>
-                           
-                            <button type="button" class="close-modal close-btn-mobile"></button>
-                        </div>
-                        <div class="wrapper-mobile-menu">
-                            <ul class="list-button-menu">
-                                <li class="item-menu">
-                                    <div class="btn-back-wrapper">
-                                        <a href="" class="button-btn back">
-                                            <span class="TO_SITE">На сайт</span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="item-menu">
-                                    <div class="btn-back-wrapper">
-                                        <button>
-                                            <input  type="number"  placeholder="0" class="top-up-input">
-
-                                        </button>
-                                    </div>
-                                </li>
-                                <li class="item-menu">
-                                    <a class="button-btn reit RATING" name="modal-rate-init-button">Рейтинг</a>
-                                </li>
-                                <li class="item-menu">
-                                    <div class="btn-back-wrapper">
-                                        <a class="button-btn btn-header BEE_GARDEN" name="modal-referrals-init-button">Пасека</a>
-                                    </div>
-                                </li>
-                                <li class="item-menu">
-                                    <div class="btn-back-wrapper">
-                                        <a class="button-btn" name="modal-history-init-button">Stake</a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="section-game">
-                                <div class="header-section">
-                                    <div class="name-title">
-                                        <h1 class="GAME_STATISTICS">статистика игры</h1>
-                                    </div>
+                    </div>      
+                    <div class="new-menu-mid">
+                        <form class="header-form">
+                            <div class="top-progress">
+                                <div class="container-top-progress">
+                                    <div class="progress-line"></div>
                                 </div>
-                                <div class="container-list-statistic">
-                                 
-                                    <ul class="list-statistic">
-                                        <li class="statistic-item investment">
-                                            <div class="container-list-stat-item">
-                                                <div class="info-item">
-                                                   
-                                                    <div class="result">
-                                                        <p class="result-info"><span class="total_invest">--</span> BNB</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="statistic-item players">
-                                            <div class="container-list-stat-item">
-                                                <div class="info-item">
-                                                    
-                                                    <div class="result">
-                                                        <p class="result-info"><span class='total_players'>--</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="statistic-item bee">
-                                            <div class="container-list-stat-item">
-                                                <div class="info-item">
-                                                   
-                                                    <div class="result">
-                                                        <p class="result-info"><span  class='total_bee_bought'>--</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="statistic-item won">
-                                            <div class="container-list-stat-item">
-                                                <div class="info-item">
-                                                   
-                                                    <div class="result">
-                                                        <p class="result-info"><span class='total_withdraw'>--</span> BNB</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="statistic-item hive">
-                                            <div class="container-list-stat-item">
-                                                <div class="info-item">
-                                                    
-                                                    <div class="result">
-                                                        <p class="result-info"><span id="totalStake">--</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <a class="medal-after" data-flythat="#modal-medal-info"></a>
+                            </div>
+                            <div class="container-bottom-input">
+                                <div class="wrapper-input">
+                                    <input id="balanceWax" type="text" class="input-form wax" placeholder="---" disabled/="">
+                                    <a class="button-btn blue-btn DEPOSIT" id="modal-deposit-init-button">Top-up</a>
+                                </div>
+                                <div class="wrapper-input">
+                                    <input id="balanceHoney" type="text" class="input-form honey" placeholder="---" disabled/="">
+                                    <a class="button-btn withdraw-btn WITHDRAW" id="modal-withdraw-init-button">Withdraw</a>
                                 </div>
                             </div>
-                            <div class="footer-modal-mobile">
-                                <button type="button" class="button-btn close-mobile CLOSE">Закрыть</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="header-form">
-                    <div class="top-progress">
-                        <div class="container-top-progress">
-                            <div class="progress-line"></div>
-                        </div>
-                        <a class="medal-after" data-flythat="#modal-medal-info"></a>
-                    </div>
-                    <div class="container-bottom-input">
-                        <div class="wrapper-input">
-                            <input id="balanceWax" type="text" class="input-form wax" placeholder="---" disabled/="">
-                            <a class="button-btn blue-btn DEPOSIT" id="modal-deposit-init-button">Top-up</a>
-                        </div>
-                        <div class="wrapper-input">
-                            <input id="balanceHoney" type="text" class="input-form honey" placeholder="---" disabled/="">
-                            <a class="button-btn withdraw-btn WITHDRAW" id="modal-withdraw-init-button">Withdraw</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-    
-            <button class="button-lottery"> 
-                <span>Connect</span>
-            </button>
+                        </form>
+                    </div>      
+                    <div class="new-menu-bottom">
+                        <button class="connect-button-lottery  "> 
+                            <span>Connect</span>
+                        </button>
+                    </div>      
             </div>
         </div>
-
     
         <div class="container-game">
             <div class="main-title">

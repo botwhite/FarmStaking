@@ -6766,7 +6766,8 @@ input::-webkit-inner-spin-button {
     Hamburger
   **/
   .hamburger {
-
+    cursor: pointer;
+    caret-color: transparent;
     position:fixed;
     top: 10em;
     right: 5%;
@@ -7077,16 +7078,16 @@ input::-webkit-inner-spin-button {
   .top-up-input{
     border: none;
     background-color: #198d8d;
-    width: 60%;
+    width: 100px;
     border-radius: 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 19px;
+    margin-right: 15px !important;
   }
 
   .splash{
     background-image: url(../image/animations/LustAss.png);
     animation: frames60 6s steps(60) infinite;
-  
     height: 200px;
     width: 200px;
     background-size: cover;
@@ -7099,7 +7100,7 @@ input::-webkit-inner-spin-button {
   .splash-wrapper{
     position: fixed;
         left: -200px;
-        /* animation-delay: 60000ms !important;  */
+        animation-delay: 60000ms !important; 
         z-index: 4999;
     animation: 
     show-splash ease-in-out 10s;
@@ -7121,3 +7122,50 @@ input::-webkit-inner-spin-button {
         }    
   }
         
+.new-menu-wrapper{
+    width: 70%;
+    border: red solid 1px;
+    height: 40%;
+}
+.new-menu-top{
+    border: yellow solid 1px;
+    height: 20%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.new-menu-mid{
+    border: blue solid 1px;
+    height: 33%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.new-menu-mid>.header-form{
+    margin-left: 50px;
+    margin-top: -35px !important;
+}
+.new-menu-bottom{
+    border: orangered solid 1px;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+.connect-button-lottery {
+    background: linear-gradient(to top, rgba(75, 154, 39, 1) 0%, rgba(90, 177, 44, 1) 100%);
+    border: 1px solid #478928;
+    border-radius: 20px;
+    min-width: 180px;
+    width: fit-content;
+    text-align: center;
+    padding-bottom: 7px;
+    z-index: 5;
+    font-size: 20px;
+    justify-content: center; 
+} 
+ 
