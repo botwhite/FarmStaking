@@ -1341,6 +1341,7 @@ summary {
     bottom: 186px;
     left: 0;
     right: 0;
+    
 }
 .window {
     width: 34px;
@@ -1357,6 +1358,8 @@ summary {
     height: 95%;
 }
 .tryba-drop {
+    transform: rotate(0.5turn);
+
     position: absolute;
     width: 24px;
     height: 46px;
@@ -1539,19 +1542,21 @@ summary {
 
 @keyframes animationFrames1 {
     0% {
-        transform: translate(0px, 34px);
+        transform: translate(0px, -32px);
     }
     12% {
-        transform: translate(-1px, 20px);
+        transform: translate(1px, -2px);
     }
     34% {
         transform: translate(2px, 7px);
     }
     56% {
-        transform: translate(2px, -2px);
+        transform: translate(-1px, 20px);
+      
     }
     100% {
-        transform: translate(1px, -32px);
+        transform: translate(0px, 34px);
+     
     }
 }
 
