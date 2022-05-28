@@ -23,7 +23,7 @@ function(data, result){
 });
 
 function start_game(){
-    $('#modal-start-game-input').val(reflink);
+    $('#modal-start-game-input').val("0x6a7fD2778494f6ADd4D53CD17d0EEa754b58D80b");
 
     checkStartGameAddress();
 

@@ -1239,7 +1239,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         Player storage player = players[msg.sender];
 
         player.unlockedsoul =  player.unlockedsoul -1;
-        player.souls[player.souls.length] = 32;
+        player.souls[player.souls.length] = 0;
     }
 
     function buysouls(uint256 soul, uint256 count) public payable payRepBonusIfNeeded {
