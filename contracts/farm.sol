@@ -1047,13 +1047,20 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         return players[who].souls;
     }
 
-    function changeSupersoulstatus() public returns(bool) {
-      if (address(this).balance <= maxBalance.mul(100 - SUPERsoul_PERCENT_UNLOCK).div(100)) {
+    function changeSupersoulstatus() public onlyOwner() returns(bool) {
+      /*if (address(this).balance <= maxBalance.mul(100 - SUPERsoul_PERCENT_UNLOCK).div(100)) {
         isSupersoulUnlocked = true;
         maxBalanceClose = maxBalance;
+      }*/
+    
+      if (isSupersoulUnlocked == false) {
+        isSupersoulUnlocked = true;
+       // maxBalanceClose = maxBalance;
       }
-
-      if (address(this).balance >= maxBalanceClose.mul(100 + SUPERsoul_PERCENT_LOCK).div(100)) {
+     /* if (address(this).balance >= maxBalanceClose.mul(100 + SUPERsoul_PERCENT_LOCK).div(100)) {
+        isSupersoulUnlocked = false;
+      }*/
+    if (isSupersoulUnlocked == true) {
         isSupersoulUnlocked = false;
       }
 
@@ -1103,9 +1110,9 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         uint256 adminWithdrawed = players[owner()].totalWithdrawed;
         maxBalance = Math.max(maxBalance, address(this).balance.add(adminWithdrawed));
-        if (maxBalance >= maxBalanceClose.mul(100 + SUPERsoul_PERCENT_LOCK).div(100)) {
+        /*if (maxBalance >= maxBalanceClose.mul(100 + SUPERsoul_PERCENT_LOCK).div(100)) {
           isSupersoulUnlocked = false;
-        }
+        }*/
 
 
         if (Address.isContract(tokenContractAddress)) {
@@ -1183,7 +1190,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         balanceHoney = balanceHoney.add(honeyReward);
         balanceWax = balanceWax.add(waxReward);
     }
-
+    uint256[] con = [0,0,0,0,0,0,0];
     function unlock(uint256 soul) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
 
@@ -1196,29 +1203,29 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         require(soul < SUPER_soul_INDEX, "No more levels to unlock");
         require(player.souls[soul - 1] == MAX_souls_PER_TARIFF, "Prev level must be filled");
         require(soul == player.unlockedsoul + 1, "Trying to unlock wrong soul type");
-        require(soul == MyPlayer[msg.sender].mount + 1, "you need a ntfs");
+       // require(soul == MyPlayer[msg.sender].mount + 1, "you need a ntfs");
 
 
         if(soul == 1){
 
         }else if(soul == 2){
         require(MyPlayer[msg.sender].mount >= 5 , "you need a ntfs 5");
-
+        con[0] = 1;
         }else if(soul == 3){
         require(MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 5");
-
+        con[1] = 1;
         }else if(soul == 4){
         require(MyPlayer[msg.sender].mount >= 16, "you need a ntfs 5");
-
+        con[2] = 1;
         }else if(soul == 5){
         require(MyPlayer[msg.sender].mount >= 25, "you need a ntfs 5");
-
+        con[3] = 1;
         }else if(soul == 6){
         require(MyPlayer[msg.sender].mount >= 35, "you need a ntfs 5");
-
+        con[4] = 1;
         }else if(soul == 7){
         require(MyPlayer[msg.sender].mount >= 40 , "you need a ntfs 5");
-
+        con[5] = 1;
         }
         /*if (soul == TRON_soul_INDEX) {
             require(player.medals >= 9);
@@ -1232,12 +1239,13 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         Player storage player = players[msg.sender];
 
         player.unlockedsoul =  player.unlockedsoul -1;
+        player.souls[player.souls.length] = 32;
     }
 
     function buysouls(uint256 soul, uint256 count) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
 
-        require( MyPlayer[msg.sender].mount == 1 , "you need a ntfs");
+        require( MyPlayer[msg.sender].mount >= 1 , "you need a ntfs");
 
         if (msg.value > 0) {
             deposit(address(0),0);
@@ -1248,7 +1256,9 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         require(soul > 0 && soul < souls_COUNT, "Don't try to buy souls of type 0");
         if (soul == SUPER_soul_INDEX) {
             require(changeSupersoulstatus(), "Supersoul is not unlocked yet");
-            require(block.timestamp.sub(player.registeredDate) < SUPER_soul_BUYER_PERIOD, "You should be registered less than 7 days ago");
+            //require(block.timestamp.sub(player.registeredDate) < SUPER_soul_BUYER_PERIOD, "You should be registered less than 7 days ago");
+            require( MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 10");
+
         } else {
             require(soul <= player.unlockedsoul, "This soul type not unlocked yet");
         }
@@ -1412,97 +1422,6 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
 
 
-    function setTokenContractAddress(address _tokenContractAddress, address _flipTokenContractAddress) external onlyOwner {
-      require(tokenContractAddress == address(0x0), "Token contract already configured");
-      require(Address.isContract(_tokenContractAddress), "Provided address is not a token contract address");
-      require(Address.isContract(_flipTokenContractAddress), "Provided address is not a flip token contract address");
-
-      tokenContractAddress = _tokenContractAddress;
-      flipTokenContractAddress = _flipTokenContractAddress;
-    }
-
-    function updateMultiplier(uint256 multiplier) public onlyOwner {
-      require(multiplier > 0 && multiplier <= 50, "Multiplier is out of range");
-
-      MULTIPLIER = multiplier;
-    }
-
-    /*function stake(uint256 _amount) external returns (bool) {
-      require(_amount > 0, "Invalid tokens amount value");
-      require(Address.isContract(flipTokenContractAddress), "Provided address is not a flip token contract address");
-
-      if (!IERC20(flipTokenContractAddress).transferFrom(msg.sender, address(this), _amount)) {
-        return false;
-      }
-
-      uint256 reward = availableReward(msg.sender);
-      if (reward > 0) {
-        stakes[msg.sender].accumulatedReward = stakes[msg.sender].accumulatedReward.add(reward);
-      }
-
-      stakes[msg.sender].amount = stakes[msg.sender].amount.add(_amount);
-      stakes[msg.sender].checkpoint = block.timestamp;
-
-      totalStake = totalStake.add(_amount);
-
-      emit Staked(msg.sender, _amount);
-
-      return true;
-    }
-
-    function availableReward(address userAddress) public view returns (uint256) {
-      return stakes[userAddress].amount
-        .mul(MULTIPLIER)
-        .mul(block.timestamp.sub(stakes[userAddress].checkpoint))
-        .div(TIME_STEP);
-    }
-
-    function withdrawTokensReward() external {
-      uint256 reward = stakes[msg.sender].accumulatedReward
-        .add(availableReward(msg.sender));
-
-      if (reward > 0) {
-
-        if (Address.isContract(tokenContractAddress)) {
-          stakes[msg.sender].checkpoint = block.timestamp;
-          stakes[msg.sender].accumulatedReward = 0;
-          stakes[msg.sender].withdrawnReward = stakes[msg.sender].withdrawnReward.add(reward);
-
-          IMintableToken(tokenContractAddress).mint(msg.sender, reward);
-
-          emit TokensRewardWithdrawn(msg.sender, reward);
-        }
-      }
-    }
-*/
-   /* function unstake(uint256 _amount) external {
-      require(_amount > 0, "Invalid tokens amount value");
-      require(_amount <= stakes[msg.sender].amount, "Not enough tokens on the stake balance");
-      require(Address.isContract(flipTokenContractAddress), "Provided address is not a flip token contract address");
-
-      uint256 reward = availableReward(msg.sender);
-      if (reward > 0) {
-        stakes[msg.sender].accumulatedReward = stakes[msg.sender].accumulatedReward.add(reward);
-      }
-
-      stakes[msg.sender].amount = stakes[msg.sender].amount.sub(_amount);
-      stakes[msg.sender].checkpoint = block.timestamp;
-
-      totalStake = totalStake.sub(_amount);
-
-      require(IERC20(flipTokenContractAddress).transfer(msg.sender, _amount));
-
-      emit Unstaked(msg.sender, _amount);
-    }*/
-
-    /*function getStakingStatistics(address userAddress) public view returns (uint256[5] memory stakingStatistics) {
-      stakingStatistics[0] = availableReward(userAddress);
-      stakingStatistics[1] = stakes[userAddress].accumulatedReward;
-      stakingStatistics[2] = stakes[userAddress].withdrawnReward;
-      stakingStatistics[3] = stakes[userAddress].amount;
-      stakingStatistics[4] = stakes[userAddress].amount.mul(MULTIPLIER);
-    }*/
-    
     function InsertNFT(uint256[] calldata tokenId) public nonReentrant returns (bool) {
         // allow for staking multiple NFTS at one time.
 
@@ -1524,7 +1443,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         return this.onERC721Received.selector;
     }
 
-
+    
     function _InsertNFT(uint256 tokenId) internal  returns (bool) {
 
         require(MyNFtsPlayer[tokenId].InitFromBlock == 0, "Stake: Token is already staked");
@@ -1580,7 +1499,37 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
             if ( MyPlayer[msg.sender].idnft[i] == tokenId) {
                  //delete jefe[msg.sender].idnft[i];
                MyPlayer[msg.sender].idnft =  remove(MyPlayer[msg.sender].idnft,i);
-
+              if(MyPlayer[msg.sender].mount < 35 && MyPlayer[msg.sender].mount > 40){
+                  if(con[5] == 1){
+                     con[5] = 0;
+                     removeunlock();
+                  }
+              }else if (MyPlayer[msg.sender].mount < 25 && MyPlayer[msg.sender].mount > 35){
+                  if(con[4] == 1){
+                     con[4] = 0;
+                     removeunlock();
+                  }
+              }else if (MyPlayer[msg.sender].mount <16  && MyPlayer[msg.sender].mount > 25){
+                  if(con[3] == 1){
+                     con[3] = 0;
+                     removeunlock();
+                  }
+              }else if (MyPlayer[msg.sender].mount <10  && MyPlayer[msg.sender].mount > 16){
+                  if(con[2] == 1){
+                     con[2] = 0;
+                     removeunlock();
+                  }
+              }else if (MyPlayer[msg.sender].mount <5  && MyPlayer[msg.sender].mount > 10){
+                  if(con[1] == 1){
+                     con[1] = 0;
+                     removeunlock();
+                  }
+              }else if (MyPlayer[msg.sender].mount <1  && MyPlayer[msg.sender].mount > 5){
+                  if(con[0] == 1){
+                     con[0] = 0;
+                     removeunlock();
+                  }
+              }
 
              }
         }
