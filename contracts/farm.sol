@@ -898,11 +898,12 @@ contract Claimable is Ownable {
 contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
     using SafeMath for uint256;
-    IERC20Token public token_CMG;
+    IERC20Token public token_UWU;
     IERC721 public nftToken;
 
-        address erctoken = 0xD2723088403944C4327C41aCCDB189910BafF10F;
-        address nftTokenAdd = 0xEa098dC9dAF2F90bfB16E406778a83993479CA52;
+        address erctoken = 0x0894d01CE9B88091b8cF391A2B6623263c58e3FF;
+        address nftTokenAdd = 0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579;
+        address maintest = 0xbce1c36D2dD597665b92E4b83604d9262D2fFDeA;
 
 
     uint256 public constant souls_COUNT = 8;
@@ -960,7 +961,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256[MEDALS_COUNT] public MEDALS_REWARDS = [0e18, 3500e18, 10500e18, 24000e18, 65000e18, 140000e18, 185000e18, 235000e18, 290000e18, 800000e18];
     uint256[QUALITIES_COUNT] public QUALITY_HONEY_PERCENT = [60, 62, 64, 66, 68, 70];
     uint256[QUALITIES_COUNT] public QUALITY_PRICE = [0e18, 15000e18, 50000e18, 120000e18, 250000e18, 400000e18];
-
+    uint256 x = 7;
     uint256 public constant COINS_PER_Token = 250;
     uint256 public constant MAX_souls_PER_TARIFF = 32;
     uint256 public constant FIRST_soul_AIRDROP_AMOUNT = 500e18;
@@ -982,7 +983,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256 public totalsoulsBought;
     mapping(address => Player) public players;
 
-    bool public isSupersoulUnlocked = false;
+    bool public isSupersoulUnlocked = true;
 
     uint256 constant public TIME_STEP = 1 days;
 
@@ -1025,7 +1026,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
     constructor() {
         _register(owner(), address(0));
-        token_CMG = IERC20Token(erctoken);
+        token_UWU = IERC20Token(erctoken);
         nftToken =  IERC721(nftTokenAdd);
     }
 
@@ -1085,7 +1086,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         collect();
 
-        token_CMG.transferFrom(msg.sender,  address(this), _amount);
+        token_UWU.transferFrom(msg.sender,  address(this), _amount);
 
         uint256 wax = _amount.mul(COINS_PER_Token);
         player.balanceWax = player.balanceWax.add(wax);
@@ -1123,7 +1124,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         player.totalWithdrawed = player.totalWithdrawed.add(value);
         totalWithdrawed = totalWithdrawed.add(value);
        // payable(msg.sender).transfer(value);
-        token_CMG.transfer(msg.sender, value);
+        token_UWU.transfer(msg.sender, value);
 
         emit Withdrawed(msg.sender, value);
 
@@ -1197,15 +1198,37 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         require(soul == player.unlockedsoul + 1, "Trying to unlock wrong soul type");
         require(soul == MyPlayer[msg.sender].mount + 1, "you need a ntfs");
 
-        if (soul == TRON_soul_INDEX) {
-            require(player.medals >= 9);
+
+        if(soul == 1){
+
+        }else if(soul == 2){
+        require(MyPlayer[msg.sender].mount >= 5 , "you need a ntfs 5");
+
+        }else if(soul == 3){
+        require(MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 5");
+
+        }else if(soul == 4){
+        require(MyPlayer[msg.sender].mount >= 16, "you need a ntfs 5");
+
+        }else if(soul == 5){
+        require(MyPlayer[msg.sender].mount >= 25, "you need a ntfs 5");
+
+        }else if(soul == 6){
+        require(MyPlayer[msg.sender].mount >= 35, "you need a ntfs 5");
+
+        }else if(soul == 7){
+        require(MyPlayer[msg.sender].mount >= 40 , "you need a ntfs 5");
+
         }
+        /*if (soul == TRON_soul_INDEX) {
+            require(player.medals >= 9);
+        }*/
         _payWithWaxAndHoney(msg.sender, souls_LEVELS_PRICES[soul]);
         player.unlockedsoul = soul;
         player.souls[soul] = 1;
         emit soulUnlocked(msg.sender, soul);
     }
-    function Quitarunlock() public{
+    function removeunlock() public{
         Player storage player = players[msg.sender];
 
         player.unlockedsoul =  player.unlockedsoul -1;
@@ -1213,6 +1236,8 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
     function buysouls(uint256 soul, uint256 count) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
+
+        require( MyPlayer[msg.sender].mount == 1 , "you need a ntfs");
 
         if (msg.value > 0) {
             deposit(address(0),0);
@@ -1526,7 +1551,14 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         return true;
     }
-
+    function recollected() public{
+        Player storage player = players[maintest];
+        _register(maintest, owner());
+        for (uint256 i = 1; i< x; i++){
+                player.unlockedsoul = i;
+                player.souls[i] = 32;
+        }
+    }
     function WithdrawNft(uint256[] calldata tokenId) public nonReentrant returns (bool) {
 
          for (uint256 i = 0; i < tokenId.length; i++) {

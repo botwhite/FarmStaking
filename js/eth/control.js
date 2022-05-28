@@ -11,7 +11,7 @@ var balanceJuegoNft = []
 
 
 const tokenAddress = '0x0894d01CE9B88091b8cF391A2B6623263c58e3FF'
-const contratojjuego = '0x149dD7dcF975f61Eb46800675Fbff83374cb8e16'
+const contratojjuego = '0x9067fccBF85b3d910392D3675AdE5B83b06CAf99'
 const NftsAddress = '0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579'
 
 
