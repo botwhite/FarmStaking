@@ -11,7 +11,7 @@ var balanceJuegoNft = []
 
 
 const tokenAddress = '0x0894d01CE9B88091b8cF391A2B6623263c58e3FF'
-const contratojjuego = '0xF3Bb270b6b94131babf3823F44b132395d37209f'
+const contratojjuego = '0x76558ed789F0C64CE0888D9f9A0CCF39e6507200'
 const NftsAddress = '0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579'
 
 
@@ -57,7 +57,7 @@ const getAccounts = async () => {
   
 
   function handleRevertError(message) {
-    alert(message)
+    alert(message) 
   }
   
   async function getRevertReason(txHash) {
