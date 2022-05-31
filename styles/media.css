@@ -6198,3 +6198,10 @@
         left: 10%;
     }
   }
+
+  @media screen and (max-height: 800px) {
+      .new-menu-bottom, .new-menu-mid{
+        margin-top: 3em;}
+        
+      
+  }
