@@ -986,7 +986,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256 public totalsoulsBought;
     mapping(address => Player) public players;
 
-    bool public isSupersoulUnlocked = true;
+    bool public isSupersoulUnlocked = false;
 
     uint256 constant public TIME_STEP = 1 days;
 
@@ -1060,13 +1060,14 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
       if (isSupersoulUnlocked == false) {
         isSupersoulUnlocked = true;
        // maxBalanceClose = maxBalance;
+      }else{
+        isSupersoulUnlocked = false;
+
       }
      /* if (address(this).balance >= maxBalanceClose.mul(100 + SUPERsoul_PERCENT_LOCK).div(100)) {
         isSupersoulUnlocked = false;
       }*/
-    if (isSupersoulUnlocked == true) {
-        isSupersoulUnlocked = false;
-      }
+
 
       return isSupersoulUnlocked;
     }
@@ -1334,8 +1335,11 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
                 }if( player.medals == 8){
                     token_Medals.transfer(msg.sender, 15 ether);
                 }
-                if( player.medals == 20){
-                    token_Medals.transfer(msg.sender, 15 ether);
+                if( player.medals == 9){
+                    token_Medals.transfer(msg.sender, 20 ether);
+                }
+                  if( player.medals == 10){
+                    token_Medals.transfer(msg.sender, 25 ether);
                 }
                 emit MedalAwarded(user, i + 1);
             }
