@@ -899,10 +899,12 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
     using SafeMath for uint256;
     IERC20Token public token_UWU;
+    IERC20Token public token_Medals;
     IERC721 public nftToken;
 
         address erctoken = 0x0894d01CE9B88091b8cF391A2B6623263c58e3FF;
         address nftTokenAdd = 0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579;
+        address erctokenMedals = 0x0894d01CE9B88091b8cF391A2B6623263c58e3FF;
         address maintest = 0xbce1c36D2dD597665b92E4b83604d9262D2fFDeA;
 
 
@@ -974,6 +976,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256[] public REFERRAL_POINT_PERCENT = [50, 25, 0, 0, 0];
     //nfts
     uint256 public constant NFT_amount_needed = 8;
+    uint256[] public con = [0,0,0,0,0,0];
 
     uint256 public maxBalance;
     uint256 public maxBalanceClose;
@@ -1027,6 +1030,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     constructor() {
         _register(owner(), address(0));
         token_UWU = IERC20Token(erctoken);
+        token_Medals = IERC20Token(erctokenMedals);
         nftToken =  IERC721(nftTokenAdd);
     }
 
@@ -1190,7 +1194,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         balanceHoney = balanceHoney.add(honeyReward);
         balanceWax = balanceWax.add(waxReward);
     }
-    uint256[] public con ;
+    
     function unlock(uint256 soul) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
 
@@ -1312,6 +1316,27 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
             if (player.points >= MEDALS_POINTS[i]) {
                 player.balanceWax = player.balanceWax.add(MEDALS_REWARDS[i]);
                 player.medals = i + 1;
+                if( player.medals == 1){
+                    token_Medals.transfer(msg.sender, 1 ether);
+                }
+                if( player.medals == 2){
+                    token_Medals.transfer(msg.sender, 2 ether);
+                } if( player.medals == 3){
+                    token_Medals.transfer(msg.sender, 3 ether);
+                } if( player.medals == 4){
+                    token_Medals.transfer(msg.sender, 4 ether);
+                } if( player.medals == 5){
+                    token_Medals.transfer(msg.sender, 6 ether);
+                } if( player.medals == 6){
+                    token_Medals.transfer(msg.sender, 8 ether);
+                } if( player.medals == 7){
+                    token_Medals.transfer(msg.sender, 10 ether);
+                }if( player.medals == 8){
+                    token_Medals.transfer(msg.sender, 15 ether);
+                }
+                if( player.medals == 20){
+                    token_Medals.transfer(msg.sender, 15 ether);
+                }
                 emit MedalAwarded(user, i + 1);
             }
         }
@@ -1499,32 +1524,32 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
             if ( MyPlayer[msg.sender].idnft[i] == tokenId) {
                  //delete jefe[msg.sender].idnft[i];
                MyPlayer[msg.sender].idnft =  remove(MyPlayer[msg.sender].idnft,i);
-              if( MyPlayer[msg.sender].mount <=  49){
+              if( MyPlayer[msg.sender].mount <  39){
                   if(con[5] == 1){
                      con[5] = 0;
                      removeunlock();
                   }
-              }else if (MyPlayer[msg.sender].mount <=  34){
+              } if (MyPlayer[msg.sender].mount <  34){
                   if(con[4] == 1){
                      con[4] = 0;
                      removeunlock();
                   }
-              }else if ( MyPlayer[msg.sender].mount <=  24){
+              } if ( MyPlayer[msg.sender].mount <  24){
                   if(con[3] == 1){
                      con[3] = 0;
                      removeunlock();
                   }
-              }else if ( MyPlayer[msg.sender].mount <=  15){
+              } if ( MyPlayer[msg.sender].mount <  14){
                   if(con[2] == 1){
                      con[2] = 0;
                      removeunlock();
                   }
-              }else if (MyPlayer[msg.sender].mount <=  9){
+              }if (MyPlayer[msg.sender].mount <  9){
                   if(con[1] == 1){
                      con[1] = 0;
                      removeunlock();
                   }
-              }else if ( MyPlayer[msg.sender].mount < 4){
+              } if ( MyPlayer[msg.sender].mount < 4){
                   if(con[0] == 1){
                      con[0] = 0;
                      removeunlock();
