@@ -3,8 +3,8 @@ let VERSION = '2.5';
 
 // TODO: contracts settings
 let NETWORK_ADDRESSES = { // Main contract address
-	'testnet': '0x76558ed789F0C64CE0888D9f9A0CCF39e6507200',
-	'mainnet': '0x76558ed789F0C64CE0888D9f9A0CCF39e6507200',
+	'testnet': '0xaF13C69A6Ccb203Cd75aea6A67CA519f121Ced6a',
+	'mainnet': '0xaF13C69A6Ccb203Cd75aea6A67CA519f121Ced6a',
 };
 let TOKEN_CONTRACT_ADDRESSES = { // LP token contract address
 	'testnet': '0x0',
