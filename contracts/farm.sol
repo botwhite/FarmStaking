@@ -1213,23 +1213,23 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         if(soul == 1){
 
-        }else if(soul == 2){
+        } if(soul == 2){
         require(MyPlayer[msg.sender].mount >= 5 , "you need a ntfs 5");
         con[0] = 1;
-        }else if(soul == 3){
-        require(MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 5");
+        } if(soul == 3){
+        require(MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 10");
         con[1] = 1;
-        }else if(soul == 4){
-        require(MyPlayer[msg.sender].mount >= 16, "you need a ntfs 5");
+        } if(soul == 4){
+        require(MyPlayer[msg.sender].mount >= 16, "you need a ntfs 16");
         con[2] = 1;
-        }else if(soul == 5){
-        require(MyPlayer[msg.sender].mount >= 25, "you need a ntfs 5");
+        } if(soul == 5){
+        require(MyPlayer[msg.sender].mount >= 25, "you need a ntfs 25");
         con[3] = 1;
-        }else if(soul == 6){
-        require(MyPlayer[msg.sender].mount >= 35, "you need a ntfs 5");
+        } if(soul == 6){
+        require(MyPlayer[msg.sender].mount >= 35, "you need a ntfs 35");
         con[4] = 1;
-        }else if(soul == 7){
-        require(MyPlayer[msg.sender].mount >= 40 , "you need a ntfs 5");
+        } if(soul == 7){
+        require(MyPlayer[msg.sender].mount >= 40 , "you need a ntfs 40");
         con[5] = 1;
         }
         /*if (soul == TRON_soul_INDEX) {
@@ -1543,7 +1543,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
                      con[3] = 0;
                      removeunlock();
                   }
-              } if ( MyPlayer[msg.sender].mount <  14){
+              } if ( MyPlayer[msg.sender].mount <  15){
                   if(con[2] == 1){
                      con[2] = 0;
                      removeunlock();
