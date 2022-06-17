@@ -287,7 +287,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			$('#bee_type_button_'+bee_type).removeClass('red-btn');
 			$('#bee_type_button_'+bee_type).html('Buy a sinner');
 			$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
-			$('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
+			// $('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 		}
 	}
 
