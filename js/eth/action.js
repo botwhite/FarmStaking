@@ -530,6 +530,7 @@ function checkMetaMask(){
                     isMetamask = false;
                     //fail('User denied access to Metamask');
                     console.log("No MetaMask catched");
+                    console.log(window.ethereum);
 
                     return;
                     // Try to use Binance Wallet
