@@ -232,7 +232,7 @@ async function run(){
             if (next_medal <= 0) {
               next_medal = 1;
             }
-            $('.medal-after').css('background', 'url("../image/medal-'+next_medal+'.png")no-repeat');
+            $('.medal-after').css('background', 'url("../image/medal-'+next_medal+'.png")no-repeat; background-size: cover;');
 
             flagMedalsPoints = setInterval(function(){
                 if(!isGetMedalsPoints){
@@ -256,7 +256,7 @@ async function run(){
                 if (next_medal <= 0) {
                   next_medal = 1;
                 }
-                $('#modal-medal-info > div > div > img').attr('src', 'image/big-medal-'+next_medal+'.png');
+                $('#modal-medal-info > div > div > img').attr('src', 'image/big-medal-'+next_medal+'.png'); 
                 $('#medal-info-points').html(parseInt(points));
                 $('#medal-info-points-awaiting').html(next_medal == 1 ? 0 : medals_points[next_medal-1]);
                 $('[name="medal-info-max"]').hide();
