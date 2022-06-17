@@ -550,13 +550,13 @@ summary {
     outline: none;
 }
 .wax {
-    background-image: url("../image/honey.png");
+    background-image: url("../image/wax.png");
     background-repeat: no-repeat;
     background-size: 40px 35px;
     background-position: 1% 50%;
 }
 .honey {
-    background-image: url("../image/wax.png");
+    background-image: url("../image/honey.png");
     background-repeat: no-repeat;
     background-size: 35px 36px;
     background-position: 1% 50%;
@@ -635,6 +635,7 @@ summary {
     background-size: contain;
     width: 24px;
     height: 6px;
+    display: none;
 }
 .btn-drop-down {
     background: linear-gradient(to bottom, rgba(241, 241, 241, 1) 0%, rgba(222, 222, 222, 1) 100%);
