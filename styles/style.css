@@ -3679,18 +3679,18 @@ tbody tr {
 }
 .title-reward {
     font-size: 30px;
-    color: #16b60a;
+    color: #ffbd00;
     font-weight: bold;
     margin-bottom: 20px;
 }
 .next-medal {
     font-size: 20px;
     font-weight: bold;
-    color: #16b60a;
+    color: #ffbd00;
     margin-top: 14px;
 }
 .small-medal {
-    color: #16b60a;
+    color: #ffbd00;
 }
 .next-reward span {
     font-size: 26px;
@@ -6303,7 +6303,7 @@ body.dialogShowing {
 .your-reit span {
     margin: 0 auto;
     text-align: center;
-    color: #16b60a;
+    color: #ffbd00;
     font-size: 36px;
     margin: 14px 0;
     font-weight: bold;
@@ -7205,4 +7205,7 @@ input::-webkit-inner-spin-button {
  
 #modal-unlock-bee > div > button.button-btn.green-btn.green-bee-btn.cryptobee-btn{
     height: 4em !important;
+}
+.NEW_ACHIEVEMENT{
+    font-size: 24px !important;
 }
