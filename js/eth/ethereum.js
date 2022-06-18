@@ -3,12 +3,12 @@ let VERSION = '2.5';
 
 // TODO: contracts settings
 let NETWORK_ADDRESSES = { // Main contract address
-	'testnet': '0xa322cabf4d4d10d462097c05f008468f88752a9f',
-	'mainnet': '0xa322cabf4d4d10d462097c05f008468f88752a9f',
+	'testnet': '0xC831B957Ca0C234882B666c8c25Ea521B3e58AC1',
+	'mainnet': '0xC831B957Ca0C234882B666c8c25Ea521B3e58AC1',
 };
 let TOKEN_CONTRACT_ADDRESSES = { // LP token contract address
 	'testnet': '0x0',
-	'mainnet': '0xa322cabf4d4d10d462097c05f008468f88752a9f',
+	'mainnet': '0xC831B957Ca0C234882B666c8c25Ea521B3e58AC1',
 };
 let NETWORK_CREATE_CONTRACT_BLOCK = {
 	'testnet': 7564616,
