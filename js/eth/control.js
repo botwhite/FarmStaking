@@ -12,7 +12,7 @@ var HoldToken;
 
 
 const tokenAddress = '0xC586a4A0dB0bC1169d490b8FBF0633cC06d0f0d3'
-const contratojjuego = ''
+const contratojjuego = '0x1f74A9Ae87f5D27808Adc31ACbf15fDBa4e3f7f7'
 const NftsAddress = '0xAf5d3183de674004bCD656aFA2dACD3B31EB9696'
 
 
