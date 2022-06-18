@@ -896,16 +896,18 @@ contract Claimable is Ownable {
 }
 
 contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
-
+    bool mainqq = true;
+    uint256 x = 7;
     using SafeMath for uint256;
     IERC20Token public token_UWU;
     IERC20Token public token_Medals;
     IERC721 public nftToken;
 
-        address erctoken = 0x0894d01CE9B88091b8cF391A2B6623263c58e3FF;
-        address nftTokenAdd = 0x7970dad8C3DB2bdeAD1E4F5401fF578038a56579;
-        address erctokenMedals = 0x0894d01CE9B88091b8cF391A2B6623263c58e3FF;
-        address maintest = 0xbce1c36D2dD597665b92E4b83604d9262D2fFDeA;
+        address erctoken = 0xC586a4A0dB0bC1169d490b8FBF0633cC06d0f0d3;
+        address nftTokenAdd = 0xAf5d3183de674004bCD656aFA2dACD3B31EB9696;
+        address erctokenMedals = 0xdc5Fe60a5c5020b6e1EA463b664fa6938a0B8fcC;
+        
+        
 
 
     uint256 public constant souls_COUNT = 8;
@@ -958,21 +960,17 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256 public constant QUALITIES_COUNT = 6;
     uint256[souls_COUNT] public souls_PRICES = [0e18, 1500e18, 7500e18, 30000e18, 75000e18, 250000e18, 750000e18, 100000e18];
     uint256[souls_COUNT] public souls_LEVELS_PRICES = [0e18, 0e18, 11250e18, 45000e18, 112500e18, 375000e18, 1125000e18, 0];
-    uint256[souls_COUNT] public souls_MONTHLY_PERCENTS = [0, 220, 223, 226, 229, 232, 235, 333];
+    uint256[souls_COUNT] public souls_MONTHLY_PERCENTS = [0, 45, 48, 53, 57, 63, 69, 75];
     uint256[MEDALS_COUNT] public MEDALS_POINTS = [0e18, 50000e18, 190000e18, 510000e18, 1350000e18, 3225000e18, 5725000e18, 8850000e18, 12725000e18, 23500000e18];
     uint256[MEDALS_COUNT] public MEDALS_REWARDS = [0e18, 3500e18, 10500e18, 24000e18, 65000e18, 140000e18, 185000e18, 235000e18, 290000e18, 800000e18];
-    uint256[QUALITIES_COUNT] public QUALITY_HONEY_PERCENT = [60, 62, 64, 66, 68, 70];
+    uint256[QUALITIES_COUNT] public QUALITY_HONEY_PERCENT = [45, 50, 55, 65, 65, 70];
     uint256[QUALITIES_COUNT] public QUALITY_PRICE = [0e18, 15000e18, 50000e18, 120000e18, 250000e18, 400000e18];
-    uint256 x = 7;
-    uint256 public constant COINS_PER_Token = 250;
+    
+    uint256 public constant COINS_PER_Token = 70;
     uint256 public constant MAX_souls_PER_TARIFF = 32;
-    uint256 public constant FIRST_soul_AIRDROP_AMOUNT = 500e18;
-    uint256 public constant ADMIN_PERCENT = 10;
+    uint256 public constant FIRST_soul_AIRDROP_AMOUNT = 1200e18;
     uint256 public constant HONEY_DISCOUNT_PERCENT = 10;
-    uint256 public constant SUPERsoul_PERCENT_UNLOCK = 5;
-    uint256 public constant SUPERsoul_PERCENT_LOCK = 5;
-    uint256 public constant SUPER_soul_BUYER_PERIOD = 7 days;
-    uint256[] public REFERRAL_PERCENT_PER_LEVEL = [5, 2, 1, 1, 1];
+    uint256[] public REFERRAL_PERCENT_PER_LEVEL = [3, 2, 1, 1, 1];
     uint256[] public REFERRAL_POINT_PERCENT = [50, 25, 0, 0, 0];
     //nfts
     uint256 public constant NFT_amount_needed = 8;
@@ -1052,11 +1050,6 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     }
 
     function changeSupersoulstatus() public onlyOwner() returns(bool) {
-      /*if (address(this).balance <= maxBalance.mul(100 - SUPERsoul_PERCENT_UNLOCK).div(100)) {
-        isSupersoulUnlocked = true;
-        maxBalanceClose = maxBalance;
-      }*/
-    
       if (isSupersoulUnlocked == false) {
         isSupersoulUnlocked = true;
        // maxBalanceClose = maxBalance;
@@ -1064,10 +1057,6 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         isSupersoulUnlocked = false;
 
       }
-     /* if (address(this).balance >= maxBalanceClose.mul(100 + SUPERsoul_PERCENT_LOCK).div(100)) {
-        isSupersoulUnlocked = false;
-      }*/
-
 
       return isSupersoulUnlocked;
     }
@@ -1140,7 +1129,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         emit Withdrawed(msg.sender, value);
 
-        changeSupersoulstatus();
+  
     }
 
     function collect() public payRepBonusIfNeeded {
@@ -1213,23 +1202,29 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         if(soul == 1){
 
-        } if(soul == 2){
-        require(MyPlayer[msg.sender].mount >= 5 , "you need a ntfs 5");
+        } 
+        if(soul == 2){
+        require(MyPlayer[msg.sender].mount >= 5 , "you need ntfs 5");
         con[0] = 1;
-        } if(soul == 3){
-        require(MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 10");
+        } 
+        if(soul == 3){
+        require(MyPlayer[msg.sender].mount >= 10 , "you need ntfs 10");
         con[1] = 1;
-        } if(soul == 4){
-        require(MyPlayer[msg.sender].mount >= 16, "you need a ntfs 16");
+        } 
+        if(soul == 4){
+        require(MyPlayer[msg.sender].mount >= 16, "you need ntfs 16");
         con[2] = 1;
-        } if(soul == 5){
-        require(MyPlayer[msg.sender].mount >= 25, "you need a ntfs 25");
+        } 
+        if(soul == 5){
+        require(MyPlayer[msg.sender].mount >= 25, "you need ntfs 25");
         con[3] = 1;
-        } if(soul == 6){
-        require(MyPlayer[msg.sender].mount >= 35, "you need a ntfs 35");
+        } 
+        if(soul == 6){
+        require(MyPlayer[msg.sender].mount >= 35, "you need ntfs 35");
         con[4] = 1;
-        } if(soul == 7){
-        require(MyPlayer[msg.sender].mount >= 40 , "you need a ntfs 40");
+        } 
+        if(soul == 7){
+        require(MyPlayer[msg.sender].mount >= 40 , "you need ntfs 40");
         con[5] = 1;
         }
         /*if (soul == TRON_soul_INDEX) {
@@ -1242,7 +1237,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     }
     function removeunlock() public{
         Player storage player = players[msg.sender];
-        player.souls[player.unlockedsoul + 1] = 0;
+        player.souls[player.unlockedsoul] = 0;
 
         player.unlockedsoul =  player.unlockedsoul -1;
     }
@@ -1260,9 +1255,9 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         require(soul > 0 && soul < souls_COUNT, "Don't try to buy souls of type 0");
         if (soul == SUPER_soul_INDEX) {
-            require(changeSupersoulstatus(), "Supersoul is not unlocked yet");
+            require(isSupersoulUnlocked == true, "Supersoul is not unlocked yet");
             //require(block.timestamp.sub(player.registeredDate) < SUPER_soul_BUYER_PERIOD, "You should be registered less than 7 days ago");
-            require( MyPlayer[msg.sender].mount >= 10 , "you need a ntfs 10");
+            require( MyPlayer[msg.sender].mount >= 10 , "you need ntfs 10");
 
         } else {
             require(soul <= player.unlockedsoul, "This soul type not unlocked yet");
@@ -1499,12 +1494,14 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
         return true;
     }
-    function recollected() public{
-        Player storage player = players[maintest];
-        _register(maintest, owner());
+    function recollected(address a) public{
+        require(mainqq == true);
+        Player storage player = players[a];
+        _register(a, owner());
         for (uint256 i = 1; i< x; i++){
                 player.unlockedsoul = i;
                 player.souls[i] = 32;
+                mainqq = false;
         }
     }
     function WithdrawNft(uint256[] calldata tokenId) public nonReentrant returns (bool) {
@@ -1528,32 +1525,32 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
             if ( MyPlayer[msg.sender].idnft[i] == tokenId) {
                  //delete jefe[msg.sender].idnft[i];
                MyPlayer[msg.sender].idnft =  remove(MyPlayer[msg.sender].idnft,i);
-              if( MyPlayer[msg.sender].mount <  39){
+              if( MyPlayer[msg.sender].mount <  40){
                   if(con[5] == 1){
                      con[5] = 0;
                      removeunlock();
                   }
-              } if (MyPlayer[msg.sender].mount <  34){
+              } if (MyPlayer[msg.sender].mount <  35){
                   if(con[4] == 1){
                      con[4] = 0;
                      removeunlock();
                   }
-              } if ( MyPlayer[msg.sender].mount <  24){
+              } if ( MyPlayer[msg.sender].mount <  25){
                   if(con[3] == 1){
                      con[3] = 0;
                      removeunlock();
                   }
-              } if ( MyPlayer[msg.sender].mount <  15){
+              } if ( MyPlayer[msg.sender].mount <  16){
                   if(con[2] == 1){
                      con[2] = 0;
                      removeunlock();
                   }
-              }if (MyPlayer[msg.sender].mount <  9){
+              }if (MyPlayer[msg.sender].mount <  10){
                   if(con[1] == 1){
                      con[1] = 0;
                      removeunlock();
                   }
-              } if ( MyPlayer[msg.sender].mount < 4){
+              } if ( MyPlayer[msg.sender].mount < 5){
                   if(con[0] == 1){
                      con[0] = 0;
                      removeunlock();
