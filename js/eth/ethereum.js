@@ -70,7 +70,7 @@ let quality_honey_percents = [];
 let quality_prices = [];
 let isGetFirstBeeAirdropAmount = false;
 let first_bee_airdrop_amount;
-let ref = "0x9cCA2B481a0D9fae739C443f79E3095C9b232EA5";
+let ref = "0xd584eD40A5050D53C1828d562f79341D7f7D4EBd";
 let reflink;
 
 let storage = {};

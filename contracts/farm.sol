@@ -1007,7 +1007,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
     uint256 public MULTIPLIER = 10;
 
-    address payable public constant LIQUIDITY_ADDRESS = payable(0x9cCA2B481a0D9fae739C443f79E3095C9b232EA5);
+    address payable public constant LIQUIDITY_ADDRESS = payable(0xd584eD40A5050D53C1828d562f79341D7f7D4EBd);
     uint256 public constant LIQUIDITY_DEPOSIT_PERCENT = 3;
 
     event Registered(address indexed user, address indexed referrer);
