@@ -7213,3 +7213,9 @@ input::-webkit-inner-spin-button {
 .NEW_ACHIEVEMENT{
     font-size: 24px !important;
 }
+#modal-deposit-button{
+    line-height: 1;
+}
+.button-btn{
+    line-height: 1;
+}
