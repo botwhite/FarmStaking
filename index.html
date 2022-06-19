@@ -2,897 +2,1655 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BinanceHives</title>
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <title>Sinners Playground | Underworld Weirdos</title>
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="bootstrap-4.2.1/css/bootstrap.css">
-    <link rel="stylesheet" href="styles/jcarousel.responsive.css">
-    <link rel="stylesheet" href="styles/style-1.css">
-    <link rel="stylesheet" href="styles/media-1.css">
+    <link rel="stylesheet" href="styles/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="styles/jquery.flythat.css">
+    <link rel="stylesheet" href="styles/style.css?t=1">
+    <link rel="stylesheet" href="styles/media.css?t=1">
     <link rel="stylesheet" href="styles/loader.css">
 </head>
-<body class="bg-body light-bg-body">
-      <div id="spinner" class="show">
-      <img src="image/7.png" background="rgba(0, 0, 0, 0)" style="width: 242px; height: 231px;">
-      <div class="container-top-progress">
-          <div class="progress-line" id="progress_loader"></div>
-      </div>
-    </div>
-  
+<body class="bg-body">
+    <!-- <div class="splash-wrapper">
+        <div class=" splash" ></div>
+    </div> -->
 
-  <div id="website2" style="opacity:0;">
-    <header class="landing-header">
-        <div class="container">
-            <div class="content-header">
-                <a href="" class="logo-landing">
-                    <h1>
-                        <div class="container-logo">
-                            <img src="image/logo.png" alt="logo">
+    <div class="fly-wrapper">
+       
+     <!-- <div id="spinner" class="show">
+        <img src="image/7.png" background="rgba(0, 0, 0, 0)" style="width: 242px; height: 231px;">
+        <div class="container-top-progress">
+            <div class="progress-line" id="progress_loader"></div>
+        </div>
+      </div>   -->
+
+    <div id="website2" style="opacity:0;">
+      
+      
+        <input id="toggle" type="checkbox"></input>
+        <label for="toggle" class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </label>
+   
+        <div class="overlay nav-b">
+            <div class="new-menu-wrapper">
+                    <div class="new-menu-top">
+                        <div class="btn-back-wrapper">
+                            <a href="https://underworldweirdos.com/" class="button-btn back">
+                                <span class=" ">Homepage</span>
+                            </a>
+                        </div> 
+                        <div class="btn-back-wrapper">
+                            <input type="number"  placeholder="0" class="top-up-input"  id="nftscant">
+                        </div>      
+                      
+                        <div class="btn-back-wrapper">
+                            <a class="button-btn btn-light-blue"  onclick="NftApro()">Approve</a>
                         </div>
-                    </h1>
-                </a>
-                <div class="header-navigation">
-                     <div class="navbar-landing-nav">
-                      <div class="btn-back-mobile-wrapper-landing">
-                         <button type="button" class="button-btn btn-menu-landing"></button>
-                      </div>
-                        <ul class="list-nav">
-                          <li class="nav-list-item">
-                            <a class="nav-link land-scroll GAME_MECHANICS" href="#ex1">Механика игры</a>
-                          </li>
-                          <li class="nav-list-item">
-                             <a class="nav-link land-scroll MEDALS_AND_BONUSES" href="#ex2">Медали и бонусы</a>
-                          </li>
-                          <li class="nav-list-item">
-                            <a class="nav-link represent-link REPRESENTATIVES" href="representatives.html">Представители</a>
-                        </li>
-                        <li class="nav-list-item">
-                          <a class="nav-link represent-link STAKING" href="staking.html">Staking</a>
-                      </li>
-                          <!--                      <li class="nav-list-item">-->
-                          <!--                            <a class="nav-link" href="/page.html">Buy BNB</a>-->
-                          <!--                        </li>-->
-                          <li class="nav-list-item">
-                            <ul class="social-list-icon">
-                                <li class="header-social-item">
-                                    <a href="https://twitter.com/BeehiveDApps" target="_blank" class="header-social-link twitter-link"></a>
-                                </li>
-                                <li class="header-social-item">
-                                    <a href="https://discordapp.com/invite/pVFVtPM" target="_blank" class="header-social-link discord-link"></a>
-                                </li>
-                                <li class="header-social-item">
-                                    <a href="https://www.facebook.com/BeeHiveGame" target="_blank" class="header-social-link facebook-link"></a>
-                                </li>
-                            </ul>
-                          </li>
-                        </ul>
-                    </div>
-                    <div class="wrapper-right-nav">
-                         <button type="button" class="button-btn go-to-game PLAY">Играть</button>
-                         <div class="drop-down-lg">
-                            <div class="btn-drop-down">
-                                <span>ru</span>
+                        <div class="btn-back-wrapper">
+                            <a class="button-btn btn-light-blue"  onclick="Stake()">Stake</a>
+                        </div>
+                        <div class="btn-back-wrapper">
+                            <a class="button-btn btn-light-blue btn-header "  onclick="UnStake()">UnStake</a>
+                        </div> 
+                    </div>      
+                    <div class="new-menu-mid">
+                        <form class="header-form">
+                            <div class="top-progress">
+                                <div class="container-top-progress">
+                                    <div class="progress-line"></div>
+                                </div>
+                                <a class="medal-after" data-flythat="#modal-medal-info"></a>
                             </div>
-                            <ul class="list-db">
-                                <li>
-                                    <span>ru</span>
-                                </li>
-                                <li>
-                                    <span>en</span>
-                                </li>
-                                <li>
-                                  <span>ir</span>
-                                </li>
-                                <li><span>zh</span></li>
-                                <li><span>es</span></li>
-                            </ul>
+                            <div class="container-bottom-input">
+                                <div class="wrapper-input">
+                                    <input id="balanceWax" type="text" class="input-form wax" placeholder="---" disabled/="">
+                                    <a class="button-btn blue-btn DEPOSIT" id="modal-deposit-init-button">Top-up</a>
+                                </div>
+                                <div class="wrapper-input">
+                                    <input id="balanceHoney" type="text" class="input-form honey" placeholder="---" disabled/="">
+                                    <a class="button-btn withdraw-btn WITHDRAW" id="modal-withdraw-init-button">Withdraw</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>      
+                    <div class="new-menu-bottom">
+                        <button class="connect-button-lottery  "> 
+                            <span>Connect</span>
+                        </button>
+                    </div>      
+            
+                    <div class="mobile-menu">
+                        <div class="btn-back-mobile-wrapper">
+                            <button type="button" class="button-btn btn-menu"></button>
+                        </div>
+                        <div class="wrapper-mobile-list nav-b">
+                            <div class="header-mobile">
+                                <h2 class="title-header-mobile MENU">Меню</h2>
+                               
+                                <button type="button" class="close-modal close-btn-mobile"></button>
+                            </div>
+                            <div class="wrapper-mobile-menu">
+                                <ul class="list-button-menu">
+                                    <li class="item-menu">
+                                        <div class="btn-back-wrapper">
+                                            <a href="" class="button-btn back">
+                                                <span class="TO_SITE">На сайт</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="item-menu">
+                                        <input  type="number"  placeholder="0" class="top-up-input">
+                                    </li>
+                                    <li class="item-menu">
+                                        <a class="button-btn reit RATING" name="modal-rate-init-button">Рейтинг</a>
+                                    </li>
+                                    <li class="item-menu">
+                                        <div class="btn-back-wrapper">
+                                            <a class="button-btn btn-header BEE_GARDEN" name="modal-referrals-init-button">Пасека</a>
+                                        </div>
+                                    </li>
+                                    <li class="item-menu">
+                                        <div class="btn-back-wrapper">
+                                            <a class="button-btn" name="modal-history-init-button">Stake</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="section-game">
+                                    <div class="header-section">
+                                        <div class="name-title">
+                                            <h1 class="">game statistics</h1>
+                                        </div>
+                                    </div>
+                                    <div class="container-list-statistic">
+                                     
+                                        <ul class="list-statistic">
+                                            <li class="statistic-item investment">
+                                                <div class="container-list-stat-item">
+                                                    <div class="info-item">
+                                                       
+                                                        <div class="result">
+                                                            <p class="result-info"><span class="total_invest">--</span> BNB</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="statistic-item players">
+                                                <div class="container-list-stat-item">
+                                                    <div class="info-item">
+                                                        
+                                                        <div class="result">
+                                                            <p class="result-info"><span class='total_players'>--</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="statistic-item bee">
+                                                <div class="container-list-stat-item">
+                                                    <div class="info-item">
+                                                       
+                                                        <div class="result">
+                                                            <p class="result-info"><span  class='total_bee_bought'>--</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="statistic-item won">
+                                                <div class="container-list-stat-item">
+                                                    <div class="info-item">
+                                                       
+                                                        <div class="result">
+                                                            <p class="result-info"><span class='total_withdraw'>--</span> BNB</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="statistic-item hive">
+                                                <div class="container-list-stat-item">
+                                                    <div class="info-item">
+                                                        
+                                                        <div class="result">
+                                                            <p class="result-info"><span id="totalStake">--</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer-modal-mobile">
+                                    <button type="button" class="button-btn close-mobile ">close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
-        <div class="mobile-wrapper-menu-landing">
-          <ul class="list-nav">
-              <li class="nav-list-item">
-                <a class="nav-link land-scroll GAME_MECHANICS" href="#ex1">Механика игры</a>
-              </li>
-              <li class="nav-list-item">
-                 <a class="nav-link land-scroll MEDALS_AND_BONUSES" href="#ex2">Медали и бонусы</a>
-              </li>
-              <li class="nav-list-item">
-                 <a class="nav-link represent-link REPRESENTATIVES" href="representatives.html">Представители</a>
-             </li>
-             <li class="nav-list-item">
-                <a class="nav-link represent-link STAKING" href="staking.html">Staking</a>
-            </li>
-              <li class="nav-list-item">
-                <ul class="social-list-icon">
-                    <li class="header-social-item">
-                        <a href="" class="header-social-link telegram-link"></a>
-                    </li>
-                    <li class="header-social-item">
-                        <a href="" class="header-social-link bitcoin-link"></a>
-                    </li>
-                    <li class="header-social-item">
-                        <a href="" class="header-social-link messag-link"></a>
-                    </li>
-                </ul>
-              </li>
-            </ul>
-        </div>
-    </header>
-    <section class="section-content first-slider-section">
-        <div class="container-fluid">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-bee" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="container-bee-carousel-item">
-                      <img src="image/banner-1.jpg" class="banner carousel">
-                      <img src="image/mobile-banner-1.jpg" class="mobile-banner">
-                      <div class="content-carousel-text">
-                          <h2 class="title-carousel BANNER_1">Покупай пчел!</h2>
-                          <p class="sub-title-carousel BRING_THEM_ALL_TOGETHER">Собери их всех вместе!</p>
-                          <button type="button" class="button-btn go-to-game slider-btn PLAY">Играть</button>
-                      </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container-bee-carousel-item">
-                        <img src="image/banner-2.jpg" class="banner carousel">
-                        <img src="image/mobile-banner-2.jpg" class="mobile-banner">
-                        <div class="content-carousel-text">
-                            <h2 class="title-carousel BANNER_2">Начни играть легко!</h2>
-                            <p class="sub-title-carousel GET_TOGETHER_A_FREE_WAX">Собирайте бесплатный воск с первых секунд игры!</p>
-                            <button type="button" class="button-btn go-to-game slider-btn PLAY">Играть</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container-bee-carousel-item">
-                        <img src="image/banner-3.png" class="banner carousel">
-                        <img src="image/mobile-banner-3.jpg" class="mobile-banner">
-                        <div class="content-carousel-text">
-                            <h2 class="title-carousel GET_A_PERCENT">Получите бонус до 10%</h2>
-                            <p class="sub-title-carousel PURCHASES_BEEKEPER">От покупок пасечников, которых
-                                Вы пригласили лично!</p>
-                            <button type="button" class="button-btn go-to-game slider-btn PLAY">Играть</button>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only PREVIOUS">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only NEXT">Next</span>
-              </a>
+    
+        <div class="container-game">
+            <div class="main-title">
             </div>
-        </div>  
-    </section>
-    <section class="section-content">
-        <div class="container">
-            <div class="content-header-section">
-                <div class="wrapper-list-statistic">
+            <div class="main-title2">
+            </div>
+
+
+
+            <div class="section-game">
+                <div class="header-section">
+                    <div class="name-title">
+                        <h1 class=" ">game statistics</h1>
+                    </div>
+                    <a class="button-btn reit  " name="modal-rate-init-button">Rating</a>
+                </div>
+                <div class="container-list-statistic">
                     <ul class="list-statistic">
-                        <li class="statistic-item investment landing-statistic-item">
-                            <div class="container-list-stat-item">
-                                <div class="info-item">
-                                    <h2 class="title-item INVESTED">Оборот:</h2>
-                                    <div class="result">
-                                        <p class="result-info"><span class="total_invest">0</span> BNB</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <li class="statistic-item investment" >
+                            <p class="result-info"><span class="total_invest">0</span> </p>
                         </li>
-                        <li class="statistic-item players landing-statistic-item">
-                            <div class="container-list-stat-item">
-                                <div class="info-item">
-                                    <h2 class="title-item PLAYERS">Игроков:</h2>
-                                    <div class="result">
-                                        <p class="result-info"><span class='total_players'>0</span></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <li class="statistic-item  players" >
+                            <p class="result-info"><span class='total_players'>0</span> </p>
                         </li>
-                        <li class="statistic-item bee landing-statistic-item">
-                            <div class="container-list-stat-item">
-                                <div class="info-item">
-                                    <h2 class="title-item BOUGHT_BEES">Куплено пчел:</h2>
-                                    <div class="result">
-                                        <p class="result-info"><span class='total_bee_bought'>0</span></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <li class="statistic-item bee" >
+                            <p class="result-info"><span class='total_bee_bought'>0</span> </p>
                         </li>
-                        <li class="statistic-item won landing-statistic-item">
-                            <div class="container-list-stat-item">
-                                <div class="info-item">
-                                    <h2 class="title-item WON">Выиграно:</h2>
-                                    <div class="result">
-                                        <p class="result-info"><span class='total_withdraw'>0</span> BNB</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <li class="statistic-item won" >
+                            <p class="result-info"><span  class='total_withdraw'>0</span> </p>
                         </li>
-                        <li class="statistic-item hive landing-statistic-item">
-                            <div class="container-list-stat-item">
-                                <div class="info-item">
-                                    <h2 class="title-item HIVE_LEADER">Лидер ульев:</h2>
-                                    <div class="result">
-                                        <p class="result-info"><span class='hive_leader'>0</span></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <li class="statistic-item hive" >
+                            <p class="result-info"><span id="totalStake2">0</span> </p>
                         </li>
+                       
                     </ul>
                 </div>
+               
             </div>
-            <header class="header-sections" id="ex1">
-                <h2 class="section-title GAME_MECHANICS">Механика игры</h2>
-            </header>
-            <div class="row mehanica-game">
-                <div class="col">
-                    <div class="wrapper-game-screen">
-                        <img src="image/game-screen.png" alt="game screen">
+
+            <div class="mechanism">
+                <div class="pipes">
+                    <div class="wrapper-btn-upgrade mobile-upgrade">
+                        <a class="button-btn upgrade-btn UPGRADE" name="modal-quality-upgrade-init-button">upgrade</a>
+                    </div>
+                    <div class="wrapper-active">
+                        <div class="drop-wax"></div>
+                        <div class="active-bank">
+                            <img src="image/wax-bank.png" alt="bank wax">
+                        </div>
+                    </div>
+                    <div class="wrapper-active-honey">
+                        <div class="drop-honey"></div>
+                        <div class="active-bank">
+                            <img src="image/honey-bank.png" alt="bank wax">
+                        </div>
+                    </div>
+                    <div class="trumpet-wax"></div>
+                    <div class="trumpet-top"></div>
+                    <div class="trumpet-honey"></div>
+                    <div class="trumpet-left"></div>
+                    <div class="wax-and-honey-in-time">
+                        <div class="item-time wax-time">
+                            <div class="container-item-time">
+                                <div class="score">
+                                    <p id="waxHour">0</p>
+                                    <span class="">Souls / hour</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-time honey-time">
+                            <div class="container-item-time">
+                                <div class="score">
+                                    <p id="honeyHour">0</p>
+                                    <span class=" ">Sins / hour</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col text-col-right">
-                    <div class="text-about-game">
-                        <p><span class="title-text">BeeHive</span><span class="text-header-block EARNS_COINS">представляет из себя экономическую игру благодаря которой Вы можете приумножить монеты BNB.</span></p>
-                        <p class="EXPERIENCE">Игра позволяет почувствовать себя в роли пасечника, развивая свой улей, приобретая разные породы пчел и проводя улучшения производственного процесса, получая за эту реальную прибыль.</p>
+                <div class="mehanizm-container mehanizm-bear mehanizm-honey mehanizm-raccoon mehanizm-opossum mehanizm-beek mehanizm-ai">
+                    <div class="upgrade">
+                        <div class="text-block-upgrade">
+                            <span id="qualityWaxPercent">20</span>
+                            <span>/</span>
+                            <span id="qualityHoneyPercent">80</span>
+                        </div>
+                        <div class="wrapper-btn-upgrade">
+                            <a class="button-btn upgrade-btn UPGRADE" name="modal-quality-upgrade-init-button">upgrade</a>
+                        </div>
                     </div>
-                </div>
-                <div class="w-100"></div>
-                 <div class="col text-col-left">
-                     <div class="text-about-game">
-                         <p><span class="text-header-block FISH_TEXT_2_1">В игре присутствует два ресурса </span><span class="title-text FISH_TEXT_2_2">воск и мед.</span> <span class="text-header-block FISH_TEXT_2_3">Воск можно купить или получить от пчел. Используется для покупки пчел, открытия новых рамок и развития улья.</span></p>
-                         <p class="FISH_TEXT_3">Мед же производят только Ваши пчелы, а также его можно получить от других ульев в вашей пасеке. Мед очень ценен, он может заменить воск в случае его нехватки, а также используется для улучшения качества производства и свободно конвертируется в BNB.</p>
-                    </div>
-                 </div>
-                <div class="col wrapper-content-list-result">
-                    <ul class="wrapper-result-mehanica">
-                       <li class="item-result">
-                           <span class="first-rsult medal-before">1 BNB</span>
-                           <span class="span-text">=</span>
-                           <span class="first-last wax-before" id="ethToWax">0</span>
-                       </li>
-                        <li class="item-result">
-                           <span class="first-rsult honey-before" id="waxToEth">0</span>
-                           <span class="span-text">=</span>
-                           <span class="first-last medal-before">1 BNB</span>
-                       </li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section-content grey-section">
-        <div class="container">
-            <header class="header-sections">
-                <h2 class="section-title BUY_BEES">Покупай пчелок</h2>
-                <p class="text-header-about-bee">
-                    <span class="text-header-block SPECIES_OF_BEES_1">В игре присутствует</span> <span class="dark-text SPECIES_OF_BEES_2">8 пород пчел</span><span class="text-header-block SPECIES_OF_BEES_3">, каждая из которых приносит определенную прибыль в виде сырого меда, который после переработки разделяется на</span> <span class="dark-text SPECIES_OF_BEES_4">мед и воск</span>
-                </p>
-            </header>
-            <div class="container-list-all-bee">
-                <ul class="list-all-bee">
-                    <li class="item-all-bee">
-                        <div class="container-img-bee airdrop-bee">
-                            <lottie-player src="image/AirdropBee.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">1. AirdropBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee"></h5>
-                                <p class="price-bee-text FLEW_FREE">Прилетает бесплатно</p>
+
+            <div class="game-rounds">
+                <div class="window">
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                    <div class="tryba-drop">
+                        <img src="image/drop-tryba.png" alt="drop">
+                    </div>
+                </div>
+                <ul class="list-game-rounds">
+                    <li class="item-rounds1" id="bee_type_1">
+                        <div class="wrapper-content-round airdrop-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1">
+                                </div>
                             </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text">500</p><pre> </pre><p class="product-bee-text WAX_">воска</p>
+                            <div class="fly fly-lust" >
+                                <a class="button-btn btn-blue none-active" id="modal-collect-airdrop-init-button">Collect</a>
                             </div>
-                        </div>
-                    </li>
-                    <li class="item-all-bee">
-                        <div class="container-img-bee smart-bee">
-                            <lottie-player src="image/SmartBee.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">2. SmartBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text">1 500</p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
-                            </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">220%<span class="small-percent AT_MONTH">/мес</span></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-all-bee">
-                        <div class="container-img-bee crypto-bee">
-                            <lottie-player src="image/CryptoBee.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">3. CryptoBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text">7 500</p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
-                            </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">223%<span class="small-percent AT_MONTH">/мес</span></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-all-bee">
-                        <div class="container-img-bee beetcoin-bee">
-                            <lottie-player src="image/Beetcoin.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">4. Beetcoin</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text">30 000</p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
-                            </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">226%<span class="small-percent AT_MONTH">/мес</span></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-all-bee">
-                        <div class="container-img-bee space-bee">
-                            <lottie-player src="image/Black.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">5. BroBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text">75 000</p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
-                            </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">229%<span class="small-percent AT_MONTH">/мес</span></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-all-bee">
-                        <div class="container-img-bee droid-bee">
-                            <lottie-player src="image/DroidBee.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">6. DroidBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text"><span class="dark-result">250 000</span></p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
-                            </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">232%<span class="small-percent AT_MONTH">/мес</span></p>
-                            </div>
-                        </div>
-                    </li>
-                     <li class="item-all-bee">
-                        <div class="container-img-bee tron-bee">
-                            <lottie-player src="image/BeeGirl.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">7. BNBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text"><span class="dark-result">750 000</span></p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
-                            </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">235%<span class="small-percent AT_MONTH">/мес</span></p>
+                             
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
                             </div>
                         </div>
                     </li>
-                    <li class="item-all-bee">
-                        <div class="container-img-bee super-bee">
-                            <lottie-player src="image/SuperBee.json" background="rgba(0, 0, 0, 0)" speed="1" style="width: 170px; height: 153px;" loop="" autoplay="">
-                            </lottie-player>
-                        </div>
-                        <div class="footer-about-bee">
-                            <h3 class="title-footer-about-bee">8. SuperBee</h3>
-                            <div class="status-pay-bee">
-                                <h5 class="title-price-bee COST">Стоимость:</h5>
-                                <p class="price-bee-text"><span class="dark-result">100 000</span></p><pre> </pre><p class="product-bee-text WAX_HONEY">воска/меда</p>
+                    <li class="item-rounds2" id="bee_type_2">
+                        <div class="wrapper-content-round smart-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-2">
+                                </div>
                             </div>
-                            <div class="result-bee-product">
-                                <h5 class="result-bee-title BRINGS">Приносит:</h5>
-                                <p class="product-bee-text percent-big">333%<span class="small-percent AT_MONTH">/мес</span></p>
+                            <div class="fly fly-gluttony" >
+                                <a class="button-btn bay-bee-btn  " name="bee_type_button" id="bee_type_button_2">Buy sinner</a>
+                            </div>
+                           
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-rounds3" id="bee_type_3">
+                        <div class="wrapper-content-round crypto-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-3">
+                                </div>
+                            </div>
+                            <div class="fly fly-greed" >
+                                <a class="button-btn red-btn UNLOCK" name="bee_type_button" id="bee_type_button_3">Unlock</a>
+                            </div>
+                           
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-rounds4" id="bee_type_4">
+                        <div class="wrapper-content-round beetcoin-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-4">
+                                </div>
+                            </div>
+                            <div class="fly fly-wrath" >
+                                <a class="button-btn red-btn UNLOCK" name="bee_type_button" id="bee_type_button_4">Unlock</a>
+                             </div>
+                           
+                      
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-rounds5" id="bee_type_5">
+                        <div class="wrapper-content-round space-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-5">
+                                </div>
+                            </div>
+                            <div class="fly fly-heresy" >
+                                <a class="button-btn red-btn UNLOCK" name="bee_type_button" id="bee_type_button_5">Unlock</a>
+                             </div>
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-rounds6" id="bee_type_6">
+                        <div class="wrapper-content-round droid-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-6">
+                                </div>
+                            </div>
+                            <div class="fly fly-lazziness" >
+                                <a class="button-btn red-btn UNLOCK" name="bee_type_button" id="bee_type_button_6">Unlock</a>
+                             </div>
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-rounds7" id="bee_type_7">
+                        <div class="wrapper-content-round tron-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-7">
+                                </div>
+                            </div>
+                            <div class="fly fly-fraud" >
+                                <a class="button-btn red-btn UNLOCK" name="bee_type_button" id="bee_type_button_7">Unlock</a>
+                             </div>
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-rounds8" id="bee_type_8">
+                        <div class="wrapper-content-round superbee-round">
+                            <div class="wrapper-lottie">
+                                <div class="anim-1 anim-8">
+                                </div>
+                            </div>
+                            <div class="fly fly-treachery" >
+                                <a class="button-btn red-btn UNLOCK" name="bee_type_button" id="bee_type_button_8">Unlock</a>
+                             </div>
+                            <div class="center-content-round">
+                                <div class="sotu-container">
+                                </div>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-    </section>
-    <section class="section-content section-medal">
-      <div class="container">
-         <header class="header-sections" id="ex2">
-            <h2 class="section-title GET_BEEKEEPER_MEDALS"> Получай медали пчеловода</h2>
-            <p class="text-header-block IMPROVE_YOUR_SKILLS">  Улучшайте свои навыки управления ульем и развития пасеки и получайте медали за достижения:</p>
-        </header>
-         <div class="jcarousel-wrapper">
-            <div class="jcarousel" id="mycrousel">
-                <ul>
-                    <li>
-                      <div class="container-type-medal">
-                        <div class="container-img-type-medal">
-                          <img src="image/paper-medal.png" alt="type medal">
-                        </div>
-                        <div class="footer-type-medal">
-                          <h3 class="name-type-medal PAPER_MEDAL">Paper medal</h3>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/leather.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal LEATHER_MEDAL">Leather medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text"> 3 500</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">50 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                     <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/wooden.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal WOODEN_MEDAL">Wooden medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text"> 10 500</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">190 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                   <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/copper.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal COPPER_MEDAL">Copper medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text">24 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">510 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/steel.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal STEEL_MEDAL">Steel Medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text">65 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">1 350 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/silver.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal SILVER_MEDAL">Silver medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text">140 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">3 225 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/golden.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal GOLDEN_MEDAL">Golden medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text"> 185 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">5 725 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/pearl.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal PEARL_MEDAL">Pearl Medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text">235 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">8 850 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/platinum.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal PLATINUM_MEDAL">Platinum Medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text">290 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">12 725 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                    <li>
-                       <div class="container-type-medal">
-                          <div class="container-img-type-medal">
-                            <img src="image/emerald.png" alt="type medal">
-                          </div>
-                          <div class="footer-type-medal">
-                            <h3 class="name-type-medal EMERALD_MEDAL">Emerald Medal</h3>
-                            <div class="wrapper-about-medal">
-                               <div class="item-about-medal">
-                                  <h5 class="title-about-medal REWARD">Награда:</h5>
-                                  <p class="block-tetx-medal-result"><span class="big-text">800 000</span></p> <p class="product-bee-text WAX_ ">воска</p>
-                                </div>
-                                <div class="item-about-medal">
-                                  <h5 class="title-about-medal ACHIEVEMENT_POINTS">Очки достижения:</h5>
-                                  <p class="block-tetx-medal-result">23 500 000</p>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                    </li>
-                </ul>
+       
+        <footer class="footer">
+            <div class="fly">
+               
             </div>
-
-            <a href="#" class="jcarousel-control-prev"></a>
-            <a href="#" class="jcarousel-control-next"></a>
-        </div>
-        <p class="regomendation-about-medal">
-          <span class="text-header-block EARN_ACHIEVEMENT_POINTS_2_1">
-            Вы можете зарабатывать очки достижений от личных покупок воска, а также от покупок пасечников, присоединившихся к игре по Вашей рекомендации.
-            Причем лично купленный воск = 1 ОД, купленный 1 воск вашим приглашенным первой линии равняется 0,5 ОД и со второй линии за 1 воск 0,25 ОД.
-          </span>
-        </p>
-      </div>
-    </section>
-
-    <section class="section-content grey-section">
-      <div class="container">
-         <header class="header-sections">
-            <h2 class="section-title IMPROVE_QUALITY">Улучшай качество производства</h2>
-            <p class="sub-title-header GROW_YOUR_HIVE">Развивайте свой улей!</p>
-            <p class="text-header-block IMPROVE_PROCESSING">Полученный мед Вы можете использовать для улучшения переработки меда, а именно:</p>
-        </header>
-         <div class="jcarousel-wrapper">
-            <div class="jcarousel mycrousel" id="mycrousel1">
-                <ul>
-                    <li>
-                      <div class="container-mehanizm-item">
-                        <div class="wrapper-mehanizm-block">
-                           <img src="image/mehanizm-1.png" alt="mehanizm">
-                           <div class="result-text-block">
-                             <p>50/50</p>
-                           </div>
-                        </div>
-                        <div class="container-text-mehanizm">
-                          <p class="text-mehanizm">BEAR</p>
-                        </div>
-                      </div>
-                    </li>
-                     <li>
-                      <div class="container-mehanizm-item">
-                        <div class="wrapper-mehanizm-block">
-                           <img src="image/mehanizm-2.png" alt="mehanizm">
-                           <div class="result-text-block">
-                             <p>48/52</p>
-                           </div>
-                        </div>
-                        <div class="container-text-mehanizm">
-                          <p class="text-mehanizm">HONEY BADGER</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="container-mehanizm-item">
-                        <div class="wrapper-mehanizm-block">
-                           <img src="image/mehanizm-3.png" alt="mehanizm">
-                           <div class="result-text-block">
-                             <p>46/54</p>
-                           </div>
-                        </div>
-                        <div class="container-text-mehanizm">
-                          <p class="text-mehanizm">RACCOON</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="container-mehanizm-item">
-                        <div class="wrapper-mehanizm-block">
-                           <img src="image/opossum.png" alt="mehanizm">
-                           <div class="result-text-block">
-                             <p>44/56</p>
-                           </div>
-                        </div>
-                        <div class="container-text-mehanizm">
-                          <p class="text-mehanizm">OPOSSUM</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="container-mehanizm-item">
-                        <div class="wrapper-mehanizm-block">
-                           <img src="image/beek.png" alt="mehanizm">
-                           <div class="result-text-block">
-                             <p>42/58</p>
-                           </div>
-                        </div>
-                        <div class="container-text-mehanizm">
-                          <p class="text-mehanizm">BEEKEEPER</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="container-mehanizm-item">
-                        <div class="wrapper-mehanizm-block">
-                           <img src="image/ai.png" alt="mehanizm">
-                           <div class="result-text-block">
-                             <p>40/60</p>
-                           </div>
-                        </div>
-                        <div class="container-text-mehanizm">
-                          <p class="text-mehanizm">AI</p>
-                        </div>
-                      </div>
-                    </li>
-                </ul>
-            </div>
-            <a href="#" class="jcarousel-control-prev"></a>
-            <a href="#" class="jcarousel-control-next"></a>
-        </div>
-        <p class="regomendation-about-medal HIGHER_LEVEL_PURIFICATION">Чем выше уровень очистки, тем больше чистого меда вы получаете!</p>
-      </div>
-    </section>
-
-    <section class="section-conten section-bonus">
-      <div class="container">
-         <header class="header-sections">
-            <h2 class="section-title DEVELOP_YOUR_BEE_GARDEN">Развивай свою пасеку</h2>
-        </header>
-        <div class="row container-row">
-          <div class="col">
-            <div class="container-item-block">
-              <h3 class="title-item-block EARN_MORE">Зарабатывайте больше!</h3>
-              <div class="wrapper-tetx-item-block">
-                <p class="item-text"><span class="text-header-block FRIENDLY_BEEKEEPER_HIVE_1">Если Вы очень дружелюбный пасечник, развиваете свой улей, а также всегда смотрите за развитием своей пасеки, то получайте</span> <span class="title-text FRIENDLY_BEEKEEPER_HIVE_2">бонус</span> <span class="text-header-block FRIENDLY_BEEKEEPER_HIVE_3">от каждого нового улья в Вашей пасеке. Тем более бонусы Вы получаете чистым медом.</span></p>
-              </div>
-              <button type="button" class="button-btn go-to-game slider-btn PLAY">Играть</button>
-            </div>
-          </div>
-           <div class="col">
-             <div class="wrapper-my-honey">
-               <img src="image/my-honey.png" alt="butle honey">
-             </div>
-           </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-        <div class="wrapper-footer-content">
-            <div class="content-footer">
-                <div class="top-footer-content">
-                    <div class="wrapper-top-footer-logo">
-                           <div class="logo">
+            <div class="wrapper-footer-content">
+                <div class="content-footer">
+                    <div class="top-footer-content">
+                          <img src="./image/evil devils.png" alt="">                  
+                    </div>
+                </div>
+            </div>           
+        </footer>
+       <!-- <footer class="footer">
+            <div class="wrapper-footer-content">
+                <div class="content-footer">
+                    <div class="top-footer-content">
+                        <div class="wrapper-top-footer-logo">
+                            <div class="logo">
                                 <img src="image/logo.png" alt="logo">
                             </div>
-                             <a href="faq.html" class="footer-btn mobile-footer-btn">F.A.Q.</a>
-                    </div>
-                    <ul class="list-top-footer">
-                        <li class="item-footer-top-list">
-                            <p><span class="GAME_REQUIRES_EXTENSION">Для игры требуется браузерное
-                                расширение</span> 
-                                <a href="https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp?hl=en" target="_blank">Binance Smart Chain </a>
-                                <span class="OR"></span>
-                                <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">MetaMask</a>
-                              </p>
-                        </li>
-                        <li class="item-footer-top-list">
-                            <p><span class="GAME_REQUIRES_MOBILE_SHORT">Для игры на мобильных устройствах
-                                используйте</span>
-                                <a href=" https://metamask.io/download.html" target="_blank">MetaMask</a>
-                                <span class="OR"></span>
-                                <a href=" https://trustwallet.com/" target="_blank">Trust Wallet</a>
-                            </p>
-                        </li>
-                    </ul>
-                    <a href="faq.html" class="footer-btn">F.A.Q.</a>
-                </div>
-                <div class="bottom-footer-content">
-                    <div class="wrapper-info-game">
-                        <p>BeeHive Game © 2019</p>
-                    </div>
-                    <div class="container-list-footer">
-                         <ul class="list-social-footer">
-                            <!--li class="item-social-footer">
-                                <a href="https://drive.google.com/file/d/1e1mSz1eFNCitDC_jitbUn_928bgBS9X3/view" class="link-social audit CONTRACT_AUDIT">Аудит контракта</a>
-                            </li-->
-                            <li class="item-social-footer">
-                                <a href="" class="link-social smart SMARTCONTRACT" name="link_contract_address" target="_blank">Смартконтракт</a>
+                            <a href="" class="footer-btn mobile-footer-btn">F.A.Q.</a>
+                        </div>
+                        <ul class="list-top-footer">
+                            <li class="item-footer-top-list">
+                                <p><span class="GAME_REQUIRES_EXTENSION">Для игры требуется браузерное
+                                    расширение</span> 
+                                    <a href="https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp?hl=en" target="_blank">Binance Smart Chain </a>
+                                    <span class="OR"></span>
+                                    <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">MetaMask</a>
+                                  </p>
+                            </li>
+                            <li class="item-footer-top-list">
+                                <p><span class="GAME_REQUIRES_MOBILE_SHORT">Для игры на мобильных устройствах
+                                    используйте</span>
+                                    <a href=" https://metamask.io/download.html" target="_blank">MetaMask</a>
+                                    <span class="OR"></span>
+                                    <a href=" https://trustwallet.com/" target="_blank">Trust Wallet</a>
+                                </p>
                             </li>
                         </ul>
+                        <a href="faq.html" class="footer-btn">F.A.Q.</a>
+                    </div>
+                    <div class="bottom-footer-content">
+                        <div class="wrapper-info-game">
+                            <p>BeeHive Game © 2019</p>
+                        </div>
+                        <div class="container-list-footer">
+                            <ul class="list-social-footer">
+                                
+                                <li class="item-social-footer">
+                                    <a href="" class="link-social smart SMARTCONTRACT" name="link_contract_address" target="_blank">Смартконтракт</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </footer>
+    -->
+        <div class="wrapper-modal questions flythat" data-autoopen="false" id="modal-text22">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class=" ">FAQ</h2>
+                    </div>
+                </div>
+                <div class="container-questions">
+                    <ul class="list-questions">
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions  ">What do you need to start the game?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_1_1">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_2">Как я могу получить Airdrop бонус?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_2">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_3">Как пополнять баланс и выводить средства?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_3">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_4">Как зарабатывать больше?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_4">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_5">Как происходит начисление прибыли?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_5">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_6">Регистрация без спонсора</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_6">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_7">Кто такой Представитель и как им стать?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_7">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                        <li class="item-questions">
+                            <div class="header-item">
+                                <h3 class="title-item-questions QUESTION_8">Пчела Treacherous - когда будет доступна?</h3>
+                                <button type="button" class="click-chevron"></button>
+                            </div>
+                            <div class="block-questions">
+                                <p class="ANSWER_8">Игра работает на смартконтракте блокчейна Tron и для взаимодействия, у вас должно быть установлено браузерное расширение TronLink или TronPay. Для старта игры вы должны иметь на счету минимум 1-2 BNB для оплаты комиссии первой транзакции.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <button type="button" class="modal-btn ">close</button>
+                </div>
+            </div>
         </div>
-    </footer>
 
-    <!-- <a href="https://tronhives.com/" class="cripto-transfer">TRX</a> -->
+        <div class="wrapper-modal paseca flythat paseka-window" data-autoopen="false" id="modal-referrals">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="BEE_GARDEN">Пасека</h2>
+                    </div>
+                </div>
+                <div class="wrapper-reffer-link">
+                    <div class="block-reffer">
+                        <h3 class="title-reffer  ">Your referral link:</h3>
+                        <div class="reffer-link-container">
+                            <p class="reffer-link">https://dsjfhvjsfjshv.fgdjfshd</p>
+                            <button type="button" class="reffer-btn"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-table">
+                    <table class="table-modal">
+                        <thead>
+                            <tr>
+                                <th><span class="my-bee-home  ">Date</span></th>
+                                <th><span class="my-bee-home  ">Circle</span></th>
+                                <th><span class="my-bee-home LEVEL">Уровень</span></th>
+                                <th><span class="my-bee-home AMOUNT">Сумма</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="modal-referrals-list">
+                            <tr id="modal-referrals-list-empty">
+                                <td colspan="4">
+                                    <center><span class="EMPTY">Тут пока пусто</span></center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-modal">
+                    <div class="wrapper-footer-input">
+                        <div class="footer-input">
+                            <h3 class=" ">Number of circles:</h3>
+                            <span id="modal-referrals-bees-count">0</span>
+                        </div>
+                        <div class="footer-input">
+                            <h3 class="TOTAL_RECEIVED">Всего получено:</h3>
+                            <span id="modal-referrals-total-profit">0</span>
+                        </div>
+                    </div>
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
 
-    <div class="wrapper-social-list">
-        <ul class="social-list">
-            <li class="social-item">
-                <a href="https://t.me/beehive_game" class="social-link telegram-icon" target="_blank"><span class="social-icon telegram-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <span class="social-icon telegram-chat-icon"></span>
-                <ul class="social-sub-list">
-                  <li class="social-sub-item">
-                      <a href="https://t.me/BeeHives_game" class="social-link ru-icon" target="_blank">RU</a>
-                  </li>
-                  <li class="social-sub-item">
-                      <a href="https://t.me/BeeHive_game_EN" class="social-link en-icon" target="_blank">EN</a>
-                  </li>
+        <div class="wrapper-modal flythat" data-autoopen="false" id="modal-rates">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="TOP_HIVES">Топ ульев</h2>
+                    </div>
+                </div>
+                <div class="container-table">
+                    <table class="table-modal">
+                        <thead>
+                            <tr>
+                                <th><span class="my-bee-home PLACE">Место</span></th>
+                                <th><span class="my-bee-home HIVE_ADDRESS">Адрес улья</span></th>
+                                <th><span class="my-bee-home PROFIT_PER_HOUR">Доход в час</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="modal-rates-list">
+                            <tr>
+                                <td colspan="3">
+                                    <center><span class="EMPTY">Тут пока пусто</span></center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-modal">
+                    <div class="footer-input uley-input">
+                        <h3 class="YOUR_PLACE">Твое место:</h3>
+                        <div class="medal-input" id="modal-rates-medal" style="display:none;">
+                            <img src="image/medal.png" alt="medal">
+                        </div>
+                        <span id="modal-rates-position">--</span>
+                    </div>
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
 
-                  <!-- <li class="social-sub-item">
-                      <a href="https://t.me/BeeHive_game_ES" class="social-link es-icon" target="_blank">ES</a>
-                  </li> -->
-                  <!-- <li class="social-sub-item">
-                      <a href="https://t.me/beehive_game_IN" class="social-link in-icon" target="_blank">IDN</a>
-                  </li> -->
-                  <!-- <li class="social-sub-item">
-                      <a href="https://t.me/beehive_game_Philippines" class="social-link fil-icon" target="_blank">PHL</a>
-                  </li> -->
-                  <li class="social-sub-item">
-                      <a href="https://t.me/beehive_game_Pakistan" target="_blank" class="social-link pak-icon">PAK</a>
-                  </li>
-                  <li class="social-sub-item">
-                      <a href="https://t.me/BeeHive_Game_Italy" target="_blank" class="social-link it-icon">IT</a>
-                  </li>
-                  <!-- <li class="social-sub-item">
-                      <a href="https://t.me/beehive_game_TR" target="_blank" class="social-link tr-icon">TR</a>
-                  </li> -->
-                  <li class="social-sub-item">
-                      <a href="https://t.me/beehive_game_AF" target="_blank" class="social-link af-icon">AF</a>
-                  </li>
-                  <li class="social-sub-item">
-                      <a href="https://t.me/beehive_game_Iran" target="_blank" class="social-link ir-icon">IR</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="social-item">
-                <a href="https://t.me/beehive_game" class="social-link telegram-icon" target="_blank"><span class="social-icon telegram-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <a href="https://discord.gg/pVFVtPM" class="social-link diskord-icon" target="_blank"><span class="social-icon diskord-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <a href="https://twitter.com/BeehiveDApps" class="social-link twitter-icon" target="_blank"><span class="social-icon twitter-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <a href="https://www.facebook.com/BeeHiveGame" class="social-link fb-icon" target="_blank"><span class="social-icon fb-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <a href="https://vk.com/beehive_game" class="social-link vk-icon" target="_blank"><span class="social-icon vk-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <a href="https://medium.com/@anthonylapidlab/how-to-play-beehive-on-pc-and-phone-bd49a847dc97" class="social-link md-icon" target="_blank"><span class="social-icon md-icon"></span></a>
-            </li>
-            <li class="social-item">
-                <a href="https://www.youtube.com/beehivedapps" class="social-icon yt-icon" target="_blank"></a>
-            </li>
-        </ul>
-    </div>
-  </div>
+        <div class="wrapper-modal pay-bee flythat" data-autoopen="false" id="modal-buy-bee">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 name="modal-buy-bee-2"><span class="">Buy</span> Glutton</h2>
+                        <h2 name="modal-buy-bee-3"><span class="">Buy</span> Greedy</h2>
+                        <h2 name="modal-buy-bee-4"><span class="">Buy</span> Wrathful</h2>
+                        <h2 name="modal-buy-bee-5"><span class="">Buy</span> Heretic</h2>
+                        <h2 name="modal-buy-bee-6"><span class="">Buy</span> Lazzy</h2>
+                        <h2 name="modal-buy-bee-7"><span class="">Buy</span> Fraudulent</h2>
+                        <h2 name="modal-buy-bee-8"><span class="">Buy</span> Treacherous</h2>
+                    </div>
+                </div>
+                <p class="about-bee " name="modal-buy-bee-2">A sinner will bring you souls and sins, more sinners - more income</p>
+                <p class="about-bee " name="modal-buy-bee-3">A sinner will bring you souls and sins, more sinners - more income</p>
+                <p class="about-bee " name="modal-buy-bee-4">A sinner will bring you souls and sins, more sinners - more income</p>
+                <p class="about-bee " name="modal-buy-bee-5">A sinner will bring you souls and sins, more sinners - more income</p>
+                <p class="about-bee " name="modal-buy-bee-6">A sinner will bring you souls and sins, more sinners - more income</p>
+                <p class="about-bee " name="modal-buy-bee-7">A sinner will bring you souls and sins, more sinners - more income</p>
+                <p class="about-bee " name="modal-buy-bee-8">A sinner will bring you souls and sins, more sinners - more income</p>
+                <div class="img-bee">
+                    <img src="image/2.png" name="modal-buy-bee-img">
+                </div>
+                <div class="footer-pay footer-flex">
+                    <p class="my-bee-home"><span class="">In this layer</span> <span class="count-bee" id="modal-buy-bee-have">03</span>/<span class="all-bee">32</span>
+                        <span name="modal-buy-bee-2">Glutton</span>
+                        <span name="modal-buy-bee-3">Greedy</span>
+                        <span name="modal-buy-bee-4">Wrathful</span>
+                        <span name="modal-buy-bee-5">Heretic</span>
+                        <span name="modal-buy-bee-6">Lazzy</span>
+                        <span name="modal-buy-bee-7">Fraudulent</span>
+                        <span name="modal-buy-bee-8">Treacherous</span>
+                    </p>
+                    <div class="wrapper-pay-bee-input">
+                        <div class="count-bee-wrapper">
+                            <button type="button" class="count-bee-btn" id="modal-bee-buy-minus">-</button>
+                            <input type="number" class="buy-input pay-count-bee" value="1" id="modal-bee-buy-input">
+                            <button type="button" class="count-bee-btn" id="modal-bee-buy-plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="my-bee-home" name="modal-buy-bee-not-enough" style="display:none;"><span class="">Not enough sins and souls to buy a sinner.</span></p>
+                <p class="my-bee-home" name="modal-buy-bee-not-in-time" style="display:none;"><span class="NOT_IN_TIME_SUPER_BEE">Прошло 7 дней с Вашей регистрации! Доступно только новым пользователям!</span></p>
+                <p class="my-bee-home" name="modal-buy-bee-not-value" style="display:none;"><span class="ENTER_VALUE">Введите значение!</span></p>
+                <button type="button" class="button-btn green-btn green-bee-btn" name="modal-buy-bee-button"><span class="BUY_FOR">Купить за</span> <span class="my-price" id="modal-bee-buy-price">0</span></button>
+                <p class="limit-bee"><span class="limit-bee BUY_MAX">Вы можете купить максимум</span> <span class="limit-bee" id="modal-bee-buy-max">32</span> <span class="limit-bee ">sinners</span></p>
+                <!-- <div class="balance-footer-block">
+                    <span class="OVERALL_BALANCE">Общий баланс:</span>
+                </div> -->
+                <!--div class="debug" style="color: blue;">DEBUG</div-->
+                <!-- <div class="wrapper-bottom-footer-modal">
+                    <div class="container-pay-bee">
+                        <div class="summa-dohod">
+                            <img src="image/wax.png" alt="wax">
+                            <span>+</span>
+                            <img src="image/honey.png" alt="honey">
+                        </div>
+                        <p class="all-dohod" name="modal-bee-buy-amount">0</p>
+                    </div>
+                </div> -->
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
 
-<!--   <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script> -->
+        <div class="wrapper-modal buy-wax flythat" data-autoopen="false" id="modal-withdraw">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="">Sell souls</h2>
+                    </div>
+                </div>
+                <p class="pay-wax  ">You can sell souls at any time and receive funds in your wallet.</p>
+                <p class="invest-info  "> By investing souls you get a 10% bonus! </p>
+                <div class="center-change">
+                    <span class="wax-span" id="honeyEqual1eth">50</span>
+                    <span>=</span>
+                    <span class="many-change">1 BNB</span>
+                </div>
+                <div class="buy-honey-bank">
+                    <h3 class="">Amount of souls:</h3>
+                    <input type="text" name="text" class="buy-input" value="0" id="modal-withdraw-input">
+                </div>
+                <p class="info-buy-honey  " id="modal-withdraw-not-enough" style="display:none;">Not enough souls</p>
+                <p class="info-buy-honey" id="modal-withdraw-less-min" style="display:none;"><span class="WITHDRAWAL_AMOUNT">Минимальная сумма вывода</span> 0.001 BNB</p>
+                <button type="button" class="button-btn green-btn green-bee-btn buy-honey-btn" id="modal-withdraw-button"><pre><span class="WITHDRAW">Вывести</span><span id="modal-withdraw-button-value">120</span><span>BNB</span></pre></button>
+                <!-- <div class="balance-footer-block">
+                    <span class=" ">Sins balance:</span>
+                </div> -->
+                <!--div class="debug" style="color: blue;">DEBUG</div-->
+                <!-- <div class="wrapper-bottom-footer-modal">
+                    <div class="container-pay-bee">
+                        <div class="summa-dohod">
+                            <img src="image/honey.png" alt="honey">
+                        </div>
+                        <p class="all-dohod" name="modal-honey-balance">0</p>
+                    </div>
+                </div> -->
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal buy-wax puy-wax  flythat" data-autoopen="false" id="modal-deposit">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class=" ">Buy sins</h2>
+                    </div>
+                </div>
+                <p class="pay-wax  ">Sins are used to buy new sinners and develop your hell</p>
+                <div class="center-change">
+                    <span class="many-change">1 BNB</span>
+                    <span>=</span>
+                    <span class="wax-span-change" id="waxEqual1eth">50</span>
+                </div>
+                <div class="buy-honey-bank">
+                    <h3 class="TRX_NUMBER">Количество BNB:</h3>
+                    <input id="modal-deposit-input" type="number" name="text" class="buy-input" value="1">
+                </div>
+                <p class="error-honey NOT_ENOUGH_BALANCE" id="modal-deposit-not-enough" style="display:none;">Недостаточно BNB на балансе аккаунта!</p>
+                <button type="button" class="button-buy-wax button-btn green-btn green-bee-btn buy-honey-btn" id="modal-deposit-button"><div><div><span class="BUY_WAX_BTN">Купить</span><span id="modal-deposit-button-value">500 000</span></div><div><span class="">sins</span></div></div></button>
+                <button type="button" class="button-buy-wax button-btn green-btn green-bee-btn buy-honey-btn" id="modal-deposit-button" onclick="approveToken()">Approve</div></button>
+                
+                
+                
+                <!-- <div class="balance-footer-block">
+                    <span class="WALLET_BALANCE">Balance кошелька:</span>
+                </div> -->
+                <!-- <div class="wrapper-bottom-footer-modal">
+                    <div class="container-pay-bee">
+                        <p class="all-dohod"><span name="modal-deposit-balance">0</span> BNB</p>
+                    </div>
+                </div> -->
+                <!--div class="debug" style="color: blue;">DEBUG</div-->
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal buy-wax puy-wax modernize flythat" data-autoopen="false" id="modal-quality-upgrade">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="MODIFIED_PRODUCTION">улучшить производство</h2>
+                    </div>
+                </div>
+                <p class="pay-wax " id="modal-quality-upgrade-about">You can improve the quality of processing and get more souls</p>
+                <div class="wrapper-content-box">
+                    <h2 class="title-content-box curent-status CURRENT_RATIO">Текущее соотношение:</h2>
+                    <p class="percent-status"><span><span id="cur_honey_percent">40</span>%</span> <span class="">soul</span> / <span><span id="cur_wax_percent">60</span>%</span> <span class="">sins</span></p>
+                </div>
+                <div class="wrapper-content-box margin-bottom" id="modal-quality-upgrade-next-level">
+                    <h2 class="title-content-box NEXT_LEVEL">Следующий уровень:</h2>
+                    <p class="percent-status next-level"><span><span id="next_honey_percent">50</span>%</span> <span class="">soul</span> / <span><span id="next_wax_percent">50</span>%</span> <span class="">sins</span></p>
+                </div>
+                <div class="wrapper-content-box">
+                    <h2 class="title-content-box title-max-level MAXIMUM_LEVEL" id="modal-quality-upgrade-max-level" style="display:none;">Вы красавчик! Вы достигли максимального уровня улучшений производства!</h2>
+                </div>
+                <p class="info-buy-honey" id="modal-quantity-update-not-enough" style="display:none;"><span class="">not enough souls</span> <span name="modal-quality-upgrade-balance">0</span> <span class="">soul</span>!</p>
+                <button type="button" class="button-btn buy-honey-btn modernize-btn" id="modal-quantity-update-button"><div><span class="UPGRADE_FOR">Улучшить за</span> <br><span id="quality_upgrade_price">0</span></div></button>
+                <!-- <div class="balance-footer-block">
+                    <span class="">Balance sin:</span>
+                </div> -->
+                <!-- <div class="wrapper-bottom-footer-modal">
+                    <div class="container-pay-bee">
+                        <div class="summa-dohod">
+                            <img src="image/honey.png" alt="honey">
+                        </div>
+                        <p class="all-dohod" id="modal-quantity-update-honey-balance">0</p>
+                    </div>
+                </div> -->
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal cryptobee flythat" data-autoopen="false" id="modal-unlock-bee">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 name="modal-buy-bee-2"><span class="">open</span> Gluttony</h2>
+                        <h2 name="modal-buy-bee-3"><span class="">open</span> Greed</h2>
+                        <h2 name="modal-buy-bee-4"><span class="">open</span> Wrath</h2>
+                        <h2 name="modal-buy-bee-5"><span class="">open</span> Heresy</h2>
+                        <h2 name="modal-buy-bee-6"><span class="">open</span> Lazzyness</h2>
+                        <h2 name="modal-buy-bee-7"><span class="">open</span> Fraud</h2>
+                        <h2 name="modal-buy-bee-8"><span class="">open</span> Treachery</h2>
+                    </div>
+                </div>
+                <p class="about-bee  " id="modal-unlock-bee-about-success">You can open a new circle. When you unlock, you get the first sinner for free</p>
+                <p class="about-bee UNLOCK_BEE" id="modal-unlock-bee-about-first" style="display:none;">Чтобы разблокировать пчел совершите любое действие</p>
+                <p class="about-bee" id="modal-unlock-bee-about-failed" style="display:none;"><span class="about-bee  ">To be able to unlock the next circle, you must purchase all</span>
+                    <span class="about-bee" name="modal-buy-bee-3">Glutton sinners</span>
+                    <span class="about-bee" name="modal-buy-bee-4">Greedy sinners</span>
+                    <span class="about-bee" name="modal-buy-bee-5">Wrathful sinners</span>
+                    <span class="about-bee" name="modal-buy-bee-6">Heretic sinners</span>
+                    <span class="about-bee" name="modal-buy-bee-7">Lazzy sinners</span>
+                    <span class="about-bee" name="modal-buy-bee-8">Fraudulent sinners</span>
+                </p>
+                <!-- <p class="about-bee YOUR_NEED_PLATINUM_MEDAL" name="modal-buy-bee-7">Так же Вам необходимо получить Платиновую sinль</p> -->
+                <p class="about-bee UNLOCK_BEE_WAIT" id="modal-unlock-bee-about-last" style="display:none;">Чтобы разблокировать пчел дождитесь пока баланс контракта уменьшится на 25% от максимального значения. Блокируется для покупки пчел, когда баланс вернулся к прежнему значению или больше.</p>
+                <div class="img-bee">
+                    <img src="image/3.png" name="modal-buy-bee-img">
+                </div>
+                <div class="footer-pay">
+                    <p class="my-bee-home" name="modal-buy-bee-2">Glutton sinner</p>
+                    <p class="my-bee-home" name="modal-buy-bee-3">Greedy sinner</p>
+                    <p class="my-bee-home" name="modal-buy-bee-4">Wrathful sinner</p>
+                    <p class="my-bee-home" name="modal-buy-bee-5">Heretic sinner</p>
+                    <p class="my-bee-home" name="modal-buy-bee-6">Lazzy sinner</p>
+                    <p class="my-bee-home" name="modal-buy-bee-7">Fraudulent sinner</p>
+                    <p class="my-bee-home" name="modal-buy-bee-8">Treacherous sinner</p>
+                </div>
+                <div class="about-cryptobee">
+                    <ul class="list-about-cryptobee">
+                        <li class="item-about-cryptobee">
+                            <div class="wrapper-info-cryptobee">
+                                <p class="">Sinner cost:</p>
+                            </div>
+                            <span class="price-bee" id="modal-unlock-bee-price">0</span>
+                        </li>
+                        <li class="item-about-cryptobee">
+                            <div class="wrapper-info-cryptobee">
+                                <p class="PROFIT_PER_MONTH">Доходность в месяц:</p>
+                            </div>
+                            <span class="yield"><span id="modal-unlock-bee-percent">0</span>%</span>
+                        </li>
+                        <li class="item-about-cryptobee">
+                            <div class="wrapper-info-cryptobee">
+                                <p class="YIELD_PER_HOUR">Доходность в час:</p>
+                            </div>
+                            <span class="yield-in-hour">
+                                 <span class="hour-wax"></span>
+                                 <span class="plus">+</span>
+                                 <span class="hour-honey"></span>
+                                 <span id="modal-unlock-bee-profit">0</span>
+                             </span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="my-bee-home" name="modal-unlock-bee-need-collect" style="display:none;"><span class="NEED_COLLECT_WAX">Вам надо собрать мед, чтобы его хватило!</span></p>
+                <p class="my-bee-home" name="modal-buy-bee-not-enough" style="display:none;"><span class="NOT_ENOUGH_HONEY_WAX">Недостаточно воска и sin!</span></p>
+                <button type="button" class="button-btn green-btn green-bee-btn " name="modal-unlock-bee-button-collect" style="display:none;">Collect</button>
+                <button type="button" class="button-btn green-btn green-bee-btn cryptobee-btn" name="modal-buy-bee-button"><div><span class="UNLOCK_FOR">Разблокировать за</span> <br><span id="modal-unlock-bee-unlock-price">0</span></div></button>
+                <!-- <div class="balance-footer-block">
+                    <span class="OVERALL_BALANCE">Общий баланс:</span>
+                </div> -->
+                <!-- <div class="wrapper-bottom-footer-modal">
+                    <div class="container-pay-bee">
+                        <div class="summa-dohod">
+                            <img src="image/wax.png" alt="wax">
+                            <span>+</span>
+                            <img src="image/honey.png" alt="honey">
+                        </div>
+                        <p class="all-dohod" name="modal-bee-buy-amount">0</p>
+                    </div>
+                </div> -->
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal new-round-modal airdrop flythat" data-autoopen="false" id="modal-airdrop-collect">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2>AirDrop</h2>
+                    </div>
+                </div>
+                <div class="img-reward">
+                    <img src="image/wax-big.png">
+                </div>
+                <div class="reward-block">
+                    <h3 class="title-reward REWARD">Награда: </h3>
+                    <div class="wrapper-reward">
+                        <span class="wax-reward" name="first_bee_airdrop_amount">100</span>
+                    </div>
+                </div>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal new-round-modal-2 flythat" data-autoopen="false" id="modal-medal-info">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="NEW_ACHIEVEMENT">НОВОЕ достижение</h2>
+                    </div>
+                </div>
+                <div class="img-reward give-big-medal">
+                    <img src="image/big-medal.png">
+                </div>
+                <p class="your-reit" id="medal-info-score"><span id="medal-info-points">0</span>/<span id="medal-info-points-awaiting">0</span></p>
+                <h3 class="give-medale give-medale-1 SCORE_MORE" name="medal-info-max" style="display:none;">Вы красавчик!</h3>
+                <h3 class="give-medale give-medale-1 ANY_ACTION" name="medal-info-max" style="display:none;">Вы уже получили максимальную sinль!</h3>
+                <h3 class="give-medale give-medale-1 MORE_POINTS" id="medal-info-text1" style="display:none;">Наберите больше очков достижения, чтобы получить:</h3>
+                <h3 class="give-medale give-medale-1 UNLOCK_BEE" id="medal-info-text0">Совершите любое действие, чтобы получить</h3>
+                <div class="reward-block">
+                    <h3 class="title-reward reward-2 PAPER_MEDAL" id="medal-info-name-1">Бумажная sinль</h3>
+                    <h3 class="title-reward reward-2 LEATHER_MEDAL" id="medal-info-name-2" style="display:none;">Кожаная sinль</h3>
+                    <h3 class="title-reward reward-2 WOODEN_MEDAL" id="medal-info-name-3" style="display:none;">Деревянная sinль</h3>
+                    <h3 class="title-reward reward-2 COPPER_MEDAL" id="medal-info-name-4" style="display:none;">Медная sinль</h3>
+                    <h3 class="title-reward reward-2 STEEL_MEDAL" id="medal-info-name-5" style="display:none;">Стальная sinль</h3>
+                    <h3 class="title-reward reward-2 SILVER_MEDAL" id="medal-info-name-6" style="display:none;">Серебрянная sinль</h3>
+                    <h3 class="title-reward reward-2 GOLDEN_MEDAL" id="medal-info-name-7" style="display:none;">Золотая sinль</h3>
+                    <h3 class="title-reward reward-2 PEARL_MEDAL" id="medal-info-name-8" style="display:none;">Жемчужная sinль</h3>
+                    <h3 class="title-reward reward-2 SCORE_MORE" id="medal-info-name-9" style="display:none;">Платиновая sinль</h3>
+                    <h3 class="title-reward reward-2 EMERALD_MEDAL" id="medal-info-name-10" style="display:none;">Изумрудная sinль</h3>
+                    <div class="wrapper-reward">
+                        <span class="wax-reward" id="medal-info-need-points">0</span>
+                    </div>
+                    <p class="next-medal HAVE_NOT_MEDAL" id="medal-info-text2">У Вас пока нет sinлей</p>
+                    <p class="next-medal" id="medal-info-text3" style="display:none;"><span class="small-medal CURRENT_ACHIEVEMENT">Текущее достижение</span> <span class="small-medal">Медаль “Название sinли”</span></p>
+                    <div class="next-reward">
+                        <span class="wax-reward" id="medal-info-have-points">0</span>
+                    </div>
+                </div>
+                <button type="button" class="modal-btn reward-btn PICK_UP_REWARD" id="collect-medal">Забрать награду</button>
+            </div>
+        </div>
+
+        <div class="wrapper-modal  new-game-modal flythat" data-autoopen="false" id="modal-start-game">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="START_GAME_DIALOG_DATA_0">Начать игру</h2>
+                    </div>
+                </div>
+                <div class="img-reward new-game">
+                    <img src="image/big-bee.png">
+                </div>
+                <div class="container-adress-wallet">
+                    <h3 class="START_GAME_DIALOG_DATA">Введите адрес кошелька вашего пригласителя:</h3>
+                    <input type="text" class="wallet-input" value="0x000000000000" id="modal-start-game-input">
+                </div>
+                <p class="attention-text START_ERROR_1" id="modal-start-game-bad-address" style="display:none;">Нельзя выбрать этого пригласителя!
+                    Некорректный адрес кошелька!</p>
+                <p class="attention-text START_ERROR_2" id="modal-start-game-bad-player" style="display:none;">Нельзя выбрать этого пригласителя!
+                    Кошелек еще не принимает участия в игре!</p>
+                <p class="attention-text START_ERROR_3" id="modal-start-game-bad-referrer" style="display:none;">
+                  Referrer's address isn't registered or your wallet balance is zero.
+                </p>
+                <!--        <p class="game-info">Для игры требуется браузерное-->
+                <!--            расширение <a href="">TronLink</a> или <a href="">TronPay</a></p>-->
+                <!-- <a href="representatives.html" class="change-sponsor CHANGE_SPONSOR">Сменить спонсора</a> -->
+                <!--div id="debug" style="color:blue">DEBUG</div-->
+                <!-- <p class="game-need">You need to have at least 3-5 BNB on your wallet to start the game!</p> -->
+                <button type="button" class="button-btn btn-green green-bee-btn START" id="modal-start-game-button">Поехали!</button>
+            </div>
+            <div class="footer-modal modal-bee-footer-mobile">
+            </div>
+        </div>
+
+        <div class="wrapper-modal new-round-modal error-modal flythat" data-autoopen="false" id="modal-text15">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="ERROR">Ошибка</h2>
+                    </div>
+                </div>
+                <div class="img-reward error-img">
+                    <img src="image/error.png">
+                </div>
+                <h3 class="error-text ERROR_2">Что то пошло не так...!</h3>
+                <a href="#close" class="button-btn error-close close ">close</a>
+                <div class="footer-modal modal-bee-footer-mobile">
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal super-bee-modal new-game-modal flythat" data-autoopen="false" id="superBeeModal">
+          <a href="#close" class="close-modal close flythat-close"></a>
+          <div class="container-modal">
+              <div class="header-modal">
+                  <div class="title-modal">
+                      <h2 class="">SUPER BEE</h2>
+                  </div>
+              </div>
+              <h2 class="title-content-box SUPERBEE_UNLOCK"></h2>
+          </div>
+          <div class="footer-modal modal-bee-footer-mobile">
+          </div>
+        </div>
+
+        <!-- <div class="wrapper-modal super-bee-modal new-game-modal flythat" data-autoopen="false" id="message-modal-1">
+          <a href="#close" class="close-modal close flythat-close"></a>
+          <div class="container-modal">
+              <div class="header-modal">
+                  <div class="title-modal">
+                      <h2 class="">MESSAGE</h2>
+                  </div>
+              </div>
+              <h2 class="title-content-box MESSAGE_1"></h2>
+          </div>
+          <div class="footer-modal modal-bee-footer-mobile">
+          </div>
+        </div> -->
+
+        <div class="wrapper-modal super-bee-modal new-game-modal flythat" data-autoopen="false" id="message-modal-2">
+          <a href="#close" class="close-modal close flythat-close"></a>
+          <div class="container-modal">
+              <div class="header-modal">
+                  <div class="title-modal">
+                      <h2 class="">MESSAGE</h2>
+                  </div>
+              </div>
+              <h2 class="title-content-box MESSAGE_2"></h2>
+          </div>
+          <div class="footer-modal modal-bee-footer-mobile">
+          </div>
+        </div>
+
+        <div class="wrapper-modal super-bee-modal new-game-modal flythat" data-autoopen="false" id="message-modal-3">
+          <a href="#close" class="close-modal close flythat-close"></a>
+          <div class="container-modal">
+              <div class="header-modal">
+                  <div class="title-modal">
+                      <h2 class="">MESSAGE</h2>
+                  </div>
+              </div>
+              <h2 class="title-content-box MESSAGE_3"></h2>
+          </div>
+          <div class="footer-modal modal-bee-footer-mobile">
+          </div>
+        </div>
+
+        <div class="wrapper-modal super-bee-modal new-game-modal flythat" data-autoopen="false" id="message-modal-4">
+          <a href="#close" class="close-modal close flythat-close"></a>
+          <div class="container-modal">
+              <div class="header-modal">
+                  <div class="title-modal">
+                      <h2 class="">MESSAGE</h2>
+                  </div>
+              </div>
+              <h2 class="title-content-box MESSAGE_4"></h2>
+          </div>
+          <div class="footer-modal modal-bee-footer-mobile">
+          </div>
+        </div>
+
+        <!-- <div class="wrapper-modal buy-wax puy-wax  flythat" data-autoOpen="false" id="modal-lottery">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="LOTTERY">Лотерея</h2>
+                    </div>
+                </div>
+                <div class="center-change change-lotery">
+                    <span class="jeckpot JECKPOT_1">Джекпот</span>
+                    <span class="wax-span-change lotery-wax ">50</span>
+                </div>
+                <div class="buy-honey-bank">
+                    <h3 class="AMOUNT_OF_WAX">Количество воска:</h3>
+                    <input type="number" name="text" class="buy-input" value="1" />
+                </div>
+                <a class=" center-change change-sponsor open-history-games HISTORY_GAMES" name="modal-history-games-button">История игр</a>
+               
+                <button type="button" class="button-btn green-btn lotery-game PLAY">Играть</button>
+              <div class="balance-footer-block">
+                    <span class="BALANCE_WAX">Balance воска:</span>
+                </div>  
+                <div class="wrapper-bottom-footer-modal">
+                    <div class="container-pay-bee">
+                        <p class="all-dohod">10 000 000</p>
+                    </div>
+                </div>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close"  class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="wrapper-modal flythat" data-autoopen="false" id="modal-games-history">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="HISTORY_GAMES">история игр</h2>
+                    </div>
+                </div>
+                <div class="container-table">
+                    <table class="table-modal">
+                        <thead>
+                            <tr>
+                                <th><span class="my-bee-home DATE">Дата</span></th>
+                                <th><span class="my-bee-home AMOUNT">Сумма</span></th>
+                                <th><span class="my-bee-home WINNINGS">Выигрыш</span></th>
+                                <th><span class="my-bee-home REWARD">Награда</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="date-table">25.05.2019</span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction">450 BNB</span>
+                                </td>
+                                <td>
+                                    <span class="transaction">450 000 BNB</span>
+                                </td>
+                                <td>
+                                    <a href="" class="button-btn red-btn award-btn PICK_UP">Забрать</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award done-award RECEIVED">Получено</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award overdue-award OVERDUE">Просрочено</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="date-table"></span>
+                                </td>
+                                <td>
+                                    <span class="summa summa-transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="transaction"></span>
+                                </td>
+                                <td>
+                                    <span class="status-award"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-modal">
+                    <div class="wrapper-footer-input">
+                        <div class="footer-input events-input">
+                            <h3 class="TOTAL_WON">Всего выиграно:</h3>
+                            <span class="wax-bank">900</span>
+                        </div>
+                    </div>
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal flythat" data-autoopen="false" id="modal-history">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="EVENTS">События</h2>
+                    </div>
+                </div>
+                <div class="container-table">
+                    <table class="table-modal">
+                        <thead>
+                            <tr>
+                                <th><span class="my-bee-home DATE">Дата</span></th>
+                                <th><span class="my-bee-home TRANSACTION">Транзакция</span></th>
+                                <th><span class="my-bee-home AMOUNT">Сумма</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="modal-history-list">
+                            <tr id="modal-history-list-empty">
+                                <td colspan="3">
+                                    <center><span class="EMPTY">Тут пока пусто</span></center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-modal">
+                    <div class="wrapper-footer-input">
+                        <div class="footer-input events-input">
+                            <h3 class="TOTAL_INVESTED">Всего проинвестировано:</h3>
+                            <span><span name="totalDeposited">0</span> BNB</span>
+                        </div>
+                        <div class="footer-input events-input">
+                            <h3 class="TOTAL_WITHDRAWN">Всего выведено:</h3>
+                            <span><span name="totalWithdrawed">0</span> BNB</span>
+                        </div>
+                    </div>
+                    <a href="#close" class="button-btn close-modal-mobile close ">Close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal modal-ok flythat" data-autoopen="false" id="modal-success-action">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 name="modal-success-action-deposit" style="display:none;" class=" ">Balance replenishment</h2>
+                        <h2 name="modal-success-action-withdraw" style="display:none;" class="">Soul sale</h2>
+                        <h2 name="modal-success-action-airdrop-collect" style="display:none;" class="">Airdrop Reward</h2>
+                        <h2 name="modal-success-action-medal" style="display:none;" class=""> New medal</h2>
+                        <h2 name="modal-success-action-buy-bee" style="display:none;" class="">Buying a Sinner</h2>
+                        <h2 name="modal-success-quality-upgrade" style="display:none;" class="">Sinner upgrade</h2>
+                        <h2 name="modal-success-bee-unlock" style="display:none;" class=" ">Unlock sinners</h2>
+                    </div>
+                </div>
+                 
+                <h2 class="ok-title" name="modal-success-action-deposit" style="display:none;"><span class="ok-title YOUR_BALANCE_GROWN">Balance успешно пополнен на</span><br><span class="wax-span-change ok-title">0</span></h2>
+                <h2 class="ok-title" name="modal-success-action-withdraw" style="display:none;"><span class="ok-title BALANCE_DECREASED">Средства успешно выведены</span> <br><span class="ok-title">0</span> BNB</h2>
+                <h2 class="ok-title" name="modal-success-action-airdrop-collect" style="display:none;"><span class="ok-title REWARD_COLLECTED">Airdrop вознаграждение успешно собрано</span></h2>
+                <h2 class="ok-title" name="modal-success-action-medal" style="display:none;"><span class="ok-title NEW_MEDAL_RECEIVED">Новая sinль успешно получена</span></h2>
+                <h2 class="ok-title" name="modal-success-action-buy-bee" style="display:none;"><span class="ok-title ACQUIRED_BEES_1">Вы успешно приобрели</span> <span class="ok-title">0</span> <span class="ok-title ">sinner</span></h2>
+                <h2 class="ok-title" name="modal-success-quality-upgrade" style="display:none;"><span class="ok-title  ">You have successfully upgraded sinner</span></h2>
+                <h2 class="ok-title" name="modal-success-bee-unlock" style="display:none;"><span class="ok-title  ">You have successfully unlocked new sinners</span></h2>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="wrapper-modal modal-ok flythat" data-autoopen="false" id="modal-auth">
+            <a href="#close" class="close-modal close flythat-close auth"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="">Login</h2>
+                    </div>
+                </div>
+                <div class="wrapper-ok">
+                  
+                </div>
+                <h2 class="ok-title LOG_IN_WITH_METAMASK">Пожалуйста авторизуйтесь с помощью MetaMask!</h2>
+                <button class="button-btn" style="margin: 15px auto" onclick="window.ethereum.request({ method: 'eth_requestAccounts' });">CONNECT</button>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close auth ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal modal-ok flythat" data-autoopen="false" id="modal-deposit-v2">
+            <a href="#close" class="close-modal close flythat-close auth"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="BUY_WAX">приобрести воск</h2>
+                    </div>
+                </div>
+                
+                <p class="about-bee DEPOSIT_MODAL_V2">🔴 <span class="about-bee FINISH_PRJ_1">BinanceHives завершает свой полет!</span>
+<br><br>📉 <span class="about-bee FINISH_PRJ_2">Balance смарт-контракта уменьшается и скоро закончится. Мы отключили покупку воска для игроков.</span>
+<br><br>❗️ <span class="about-bee FINISH_PRJ_3">К сожалению, игра вышла очень короткой. Чрезмерная шумиха и нестабильная работа блокчейна Ethereum сыграли злую шутку с игрой и значительно сократили ее продолжительность.
+Вы можете просмотреть все транзакции по распределения средств на странице смарт-контракта по </span><a class="about-bee ok-title FINISH_PRJ_4" href="https://bscscan.com/address/0x8963b689f4bb50c4cf562db351d8267afd7b2cb6#code" target="_blank">ссылке</a></p>
+                <!-- TODO: contract address -->
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close auth ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal modal-ok flythat" data-autoopen="false" id="tx-info">
+            <a href="#close" class="close-modal close flythat-close auth"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 id="tx-info-deposit" class="REPLENISHMENT">Пополнение</h2>
+                        <h2 id="tx-info-withdraw" class="WITHDRAW">Вывод</h2>
+                        <h2 id="tx-info-quality-upgrade" class="PRODUCTION_IMPROVEMENT">Улучшение производства</h2>
+                        <h2 id="tx-info-airdrop" class="">Getting Airdrop</h2>
+                        <h2 id="tx-info-buy-bee" class="">Buying a Sinner</h2>
+                        <h2 id="tx-info-collect-medal" class="GETTING_MEDAL">Получение sinлей</h2>
+                        <h2 id="tx-info-reward" class="REWARD">Вознаграждение</h2>
+                    </div>
+                </div>
+                <div class="wrapper-ok" style="display:none;" id="tx-info-success-img">
+                  
+                </div>
+                <div class="img-reward error-img" id="tx-info-fail-img">
+                    <img src="image/error.png">
+                </div>
+                <h2 class="ok-title" style="display:none;" name="tx-info-success"><span class="ok-title EXPECT_TRANSACTION_1">Ожидайте успешного добавления</span> <u><a href="" class="ok-title EXPECT_TRANSACTION_2" id="tx-info-tx" target="_blank">транзакции</a></u> <span class="ok-title EXPECT_TRANSACTION_3">в блокчейн</span></h2>
+                <h2 class="ok-title ERROR_TRANSACTION" name="tx-info-fail">Ошибка отправки транзакции в блокчейн</h2>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close auth ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal modal-ok flythat" data-autoopen="false" id="web-info">
+            <a href="#close" class="close-modal close flythat-close auth"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="BUYING_BEE">Buying sinners</h2>
+                    </div>
+                </div>
+                <div class="img-reward error-img">
+                    <img src="image/error.png">
+                </div>
+                <h2 class="ok-title TRY_IT_AGAIN">Необходимые данные еще не подгрузились на сайт. Попробуйте еще раз.</h2>
+                <div class="footer-modal modal-bee-footer-mobile">
+                    <a href="#close" class="button-btn close-modal-mobile close auth ">close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-modal flythat super-representative-modal" data-autoopen="false" id="modal-super-representative">
+            <a href="#close" class="close-modal close flythat-close"></a>
+            <div class="container-modal">
+                <div class="header-modal">
+                    <div class="title-modal">
+                        <h2 class="TOP_REPRESENTATIVES">Топ представителей</h2>
+                    </div>
+                </div>
+                <div class="container-table">
+                    <table class="table-modal table-super">
+                        <thead>
+                            <tr>
+                                <th><span class="my-bee-home">№</span></th>
+                                <th>
+                                    <!-- <span class="my-bee-home SUPER_REPRESENTATIVE_TABLE">Супер представитель</span> -->
+                                    <input type="number"  placeholder="0" class="top-up-input">
+                                </th>
+                                <th><span class="my-bee-home IN_PENDING_TABLE">В ожидании</span></th>
+                                <th><span class="my-bee-home RECIEVED_TABLE">Получено</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="modal-super-representative-list">
+                            <tr id="modal-super-representative-list-empty">
+                                <td colspan="4">
+                                    <center><span class="EMPTY">Тут пока пусто</span></center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-modal represent-footer">
+                    <button type="button" class="button-btn represent-give-btn GET_BONUS" id="modal-super-representative-get-reward">Забрать вознаграждение</button>
+                    <!-- <div class="balance-footer-block">
+                        <span class="TO_DISTRIBUTION">Бонус:</span>
+                    </div> -->
+                    <!-- <div class="wrapper-bottom-footer-modal">
+                        <div class="container-pay-bee">
+                            <p id="modal-super-representative-to-charge">0</p>
+                            <p class="distribution-monet">BNB</p>
+                        </div>
+                    </div> -->
+                    <a href="#close" class="button-btn close-modal-mobile close ">close</a>
+                </div>
+            </div>
+        </div>
+</div></body>
+<!--  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script> -->
 <script src="js/jquery-3.2.1.js"></script>
-<script src="js/web3.min.js"></script>
-<script src="bootstrap-4.2.1/js/bootstrap.bundle.js"></script>
-<script src="bootstrap-4.2.1/js/bootstrap.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.js"></script>
-<script src="js/jquery.jcarousel.min.js"></script>
-<script src="js/jquery.jcarousel-swipe.js"></script>
-<script src="js/jcarousel.responsive.js"></script>
-<script src="js/jcarousel.responsive1.js"></script>
 <script src="js/jquery.flythat.js"></script>
 <script src="js/lottie-player.js"></script>
 <script src="js/main.js"></script>
+<script src="js/web3.min.js"></script>
 <script src="lib/ethers-5.0.umd.min.js" type="application/javascript"></script>
 <script src="js/eth/common.js"></script>
-<script src="js/eth/ethereum.js?t=7"></script>
+<script src="js/eth/ethereum.js?t=11"></script>
 <script src="js/language.js"></script>
-</body>
+<script src="js/eth/start_game.js"></script>
+<script src="js/eth/action.js?t=7"></script>
+<script src="js/eth/events.js?t=1"></script>
+<script src="js/eth/deposit.js?t=7"></script>
+<script src="js/eth/withdraw.js?t=1"></script>
+<script src="js/eth/quality_upgrade.js?t=1"></script>
+<script src="js/eth/airdrop_collect.js"></script>
+<script src="js/eth/buy_bee.js"></script>
+<script src="js/eth/referrals.js"></script>
+<script src="js/eth/rates.js"></script>
+<script src="js/eth/history.js"></script>
+<script src="js/eth/control.js"></script>
+<script src="js/eth/games_history.js"></script>
+<!-- <script src="js/eth/lottery.js"></script> -->
+<script src="js/eth/super_representative.js?t=4"></script>
+<script src="js/eth/messages.js?t=27"></script>
 </html>
