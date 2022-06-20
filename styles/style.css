@@ -7292,14 +7292,10 @@ a, a:active, a:visited, a:hover {
 .left>h3{
     text-align: center;
     color:#931727;
-}
-.sox-button>*{
-    color: #fff;
-    background-image: url("/image/sox/chevron-down-solid.svg");
-}
+} 
 .sox-button{
     color: #fff;
-    background-image: url("/image/sox/kindpng_258307.png") ;
+    background-image: url("/image/sox/kindpng_258307.png")  !important;
     background-repeat: no-repeat;
     background-size: contain;
     width: 1.5em;
