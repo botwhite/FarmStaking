@@ -1614,7 +1614,7 @@
         margin-top: 94px;
     }
     .pay-bee .container-modal {
-        padding: 230px 20px !important;
+        padding: 30vh 20px !important;
     }
     .header-modal {
         box-shadow: none;
@@ -1644,7 +1644,7 @@
         width: 238px;
         height: 40px;
         font-size: 16px;
-        margin: 0 auto;
+        margin: 0.5em auto;
         border-radius: 10px;
     }
     .new-game-modal .green-bee-btn {
@@ -4812,7 +4812,7 @@
         white-space: nowrap;
     }
     .button-btn {
-        height: 2em;
+        height: 2.5em;
     }
     .wrapper-content-round::before,
     .wrapper-content-round .wrapper-lottie {
@@ -6255,7 +6255,7 @@
         background-position-y: center;
     }
     .container-modal { 
-        padding-top: 25vh;
+        padding-top: 20vh;
     }
 
     .tooltip>img{
