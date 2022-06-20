@@ -635,3 +635,13 @@ function getMobileOperatingSystem() {
 
     return "unknown";
 }
+
+function showSocialMobile(){
+        var x = document.getElementById("sox-mobile");
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+    
+}

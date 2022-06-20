@@ -1614,7 +1614,7 @@
         margin-top: 94px;
     }
     .pay-bee .container-modal {
-        padding-top: 0;
+        padding: 160px 20px;
     }
     .header-modal {
         box-shadow: none;
@@ -6213,9 +6213,61 @@
     }
   }
 
+  @media screen and (min-width: 800px) {
+    #sox-mobile,
+    .sox-button{
+        display: none;
+    }
+    .tooltip>img{
+        width: 1em;
+        height: 1em;
+    }
+
+  }
+
+
+  @media screen and (max-width: 800px) {
+   
+    .sox{
+        display: none;
+    }
+    .sox-button{
+        position: fixed;
+        top: 65vh;
+        left: 0;
+        z-index: 5555;
+    }
+    #sox-mobile{   
+        display: none;
+        position: fixed;
+        top: 70vh;
+        left: 1em; 
+        z-index: 5555; 
+        flex-direction: column;
+    }
+    #sox-mobile>*{
+        margin-top: 0.5em;
+        text-decoration: none;
+    }
+
+ 
+    .wrapper-modal{
+        background-position-y: center;
+    }
+    .container-modal { 
+        padding-top: 25vh;
+    }
+
+    .tooltip>img{
+        width: 1.5em;
+        height: 1.5em;
+    }
+  }
+
+
   @media screen and (max-height: 800px) {
       .new-menu-bottom, .new-menu-mid{
         margin-top: 3em;}
-        
+
       
   }

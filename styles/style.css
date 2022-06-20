@@ -74,7 +74,7 @@
     font-size: 14px;
     color: #ffffff;
     font-family: Gloria-A !important;
-    caret-color: transparent !important;
+    caret-color: transparent !important; 
 }
 body,
 div,
@@ -3500,6 +3500,7 @@ tbody tr {
     padding-top: 95px;
     height: 751px;
     background: url("../image/cryptobee.png") no-repeat;
+    background-size: contain;
 }
 .cryptobee .header-modal {
     max-width: 324px;
@@ -7213,9 +7214,97 @@ input::-webkit-inner-spin-button {
 .NEW_ACHIEVEMENT{
     font-size: 24px !important;
 }
-#modal-deposit-button{
-    line-height: 1;
-}
+ 
 .button-btn{
     line-height: 1;
+
+} 
+.sox{
+    position: fixed;
+    right: 3.5em;
+    bottom: 2em;
+    z-index: 555;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+a, a:active, a:visited, a:hover {
+    text-decoration: none;
+
+}
+.sox>*{
+    font-size: 2.5em;
+    margin-left: 0.3em;
+    margin-top: 0.3em;
+}
+.tooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+    text-decoration: none;
+
+}
+
+.tooltip .left {
+    min-width:200px; 
+    top:50%;
+    right:100%;
+    margin-right:20px;
+    transform:translate(0, -50%);
+    padding:10px 20px;
+    color:#ba2c38;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:16px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip:hover .left {
+    visibility:visible; opacity:1;
+}
+
+.tooltip .left i {
+    position:absolute;
+    top:50%;
+    left:100%;
+    margin-top:-12px;
+    width:12px;
+    height:24px;
+    overflow:hidden;
+}
+
+.tooltip .left i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:0;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-45deg);
+    background-color:#EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+.left>h3{
+    text-align: center;
+    color:#931727;
+}
+.sox-button>*{
+    color: #fff;
+    background-image: url("/image/sox/chevron-down-solid.svg");
+}
+.sox-button{
+    color: #fff;
+    background-image: url("/image/sox/kindpng_258307.png") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 1.2em;
 }
