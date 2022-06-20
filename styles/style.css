@@ -7240,8 +7240,7 @@ a, a:active, a:visited, a:hover {
 }
 .tooltip {
     display:inline-block;
-    position:relative;
-    border-bottom:1px dotted #666;
+    position:relative; 
     text-align:left;
     text-decoration: none;
 
