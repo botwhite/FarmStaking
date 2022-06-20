@@ -7295,7 +7295,7 @@ a, a:active, a:visited, a:hover {
 } 
 .sox-button{
     color: #fff;
-    background-image: url("/image/sox/d-a.png")  !important;
+    background-image: url(/image/sox/d-a.png)  !important;
     background-repeat: no-repeat;
     background-size: contain;
     width: 1.5em;
