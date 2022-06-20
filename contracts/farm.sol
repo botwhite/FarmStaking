@@ -932,7 +932,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         address[] referrals;
           //nfts
 
-
+        uint256[] con;
 
     }
 
@@ -974,7 +974,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256[] public REFERRAL_POINT_PERCENT = [50, 25, 0, 0, 0];
     //nfts
     uint256 public constant NFT_amount_needed = 8;
-    uint256[] public con = [0,0,0,0,0,0];
+    
 
     uint256 public maxBalance;
     uint256 public maxBalanceClose;
@@ -1205,27 +1205,27 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         } 
         if(soul == 2){
         require(MyPlayer[msg.sender].mount >= 5 , "you need ntfs 5");
-        con[0] = 1;
+        player.con[0] = 1;
         } 
         if(soul == 3){
         require(MyPlayer[msg.sender].mount >= 10 , "you need ntfs 10");
-        con[1] = 1;
+        player.con[1] = 1;
         } 
         if(soul == 4){
         require(MyPlayer[msg.sender].mount >= 16, "you need ntfs 16");
-        con[2] = 1;
+        player.con[2] = 1;
         } 
         if(soul == 5){
         require(MyPlayer[msg.sender].mount >= 25, "you need ntfs 25");
-        con[3] = 1;
+        player.con[3] = 1;
         } 
         if(soul == 6){
         require(MyPlayer[msg.sender].mount >= 35, "you need ntfs 35");
-        con[4] = 1;
+        player.con[4] = 1;
         } 
         if(soul == 7){
         require(MyPlayer[msg.sender].mount >= 40 , "you need ntfs 40");
-        con[5] = 1;
+        player.con[5] = 1;
         }
         /*if (soul == TRON_soul_INDEX) {
             require(player.medals >= 9);
@@ -1526,33 +1526,33 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
                  //delete jefe[msg.sender].idnft[i];
                MyPlayer[msg.sender].idnft =  remove(MyPlayer[msg.sender].idnft,i);
               if( MyPlayer[msg.sender].mount <  40){
-                  if(con[5] == 1){
-                     con[5] = 0;
+                  if(player.con[5] == 1){
+                     player.con[5] = 0;
                      removeunlock();
                   }
               } if (MyPlayer[msg.sender].mount <  35){
-                  if(con[4] == 1){
-                     con[4] = 0;
+                  if(player.con[4] == 1){
+                     player.con[4] = 0;
                      removeunlock();
                   }
               } if ( MyPlayer[msg.sender].mount <  25){
-                  if(con[3] == 1){
-                     con[3] = 0;
+                  if(player.con[3] == 1){
+                     player.con[3] = 0;
                      removeunlock();
                   }
               } if ( MyPlayer[msg.sender].mount <  16){
-                  if(con[2] == 1){
-                     con[2] = 0;
+                  if(player.con[2] == 1){
+                     player.con[2] = 0;
                      removeunlock();
                   }
               }if (MyPlayer[msg.sender].mount <  10){
-                  if(con[1] == 1){
-                     con[1] = 0;
+                  if(player.con[1] == 1){
+                     player.con[1] = 0;
                      removeunlock();
                   }
               } if ( MyPlayer[msg.sender].mount < 5){
-                  if(con[0] == 1){
-                     con[0] = 0;
+                  if(player.con[0] == 1){
+                     player.con[0] = 0;
                      removeunlock();
                   }
               }

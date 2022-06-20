@@ -12,7 +12,7 @@ var HoldToken;
 
 
 const tokenAddress = '0xC586a4A0dB0bC1169d490b8FBF0633cC06d0f0d3'
-const contratojjuego = '0x1f74A9Ae87f5D27808Adc31ACbf15fDBa4e3f7f7'
+const contratojjuego = '0x1f74a9ae87f5d27808adc31acbf15fdba4e3f7f7'
 const NftsAddress = '0xAf5d3183de674004bCD656aFA2dACD3B31EB9696'
 
 
@@ -104,17 +104,12 @@ const getAccounts = async () => {
     var asdasd = balanceJuegoNft.length
     var asdasd2 = balanceJuegoNft.length
     console.log(asdasd)
+    console.log(asdasd2)
     document.getElementById("totalStake").textContent =  asdasd;
     document.getElementById("totalStake2").textContent =  asdasd2;
 
 
     
-    for(var i = 0; i < balanceNFT; i++){
-
-      var misNftsIDa= await contractNft.methods.tokenOfOwnerByIndex(accounts[0], i).call();
-
-      misNftsID.push(misNftsIDa)
-    }
 
     
 }
@@ -184,21 +179,31 @@ const getAccounts = async () => {
   console.log(misNftsID)
 
  
-function Stake() {
+  async function  Stake()  {
+  for(var i = 0; i < balanceNFT; i++){
+
+    var misNftsIDa = await contractNft.methods.tokenOfOwnerByIndex(accounts[0], i).call();
+
+    misNftsID.push(misNftsIDa)
+  }
+  console.log(misNftsID)
+
     var nftsfinal;
     const element= []
     var nfts = document.getElementById("nftscant").value;
     var nfts2 = document.getElementById("nftscantM").value;
 
 
-    if(nfts == 0){
+    if(nfts != 0){
       nftsfinal=nfts;
-    }else{
+    }
+    if(nfts2 != 0){
       nftsfinal=nfts2;
 
     }
+    console.log(nftsfinal)
 
-    for (let e = 0; e < nfts ; e++) {
+    for (let e = 0; e < nftsfinal ; e++) {
        element[e] = misNftsID[e];
       
     }
@@ -242,14 +247,27 @@ const cambiarstatus = async () => {
 
 const UnStake = async () => {
 
+  var nftsfinal;
   const element= []
   var nfts = document.getElementById("nftscant").value;
+  var nfts2 = document.getElementById("nftscantM").value;
 
-  for (let e = 0; e < nfts ; e++) {
+
+  if(nfts != 0){
+    nftsfinal=nfts;
+  }
+  if(nfts2 != 0){
+    nftsfinal=nfts2;
+
+  }
+  console.log(balanceJuegoNft)
+
+  for (let e = 0; e < nftsfinal ; e++) {
      element[e] = balanceJuegoNft[e];
     
   }
   console.log(element)
+
   contract.methods.WithdrawNft(element).send({ from: accounts[0] }).then(result => {
    
 
