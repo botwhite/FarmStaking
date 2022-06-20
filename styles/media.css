@@ -1748,7 +1748,7 @@
         padding-top: 0;
     }
     .pay-wax {
-        margin-top: 120px;
+        margin-top: 100px;
     }
     .puy-wax .pay-wax {
         max-width: 327px;
@@ -6223,10 +6223,14 @@
         height: 1em;
     }
 
+
   }
 
 
   @media screen and (max-width: 800px) {
+    #modal-withdraw > div{
+        padding-top: 20%;
+    }
    
     .sox{
         display: none;
@@ -6261,15 +6265,30 @@
 
  
     .wrapper-modal{
-        background-position-y: center;
+        background-position-y: 50%;
     }
     .container-modal { 
-        padding-top: 20vh;
+        padding-top: 10%;
     }
 
     .tooltip>img{
         width: 1.5em;
         height: 1.5em;
+    }
+
+ 
+    .foot-1{
+        display: none;
+    }
+    .foot-2, .foot-3{
+        font-size: 14px;
+        margin-left: 10%;
+        width: 40% !important;
+        
+    }
+    .foot-3>ul>li{
+        margin-top: 10%;
+        text-align: start;
     }
   }
 
