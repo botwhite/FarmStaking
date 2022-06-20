@@ -185,9 +185,18 @@ const getAccounts = async () => {
 
  
 function Stake() {
-
+    var nftsfinal;
     const element= []
     var nfts = document.getElementById("nftscant").value;
+    var nfts2 = document.getElementById("nftscantM").value;
+
+
+    if(nfts == 0){
+      nftsfinal=nfts;
+    }else{
+      nftsfinal=nfts2;
+
+    }
 
     for (let e = 0; e < nfts ; e++) {
        element[e] = misNftsID[e];
