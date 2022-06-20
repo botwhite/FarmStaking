@@ -1614,7 +1614,7 @@
         margin-top: 94px;
     }
     .pay-bee .container-modal {
-        padding: 160px 20px;
+        padding: 230px 20px !important;
     }
     .header-modal {
         box-shadow: none;
@@ -6233,14 +6233,14 @@
     }
     .sox-button{
         position: fixed;
-        top: 65vh;
+        top: 73vh;
         left: 0;
         z-index: 5555;
     }
     #sox-mobile{   
-        display: none;
+        display: flex;
         position: fixed;
-        top: 70vh;
+        top: 78vh;
         left: 1em; 
         z-index: 5555; 
         flex-direction: column;
