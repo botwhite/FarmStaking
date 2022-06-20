@@ -6249,6 +6249,15 @@
         margin-top: 0.5em;
         text-decoration: none;
     }
+    .sox-button{
+        color: #fff;
+        background-image: url(/image/sox/d-a.png)  !important;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 1.5em;
+        height: 1.5em;
+        margin-left: 1.2em;
+    }
 
  
     .wrapper-modal{
