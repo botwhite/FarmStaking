@@ -6214,8 +6214,8 @@
   }
 
   @media screen and (min-width: 800px) {
-    #sox-mobile,
-    .sox-button{
+    #sox-mobile
+    {
         display: none;
     }
     .tooltip>img{
