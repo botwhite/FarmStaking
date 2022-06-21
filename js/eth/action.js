@@ -138,6 +138,8 @@ function getActualBalance(){
             balanceHoney = Math.floor(
               actual_balance[0].div(ethers.BigNumber.from(10).pow(18)).toNumber()
             );
+            console.log(actual_balance[1])
+
             balanceWax = Math.floor(
               actual_balance[1].div(ethers.BigNumber.from(10).pow(18)).toNumber()
             );
@@ -146,6 +148,7 @@ function getActualBalance(){
             }
             $('#balanceHoney').val(format_number(balanceHoney));
             $('#balanceWax').val(format_number(balanceWax));
+            console.log(balanceWax)
         }).catch(err => {
             console.log("ERROR", "web3.instantBalance", err);
         });
