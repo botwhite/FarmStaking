@@ -7310,6 +7310,9 @@ a, a:active, a:visited, a:hover {
     flex-direction: row;
     justify-content: space-around;
 }
+.foot{
+    padding: 5% 0;
+}
 .foot-1,.foot-3{
     padding:0 0 3% 0 ;
     width: 25%;
@@ -7325,14 +7328,15 @@ a, a:active, a:visited, a:hover {
     width: 100%;
     height: 100%;
 }
-.foot-2 {
-    padding:0 0 3% 0 ;
+.foot-2 { 
     width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: justify;
-    font-size: 24px;
+    text-align: left;
+    font-size: 16px;
+    line-height: normal;
+    color: #f2f3b2;
 }
 

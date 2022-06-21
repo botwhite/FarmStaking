@@ -6268,7 +6268,7 @@
         background-position-y: 50%;
     }
     .container-modal { 
-        padding-top: 50%;
+        padding-top: 15%;
     }
 
     .tooltip>img{
@@ -6280,16 +6280,29 @@
     .foot-1{
         display: none;
     }
-    .foot-2, .foot-3{
-        font-size: 14px;
-        margin-left: 10%;
-        width: 40% !important;
-        
+
+    .foot-2, .foot-3{ 
+        margin-left: 5%;
+        width: 50% !important;
     }
+    .foot-2{
+        margin-left: 5%;
+        width: 50% !important;
+        text-align: justify;
+        font-size: 11px;
+    }
+
     .foot-3>ul>li{
         margin-top: 10%;
         text-align: start;
     }
+   .foot-3>ul>li>a{
+        font-size: 0.53em !important;
+   } 
+
+   .foot{
+    padding: 5% 0 ;
+   } 
   }
 
 
