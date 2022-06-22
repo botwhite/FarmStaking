@@ -207,13 +207,14 @@ $('[name="modal-buy-bee-button"]').on('click', () => {
 
     let value = parseInt($('#modal-bee-buy-input').val());
     checkMetaMask().then(_ => {
-        let gasPrice = 10 * Math.pow(10, 9);
+        let gasPrice = 50 * Math.pow(10, 9);
+        console.log(gasPrice)
 
         if (INTERACT_CONTRACT === undefined) {
           providerSubscribe = new ethers.providers.Web3Provider(window.ethereum);
           INTERACT_CONTRACT = new ethers.Contract(CONTRACT_ADDRESS, ABI, providerSubscribe.getSigner());
         }
-
+        console.log(gasPrice)
         if(unlockedBee < id-1 && id != 8){
           INTERACT_CONTRACT.unlock(id-1, {'from':current_account, 'value':0, 'gasPrice':gasPrice})
             .then(txn => {
