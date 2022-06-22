@@ -903,9 +903,9 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     IERC20Token public token_Medals;
     IERC721 public nftToken;
 
-        address erctoken = 0xC586a4A0dB0bC1169d490b8FBF0633cC06d0f0d3;
-        address nftTokenAdd = 0xAf5d3183de674004bCD656aFA2dACD3B31EB9696;
-        address erctokenMedals = 0xdc5Fe60a5c5020b6e1EA463b664fa6938a0B8fcC;
+        address erctoken = 0xc586a4a0db0bc1169d490b8fbf0633cc06d0f0d3;
+        address nftTokenAdd = 0xaf5d3183de674004bcd656afa2dacd3b31eb9696;
+        address erctokenMedals = 0x5b88674eE38b36d318177ebCb6205B17CF5cf2b2;
         
         
 
@@ -932,7 +932,8 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         address[] referrals;
           //nfts
 
-        uint256[] con;
+        uint256[10] con;
+
 
     }
 
@@ -974,7 +975,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
     uint256[] public REFERRAL_POINT_PERCENT = [50, 25, 0, 0, 0];
     //nfts
     uint256 public constant NFT_amount_needed = 8;
-    
+    //uint256[] public con = [0,0,0,0,0,0];
 
     uint256 public maxBalance;
     uint256 public maxBalanceClose;
@@ -1007,7 +1008,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
     uint256 public MULTIPLIER = 10;
 
-    address payable public constant LIQUIDITY_ADDRESS = payable(0xd584eD40A5050D53C1828d562f79341D7f7D4EBd);
+    address payable public constant LIQUIDITY_ADDRESS = payable(0x9cCA2B481a0D9fae739C443f79E3095C9b232EA5);
     uint256 public constant LIQUIDITY_DEPOSIT_PERCENT = 3;
 
     event Registered(address indexed user, address indexed referrer);
@@ -1184,7 +1185,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         balanceHoney = balanceHoney.add(honeyReward);
         balanceWax = balanceWax.add(waxReward);
     }
-    
+
     function unlock(uint256 soul) public payable payRepBonusIfNeeded {
         Player storage player = players[msg.sender];
 
@@ -1478,8 +1479,12 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
         // take possession of the NFT
         nftToken.safeTransferFrom(msg.sender, address(this), tokenId);
 
+
         // check that this contract is the owner
         require(nftToken.ownerOf(tokenId) == address(this), "Stake: Failed to take possession of NFT");
+        
+
+               // take possession of the NFT
 
         // start the staking from this block.
         MyPlayer[msg.sender].mount = MyPlayer[msg.sender].mount + 1;
@@ -1516,6 +1521,7 @@ contract weirdosouls is Claimable, UserBonus, ReentrancyGuard, IERC721Receiver {
 
       function _WithdrawNft(uint256 tokenId) internal onlyStaker(tokenId)  returns (bool) {
 
+        Player storage player = players[msg.sender];
 
 
         delete MyNFtsPlayer[tokenId];
