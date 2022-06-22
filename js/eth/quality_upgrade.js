@@ -67,7 +67,7 @@ $('#modal-quantity-update-button').click(function(){
             gasPrice: 10 * Math.pow(10, 9)
           }
         ).then(txn => {
-            $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'bscscan.com/tx/' + txn.hash);
+            $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
             $('[name="tx-info-success"]').show();
             $('#tx-info-success-img').show();
             $('[name="tx-info-fail"]').hide();

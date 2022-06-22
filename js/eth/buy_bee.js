@@ -257,7 +257,7 @@ function actionAfterMetamask(err, hash){
         $('[name="tx-info-fail"]').show();
         $('#tx-info-fail-img').show();
     } else {
-        $('#tx-info-tx').attr('href', 'https://'+NETWORK_URL+'bscscan.com/tx/'+hash);
+        $('#tx-info-tx').attr('href', 'https://'+NETWORK_URL+'polygonscan.com/tx/'+hash);
         $('[name="tx-info-success"]').show();
         $('#tx-info-success-img').show();
         $('[name="tx-info-fail"]').hide();

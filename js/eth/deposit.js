@@ -81,7 +81,7 @@ $('#modal-deposit-button').on('click', () => {
           
           })
           .then(txn => {
-            $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'bscscan.com/tx/' + txn.hash);
+            $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
             $('[name="tx-info-success"]').show();
             $('#tx-info-success-img').show();
             $('[name="tx-info-fail"]').hide();
@@ -117,7 +117,7 @@ $('#modal-deposit-button').on('click', () => {
    
     const result =  contract.methods.deposit(ref, _spend)
       .send({ from: accounts[0] }).then(txn => {
-        $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'bscscan.com/tx/' + txn.hash);
+        $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
         $('[name="tx-info-success"]').show();
         $('#tx-info-success-img').show();
         $('[name="tx-info-fail"]').hide();

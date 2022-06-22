@@ -30,7 +30,7 @@ $('[name="modal-history-init-button"]').click(function(){
                             '       <span class="date-table">'+operations[i].datetime+'</span>'+
                             '   </td>'+
                             '   <td>'+
-                            '       <span class="transaction">'+'<a class="about-bee" href="https://'+NETWORK_URL+'bscscan.com/tx/'+operations[i].transactionHash+'" target="_blank">'+operations[i].transactionHash+'</a></span>'+
+                            '       <span class="transaction">'+'<a class="about-bee" href="https://'+NETWORK_URL+'polygonscan.com/tx/'+operations[i].transactionHash+'" target="_blank">'+operations[i].transactionHash+'</a></span>'+
                             '   </td>'+
                             '   <td>'+
                             '       <span class="summa summa-transaction">'+format_number(operations[i].amount, 4)+' BNB</span>'+
