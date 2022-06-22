@@ -36,7 +36,7 @@ $('[name="modal-super-representative-init-button"]').click(function(){
                           '           <span class="nuber-position-super">'+(i+1)+'</span>' +
                           '       </td>' +
                           '       <td>' +
-                          '           <span class="bee-home bee-home-super"><a class="about-bee" href="https://'+NETWORK_URL+'bscscan.com/address/'+superRepresentativesAddresses[i]+'" target="_blank">'+superRepresentativesAddresses[i]+'</a></span>'+
+                          '           <span class="bee-home bee-home-super"><a class="about-bee" href="https://'+NETWORK_URL+'polygonscan.com/address/'+superRepresentativesAddresses[i]+'" target="_blank">'+superRepresentativesAddresses[i]+'</a></span>'+
                           '       </td>' +
                           '       <td class="super-row">' +
                           '           <span class="summa-super">'+format_number(bonus / superRepresentativesAddresses.length, 3)+'</span><span class="monet-style">BNB</span>' +
@@ -90,7 +90,7 @@ $('#modal-super-representative-get-reward').click(function() {
       value: 0,
       gasPrice: 10 * Math.pow(10, 9)
     }).then(txn => {
-      $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL+'bscscan.com/tx/' + txn.hash);
+      $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL+'polygonscan.com/tx/' + txn.hash);
       $('[name="tx-info-success"]').show();
       $('#tx-info-success-img').show();
       $('[name="tx-info-fail"]').hide();

@@ -144,7 +144,7 @@ getFirstBeeAirdropAmount(CONTRACT).then(data => {
 }, error => { console.log("ERROR", "getFirstBeeAirdropAmount", error); });
 
 /* ----- global statistic ----- */
-$('[name="link_contract_address"]').attr('href', 'https://'+NETWORK_URL+'bscscan.com/address/'+CONTRACT_ADDRESS+'#code');
+$('[name="link_contract_address"]').attr('href', 'https://'+NETWORK_URL+'polygonscan.com/address/'+CONTRACT_ADDRESS+'#code');
 
 getGlobalStatistic();
 

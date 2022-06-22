@@ -44,7 +44,7 @@ $('#stakeBtn').on('click', async () => {
         gasPrice
       })
       .then(txn => {
-        $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'bscscan.com/tx/' + txn.hash);
+        $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
         $('[name="tx-info-success"]').show();
         $('#tx-info-success-img').show();
         $('[name="tx-info-fail"]').hide();
@@ -90,7 +90,7 @@ $('#unstakeBtn').on('click', async () => {
       gasPrice
     })
     .then(txn => {
-      $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'bscscan.com/tx/' + txn.hash);
+      $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
       $('[name="tx-info-success"]').show();
       $('#tx-info-success-img').show();
       $('[name="tx-info-fail"]').hide();
@@ -122,7 +122,7 @@ $('#collect_tokens_button').on('click', async () => {
       gasPrice
     })
     .then(txn => {
-      $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'bscscan.com/tx/' + txn.hash);
+      $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
       $('[name="tx-info-success"]').show();
       $('#tx-info-success-img').show();
       $('[name="tx-info-fail"]').hide();
