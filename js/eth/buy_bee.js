@@ -223,7 +223,7 @@ $('[name="modal-buy-bee-button"]').on('click', () => {
               actionAfterMetamask(err, "");
             });
         } else {
-            INTERACT_CONTRACT.buysouls(id-1, value, {'from':current_account, 'value':0, 'gasPrice':gasPrice})
+            INTERACT_CONTRACT.buysouls(id-1, value, {'from':current_account})
               .then(txn => {
                 actionAfterMetamask(false, txn.hash)
               }).catch(err => {
