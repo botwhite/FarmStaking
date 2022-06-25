@@ -148,7 +148,7 @@ function getActualBalance(){
             }
             $('#balanceHoney').val(format_number(balanceHoney));
             $('#balanceWax').val(format_number(balanceWax));
-            console.log(balanceWax)
+            //console.log(balanceWax)
         }).catch(err => {
             console.log("ERROR", "web3.instantBalance", err);
         });

@@ -74,9 +74,7 @@ $('#modal-withdraw-button').on('click', () => {
         INTERACT_CONTRACT.withdraw(
           honeyWei,
           {
-            from: current_account,
-            value: "0",
-            gasPrice
+            from: current_account
           })
           .then(txn => {
             $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
