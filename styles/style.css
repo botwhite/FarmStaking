@@ -7289,6 +7289,55 @@ a, a:active, a:visited, a:hover {
     background-color:#EEEEEE;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
+
+ 
+
+.ttip .right {
+    min-width:200px; 
+    top: 75%;
+    left: 110%;
+    margin-right:20px;
+    transform:translate(0, -50%);
+    padding:10px 20px;
+    color:#ba2c38;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:16px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.ttip:hover .right {
+    visibility:visible; opacity:1;
+}
+
+.ttip .right i {
+    position:absolute;
+    top:50%;
+    right:100%;
+    margin-top:-12px;
+    width:12px;
+    height:24px;
+    overflow:hidden;
+}
+
+.ttip .right i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:0;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-45deg);
+    background-color:#EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+
 .left>h3{
     text-align: center;
     color:#931727;
