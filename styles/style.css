@@ -7345,6 +7345,44 @@ a, a:active, a:visited, a:hover {
    
 }
 
+.ttip .top-box, .ttip .top-ineer-menu{
+    min-width:200px; 
+    top: 20px;
+    left: 50%;
+    transform:translate(-50%, -100%);
+    padding:10px 20px;
+    color:#ba2c38;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+}
+.ttip .top-ineer-menu{
+    left:48%;
+    top: 22%;
+    min-width:200px; 
+    transform:translate(-50%, -100%);
+    padding:10px 20px;
+    color:#ba2c38;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+    text-align: center;
+}
+.top-box{
+    text-align: center;
+}
 .ttip .top  {
     min-width:200px; 
     top: 20px;
@@ -7367,11 +7405,11 @@ a, a:active, a:visited, a:hover {
     text-align: center;
 }
  
-.ttip:hover .top {
+.ttip:hover .top, .ttip:hover .top-box,.ttip:hover .top-ineer-menu  {
     display:block;
 }
 
-.ttip .top i {
+.ttip .top i,.ttip .top-box i, .ttip .top-ineer-menu i {
     position:absolute;
     top:100%;
     left:50%;
@@ -7381,7 +7419,7 @@ a, a:active, a:visited, a:hover {
     overflow:hidden;
 }
 
-.ttip .top i::after {
+.ttip .top i::after,.ttip .top-box i::after, .ttip .top-ineer-menu i::after  {
     content:'';
     position:absolute;
     width:12px;

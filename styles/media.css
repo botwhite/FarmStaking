@@ -6222,7 +6222,9 @@
         width: 1em;
         height: 1em;
     }
-
+    .sox-button{
+        display: none;
+    }
 
   }
 
@@ -6311,4 +6313,15 @@
         margin-top: 3em;}
 
       
+  }
+
+  @media screen and (min-width: 1200px ) {
+    .ttip .top-ineer-menu{
+        top: 38%;
+    }
+    .wdtt{
+        left:75% !important; 
+    }
+}
+    
   }
