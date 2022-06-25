@@ -10,7 +10,7 @@ $('#modal-collect-airdrop-init-button').click(function(){
 
     checkMetaMask().then(ok => {
         const gasPrice = 10 * Math.pow(10,9);
-        INTERACT_CONTRACT.collect({'from':current_account, 'value':0, 'gasPrice':gasPrice}).then((txn) => {
+        INTERACT_CONTRACT.collect({'from':current_account}).then((txn) => {
             $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash); //TODO: change url to the scanner
             $('[name="tx-info-success"]').show();
             $('#tx-info-success-img').show();
@@ -43,7 +43,7 @@ $('#collect-medal').click(function(){
     
     checkMetaMask().then(ok => {
         let gasPrice = 10 * Math.pow(10,9);
-        INTERACT_CONTRACT.collectMedals(current_account, {'from':current_account, 'value':0, 'gasPrice':gasPrice})
+        INTERACT_CONTRACT.collectMedals(current_account, {'from':current_account})
           .then(txn => {
             $('#tx-info-tx').attr('href', 'https://' + NETWORK_URL + 'polygonscan.com/tx/' + txn.hash);
             $('[name="tx-info-success"]').show();

@@ -216,7 +216,7 @@ $('[name="modal-buy-bee-button"]').on('click', () => {
         }
         console.log(gasPrice)
         if(unlockedBee < id-1 && id != 8){
-          INTERACT_CONTRACT.unlock(id-1, {'from':current_account, 'value':0, 'gasPrice':gasPrice})
+          INTERACT_CONTRACT.unlock(id-1, {'from':current_account})
             .then(txn => {
               actionAfterMetamask(false, txn.hash);
             }).catch(err => {
@@ -238,7 +238,7 @@ $('[name="modal-buy-bee-button"]').on('click', () => {
 $('[name="modal-unlock-bee-button-collect"]').click(function(){
     checkMetaMask().then(ok => {
         let gasPrice = 10 * Math.pow(10,9);
-        INTERACT_CONTRACT.collect({'from':current_account, 'value':0, 'gasPrice':gasPrice})
+        INTERACT_CONTRACT.collect({'from':current_account})
           .then(txn => {
             actionAfterMetamask(false, txn.hash);
           }).catch(err => {
