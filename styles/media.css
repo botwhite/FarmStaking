@@ -3197,6 +3197,9 @@
     }
 }
 @media screen and (max-width: 768px) and (min-width: 0px) {
+    .top, .left, .right{
+        display: none !important;
+    }
 
     .wrapper-mobile-list {
         position: fixed;
@@ -6320,6 +6323,4 @@
         top: 38%;
     }
     
-}
-    
-  }
+} 
