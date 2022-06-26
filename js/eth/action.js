@@ -88,6 +88,7 @@ try {
   ethereumButton.addEventListener('click', () => {
     //Will Start the metamask extension
     window.ethereum.request({ method: 'eth_requestAccounts' });
+
   });
 } catch (e) {
   console.log(e);
@@ -137,8 +138,12 @@ function getActualBalance(){
         CONTRACT.instantBalance(current_account).then(actual_balance => {
             balanceHoney = Math.floor(
               actual_balance[0].div(ethers.BigNumber.from(10).pow(18)).toNumber()
+              
             );
-            console.log(actual_balance[1])
+            $('#NotConnected').hide();
+              $('#Connected').show();
+              console.log("conedtado")
+           
 
             balanceWax = Math.floor(
               actual_balance[1].div(ethers.BigNumber.from(10).pow(18)).toNumber()

@@ -27,6 +27,7 @@ const getAccounts = async () => {
     try {
       await window.ethereum.request({ method: "eth_requestAccounts" })
       resolve(web3)
+
     } catch (error) {
       console.log(error)
     }
@@ -122,7 +123,6 @@ const getAccounts = async () => {
         if (netId == NETWORK_ID) {
           var awaitContract = async function () {
             contract = await getContract(web3);
-           
             
  
             web3.eth.getAccounts(function (err, accounts) {
