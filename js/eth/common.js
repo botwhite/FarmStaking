@@ -266,7 +266,6 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			if(unlockedBee < bee_type-1){
 				$('#bee_type_button_'+bee_type).html('Unlock');
 				$('#bee_type_button_'+bee_type).addClass('UNLOCK'); 
-			 
 				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');			 
 			} else {
 				$('#bee_type_button_'+bee_type).removeClass('red-btn');
@@ -276,8 +275,42 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 				// $('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 			}
-
-
+			if($('#bee_type_button_3').hasClass('UNLOCK')){
+				$('#bee_type_3 > div > div.fly.fly-greed.ttip > div > .unlock').removeClass('HIDE');
+				$('#bee_type_3 > div > div.fly.fly-greed.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
+				$('#bee_type_3 > div > div.fly.fly-greed.ttip > div > .buy').addClass('HIDE');
+				$('#bee_type_3 > div > div.fly.fly-greed.ttip > div > .collected').addClass('HIDE'); 
+				}
+			if($('#bee_type_button_4').hasClass('UNLOCK')){
+				$('#bee_type_4 > div > div.fly.fly-wrath.ttip > div > .unlock').removeClass('HIDE');
+				$('#bee_type_4 > div > div.fly.fly-wrath.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (10) to unlock this circle ');
+				$('#bee_type_4 > div > div.fly.fly-wrath.ttip > div > .buy').addClass('HIDE');
+				$('#bee_type_4 > div > div.fly.fly-wrath.ttip > div > .collected').addClass('HIDE'); 
+				}
+			if($('#bee_type_button_5').hasClass('UNLOCK')){
+				$('#bee_type_5 > div > div.fly.fly-heresy.ttip > div > .unlock').removeClass('HIDE');
+				$('#bee_type_5 > div > div.fly.fly-heresy.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (16) to unlock this circle ');
+				$('#bee_type_5 > div > div.fly.fly-heresy.ttip > div > .buy').addClass('HIDE');
+				$('#bee_type_5 > div > div.fly.fly-heresy.ttip > div > .collected').addClass('HIDE'); 
+				}
+			if($('#bee_type_button_6').hasClass('UNLOCK')){
+				$('#bee_type_6 > div > div.fly.fly-lazziness.ttip > div > .unlock').removeClass('HIDE');
+				$('#bee_type_6 > div > div.fly.fly-lazziness.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (25) to unlock this circle ');
+				$('#bee_type_6 > div > div.fly.fly-lazziness.ttip > div > .buy').addClass('HIDE');
+				$('#bee_type_6 > div > div.fly.fly-lazziness.ttip > div > .collected').addClass('HIDE'); 
+				}
+			if($('#bee_type_button_7').hasClass('UNLOCK')){
+				$('#bee_type_7 > div > div.fly.fly-fraud.ttip > div > .unlock').removeClass('HIDE');
+				$('#bee_type_7 > div > div.fly.fly-fraud.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (35) to unlock this circle ');
+				$('#bee_type_7 > div > div.fly.fly-fraud.ttip > div > .buy').addClass('HIDE');
+				$('#bee_type_7 > div > div.fly.fly-fraud.ttip > div > .collected').addClass('HIDE'); 
+				}
+			if($('#bee_type_button_8').hasClass('UNLOCK')){
+				$('#bee_type_8 > div > div.fly.fly-treachery.ttip > div > .unlock').removeClass('HIDE');
+				$('#bee_type_8 > div > div.fly.fly-treachery.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (10) to unlock this circle ');
+				$('#bee_type_8 > div > div.fly.fly-treachery.ttip > div > .buy').addClass('HIDE');
+				$('#bee_type_8 > div > div.fly.fly-treachery.ttip > div > .collected').addClass('HIDE'); 
+				}
 		}
 
 		if(bee_type != 8 && playerBees[bee_type-1] == 32){
@@ -318,8 +351,8 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
         $.get('js/eth/airdrop_collect.js');
 	} else {
 		$('#bee_type_1 > div').removeClass('no-active-round');
-		$('#bee_type_1 > div > div > a').addClass('COLLECTED');
-		$('#bee_type_1 > div > div > a').removeClass('COLLECT');
+		// $('#bee_type_1 > div > div > a').addClass('COLLECTED');
+		// $('#bee_type_1 > div > div > a').removeClass('COLLECT');
 		$('#bee_type_1 > div > .drop-big').remove();
 	}
 
