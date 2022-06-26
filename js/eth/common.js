@@ -214,6 +214,7 @@ function calculateProfitAtHour(bees, bee_monthly_percents, bee_levels_prices){
 
 function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = false, unlockedBee = 0, superBeeUnlocked = false){
 	for(let bee_type = 1; bee_type <= 8; bee_type++){
+	 
 		let bee_type_wax = '';
 
 		for(let i = 1; i <= 32; i++){
@@ -254,22 +255,29 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			bees_can_unlock[bee_type-1] = false;
 			$('#bee_type_button_'+bee_type).removeClass('bay-bee-btn');
 			$('#bee_type_button_'+bee_type).html('Unlock');
+		
 		}
 
 		if(bee_type != 8 && playerBees[bee_type-2] == 32){
 			bees_can_unlock[bee_type-1] = true;
 			$('#bee_type_button_'+bee_type).removeClass('none-active');
 			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
+
 			if(unlockedBee < bee_type-1){
 				$('#bee_type_button_'+bee_type).html('Unlock');
-				$('#bee_type_button_'+bee_type).addClass('UNLOCK');
-				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');
+				$('#bee_type_button_'+bee_type).addClass('UNLOCK'); 
+			 
+				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');			 
 			} else {
 				$('#bee_type_button_'+bee_type).removeClass('red-btn');
 				$('#bee_type_button_'+bee_type).html('Buy a sinner');
+				$('#unlock').addClass('HIDE');
+				$('#collected').addClass('HIDE');
 				$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 				// $('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 			}
+
+
 		}
 
 		if(bee_type != 8 && playerBees[bee_type-1] == 32){
@@ -277,6 +285,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			$('#bee_type_button_'+bee_type).addClass('none-active');
 			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
 			$('#bee_type_button_'+bee_type).addClass('COLLECTED');
+		 
 			$('#bee_type_button_'+bee_type).removeClass('COLLECT');
 			$('#bee_type_button_'+bee_type).html('Collected');
 		}
@@ -309,7 +318,6 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
         $.get('js/eth/airdrop_collect.js');
 	} else {
 		$('#bee_type_1 > div').removeClass('no-active-round');
-
 		$('#bee_type_1 > div > div > a').addClass('COLLECTED');
 		$('#bee_type_1 > div > div > a').removeClass('COLLECT');
 		$('#bee_type_1 > div > .drop-big').remove();
