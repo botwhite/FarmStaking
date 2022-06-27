@@ -381,6 +381,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 		}
 		if($('#bee_type_button_'+bee_type).hasClass('bay-bee-btn')){
 			$('#bee_type_'+bee_type+' > div > div.fly.fly-gluttony.ttip > div.top > #buy').removeClass('HIDE')
+			$('#bee_type_'+bee_type+' > div > div.fly.fly-gluttony.ttip > div.top > #unlock').addClass('HIDE')
 			$('#bee_type_'+bee_type+' > div > div.fly.fly-gluttony.ttip > div.top > #buy').html('You must have at least 1 weirdo staked in the game to buy sinners from this circle ')
 		}
 		 
