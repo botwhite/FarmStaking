@@ -279,7 +279,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			}
 			if($('#bee_type_button_2').hasClass('UNLOCK')){
 				$('div.fly.fly-gluttony.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-gluttony.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
+				$('div.fly.fly-gluttony.ttip > div > .unlock').html('You need to have 32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
 				$('div.fly.fly-gluttony.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-gluttony.ttip > div > .collected').addClass('HIDE'); 
 				}
@@ -293,7 +293,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			}
 			if($('#bee_type_button_3').hasClass('UNLOCK')){
 				$('div.fly.fly-greed.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-greed.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
+				$('div.fly.fly-greed.ttip > div > .unlock').html('You need to have 32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
 				$('div.fly.fly-greed.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-greed.ttip > div > .collected').addClass('HIDE'); 
 				}
@@ -308,7 +308,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			
 			if($('#bee_type_button_4').hasClass('UNLOCK')){
 				$('div.fly.fly-wrath.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-wrath.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (10) to unlock this circle ');
+				$('div.fly.fly-wrath.ttip > div > .unlock').html('You need to have 32 sinners from the past circle and enough weirdos staked (10) to unlock this circle ');
 				$('div.fly.fly-wrath.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-wrath.ttip > div > .collected').addClass('HIDE'); 
 				}
@@ -322,7 +322,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				}
 			if($('#bee_type_button_5').hasClass('UNLOCK')){
 				$('div.fly.fly-heresy.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-heresy.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (16) to unlock this circle ');
+				$('div.fly.fly-heresy.ttip > div > .unlock').html('You need to have 32 sinners from the past circle and enough weirdos staked (16) to unlock this circle ');
 				$('div.fly.fly-heresy.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-heresy.ttip > div > .collected').addClass('HIDE'); 
 				}
@@ -336,7 +336,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				}
 			if($('#bee_type_button_6').hasClass('UNLOCK')){
 				$('div.fly.fly-lazziness.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-lazziness.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (25) to unlock this circle ');
+				$('div.fly.fly-lazziness.ttip > div > .unlock').html('You need to have 32 sinners from the past circle and enough weirdos staked (25) to unlock this circle ');
 				$('div.fly.fly-lazziness.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-lazziness.ttip > div > .collected').addClass('HIDE'); 
 				}
@@ -350,7 +350,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				}
 			if($('#bee_type_button_7').hasClass('UNLOCK')){
 				$('div.fly.fly-fraud.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-fraud.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (35) to unlock this circle ');
+				$('div.fly.fly-fraud.ttip > div > .unlock').html('You need to have 32 sinners from the past circle and enough weirdos staked (35) to unlock this circle ');
 				$('div.fly.fly-fraud.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-fraud.ttip > div > .collected').addClass('HIDE'); 
 				}
