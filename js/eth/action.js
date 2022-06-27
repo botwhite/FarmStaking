@@ -196,11 +196,11 @@ async function run(){
             if(airdropCollected){
                 $('#modal-collect-airdrop-init-button').addClass("none-active");  
                 $('#modal-collect-airdrop-init-button').html("Collected");  
-                $('#bee_type_1 > div > div.fly.fly-lust.ttip.fly-transition > div > h3.collect').addClass('HIDE');
+                $('#bee_type_1 > div > div.fly.fly-lust.ttip.fly-transition > div.top > h3.collect').addClass('HIDE');
 
             } else {
                 $('#modal-collect-airdrop-init-button').html("Collect");
-                $('#bee_type_1 > div > div.fly.fly-lust.ttip.fly-transition > div > h3.collected').addClass('HIDE');
+                $('#bee_type_1 > div > div.fly.fly-lust.ttip.fly-transition > div.top > h3.collected').addClass('HIDE');
                 
                 if(registered){
                     $('#modal-collect-airdrop-init-button').removeClass("none-active"); 

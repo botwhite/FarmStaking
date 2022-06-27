@@ -365,7 +365,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			
 			if($('#bee_type_button_8').hasClass('UNLOCK')){
 				$('div.fly.fly-treachery.ttip > div > .unlock').removeClass('HIDE');
-				$('div.fly.fly-treachery.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (10) to unlock this circle ');
+				$('div.fly.fly-treachery.ttip > div > .unlock').html('This circle is only unlocked at specials events announced at our Discord, you need to have enough weirdos staked (10) to buy this sinners when the level gets unlocked.');
 				$('div.fly.fly-treachery.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-treachery.ttip > div > .collected').addClass('HIDE'); 
 				}
@@ -377,14 +377,19 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 					$('div.fly.fly-treachery.ttip > div > .unlock').addClass('HIDE'); 
 					}
 				}
+
 		}
+		if($('#bee_type_button_'+bee_type).hasClass('bay-bee-btn')){
+			$('#bee_type_'+bee_type+' > div > div.fly.fly-gluttony.ttip > div.top > #buy').removeClass('HIDE')
+			$('#bee_type_'+bee_type+' > div > div.fly.fly-gluttony.ttip > div.top > #buy').html('You must have at least 1 weirdo staked in the game to buy sinners from this circle ')
+		}
+		 
 
 		if(bee_type != 8 && playerBees[bee_type-1] == 32){
 			$('#bee_type_button_'+bee_type).removeClass('red-btn');
 			$('#bee_type_button_'+bee_type).addClass('none-active');
 			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
-			$('#bee_type_button_'+bee_type).addClass('COLLECTED');
-		 
+			$('#bee_type_button_'+bee_type).addClass('COLLECTED'); 
 			$('#bee_type_button_'+bee_type).removeClass('COLLECT');
 			$('#bee_type_button_'+bee_type).html('Collected');
 		}
