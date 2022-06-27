@@ -380,9 +380,40 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 
 		}
 		if($('#bee_type_button_'+bee_type).hasClass('bay-bee-btn')){
-			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').removeClass('HIDE')
-			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #unlock').addClass('HIDE')
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').removeClass('HIDE');
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #unlock').addClass('HIDE');
+			switch (bee_type) {
+			case 2:
 			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 1 weirdo staked in the game to buy sinners from this circle ')
+					break;
+			case 3:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 5 weirdo staked in the game to buy sinners from this circle ')
+					
+					break;
+			case 4:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 10 weirdo staked in the game to buy sinners from this circle ')
+					
+					break;
+			case 5:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 16 weirdo staked in the game to buy sinners from this circle ')
+					
+					break;
+			case 6:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 25 weirdo staked in the game to buy sinners from this circle ')
+					break;
+			case 7:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 35 weirdo staked in the game to buy sinners from this circle ')
+					break;
+			case 8:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 10 weirdo staked in the game to buy sinners from this circle ')
+					break;
+				
+				default:
+					$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have a minimum staked weirdos in the game to buy sinners from this circle ')
+				break;
+
+			}
+		
 		}
 		 
 
