@@ -214,6 +214,7 @@ function calculateProfitAtHour(bees, bee_monthly_percents, bee_levels_prices){
 
 function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = false, unlockedBee = 0, superBeeUnlocked = false){
 	for(let bee_type = 1; bee_type <= 8; bee_type++){
+	 
 		let bee_type_wax = '';
 
 		for(let i = 1; i <= 32; i++){
@@ -254,29 +255,173 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			bees_can_unlock[bee_type-1] = false;
 			$('#bee_type_button_'+bee_type).removeClass('bay-bee-btn');
 			$('#bee_type_button_'+bee_type).html('Unlock');
+		
 		}
 
 		if(bee_type != 8 && playerBees[bee_type-2] == 32){
 			bees_can_unlock[bee_type-1] = true;
 			$('#bee_type_button_'+bee_type).removeClass('none-active');
 			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
+
 			if(unlockedBee < bee_type-1){
 				$('#bee_type_button_'+bee_type).html('Unlock');
-				$('#bee_type_button_'+bee_type).addClass('UNLOCK');
-				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');
+				$('#bee_type_button_'+bee_type).addClass('UNLOCK'); 
+				$('#bee_type_button_'+bee_type).removeClass('BUY_A_BEE');			 
 			} else {
 				$('#bee_type_button_'+bee_type).removeClass('red-btn');
 				$('#bee_type_button_'+bee_type).html('Buy a sinner');
+				$('#buy').removeClass('HIDE');
+				$('#buy').html('You must have at least 1 weirdo staked in the game to buy sinners from this circle ');
+				$('#unlock').addClass('HIDE');
+				$('#collected').addClass('HIDE');
 				$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 				// $('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 			}
+			if($('#bee_type_button_2').hasClass('UNLOCK')){
+				$('div.fly.fly-gluttony.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
+				$('div.fly.fly-gluttony.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .collected').addClass('HIDE'); 
+				}
+			else{
+				if ($('#bee_type_button_2').hasClass('COLLECTED')) {
+				$('div.fly.fly-gluttony.ttip > div > .collected').removeClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+				$('div.fly.fly-gluttony.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .unlock').addClass('HIDE'); 
+				}
+			}
+			if($('#bee_type_button_3').hasClass('UNLOCK')){
+				$('div.fly.fly-greed.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-greed.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
+				$('div.fly.fly-greed.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-greed.ttip > div > .collected').addClass('HIDE'); 
+				}
+			else{
+				if ($('#bee_type_button_3').hasClass('COLLECTED')) {
+				$('div.fly.fly-greed.ttip > div > .collected').removeClass('HIDE');
+				$('div.fly.fly-greed.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+				$('div.fly.fly-greed.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-greed.ttip > div > .unlock').addClass('HIDE'); 
+				}
+			}
+			
+			if($('#bee_type_button_4').hasClass('UNLOCK')){
+				$('div.fly.fly-wrath.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-wrath.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (10) to unlock this circle ');
+				$('div.fly.fly-wrath.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-wrath.ttip > div > .collected').addClass('HIDE'); 
+				}
+				else{
+					if ($('#bee_type_button_4').hasClass('COLLECTED')) {
+					$('div.fly.fly-wrath.ttip > div > .collected').removeClass('HIDE');
+					$('div.fly.fly-wrath.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-wrath.ttip > div > .buy').addClass('HIDE');
+					$('div.fly.fly-wrath.ttip > div > .unlock').addClass('HIDE'); 
+					}
+				}
+			if($('#bee_type_button_5').hasClass('UNLOCK')){
+				$('div.fly.fly-heresy.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-heresy.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (16) to unlock this circle ');
+				$('div.fly.fly-heresy.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-heresy.ttip > div > .collected').addClass('HIDE'); 
+				}
+				else{
+					if ($('#bee_type_button_5').hasClass('COLLECTED')) {
+					$('div.fly.fly-heresy.ttip > div > .collected').removeClass('HIDE');
+					$('div.fly.fly-heresy.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-heresy.ttip > div > .buy').addClass('HIDE');
+					$('div.fly.fly-heresy.ttip > div > .unlock').addClass('HIDE'); 
+					}
+				}
+			if($('#bee_type_button_6').hasClass('UNLOCK')){
+				$('div.fly.fly-lazziness.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-lazziness.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (25) to unlock this circle ');
+				$('div.fly.fly-lazziness.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-lazziness.ttip > div > .collected').addClass('HIDE'); 
+				}
+				else{
+					if ($('#bee_type_button_6').hasClass('COLLECTED')) {
+					$('div.fly.fly-lazziness.ttip > div > .collected').removeClass('HIDE');
+					$('div.fly.fly-lazziness.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-lazziness.ttip > div > .buy').addClass('HIDE');
+					$('div.fly.fly-lazziness.ttip > div > .unlock').addClass('HIDE'); 
+					}
+				}
+			if($('#bee_type_button_7').hasClass('UNLOCK')){
+				$('div.fly.fly-fraud.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-fraud.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (35) to unlock this circle ');
+				$('div.fly.fly-fraud.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-fraud.ttip > div > .collected').addClass('HIDE'); 
+				}
+				else{
+					if ($('#bee_type_button_7').hasClass('COLLECTED')) {
+					$('div.fly.fly-fraud.ttip > div > .collected').removeClass('HIDE');
+					$('div.fly.fly-fraud.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-fraud.ttip > div > .buy').addClass('HIDE');
+					$('div.fly.fly-fraud.ttip > div > .unlock').addClass('HIDE'); 
+					}
+				}
+			
+			if($('#bee_type_button_8').hasClass('UNLOCK')){
+				$('div.fly.fly-treachery.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-treachery.ttip > div > .unlock').html('This circle is only unlocked at specials events announced at our Discord, you need to have enough weirdos staked (10) to buy this sinners when the level gets unlocked.');
+				$('div.fly.fly-treachery.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-treachery.ttip > div > .collected').addClass('HIDE'); 
+				}
+				else{
+					if ($('#bee_type_button_8').hasClass('COLLECTED')) {
+					$('div.fly.fly-treachery.ttip > div > .collected').removeClass('HIDE');
+					$('div.fly.fly-treachery.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-treachery.ttip > div > .buy').addClass('HIDE');
+					$('div.fly.fly-treachery.ttip > div > .unlock').addClass('HIDE'); 
+					}
+				}
+
 		}
+		if($('#bee_type_button_'+bee_type).hasClass('bay-bee-btn')){
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').removeClass('HIDE');
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #unlock').addClass('HIDE');
+			switch (bee_type) {
+			case 2:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 1 weirdo staked in the game to buy sinners from this circle ')
+					break;
+			case 3:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 5 weirdo staked in the game to buy sinners from this circle ')
+					
+					break;
+			case 4:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 10 weirdo staked in the game to buy sinners from this circle ')
+					
+					break;
+			case 5:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 16 weirdo staked in the game to buy sinners from this circle ')
+					
+					break;
+			case 6:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 25 weirdo staked in the game to buy sinners from this circle ')
+					break;
+			case 7:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 35 weirdo staked in the game to buy sinners from this circle ')
+					break;
+			case 8:
+			$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have at least 10 weirdo staked in the game to buy sinners from this circle ')
+					break;
+				
+				default:
+					$('#bee_type_'+bee_type+' > div > div.fly.ttip > div.top > #buy').html('You must have a minimum staked weirdos in the game to buy sinners from this circle ')
+				break;
+
+			}
+		
+		}
+		 
 
 		if(bee_type != 8 && playerBees[bee_type-1] == 32){
 			$('#bee_type_button_'+bee_type).removeClass('red-btn');
 			$('#bee_type_button_'+bee_type).addClass('none-active');
 			$('#bee_type_button_'+bee_type).addClass('bay-bee-btn');
-			$('#bee_type_button_'+bee_type).addClass('COLLECTED');
+			$('#bee_type_button_'+bee_type).addClass('COLLECTED'); 
 			$('#bee_type_button_'+bee_type).removeClass('COLLECT');
 			$('#bee_type_button_'+bee_type).html('Collected');
 		}
@@ -309,9 +454,8 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
         $.get('js/eth/airdrop_collect.js');
 	} else {
 		$('#bee_type_1 > div').removeClass('no-active-round');
-
-		$('#bee_type_1 > div > div > a').addClass('COLLECTED');
-		$('#bee_type_1 > div > div > a').removeClass('COLLECT');
+		// $('#bee_type_1 > div > div > a').addClass('COLLECTED');
+		// $('#bee_type_1 > div > div > a').removeClass('COLLECT');
 		$('#bee_type_1 > div > .drop-big').remove();
 	}
 

@@ -76,6 +76,9 @@
     font-family: Gloria-A !important;
     caret-color: transparent !important; 
 }
+html{
+    background-color: #000000;
+}
 body,
 div,
 span,
@@ -269,10 +272,10 @@ button {
 .bg-body {
     position: relative;
     z-index: 0;  
-    background-color: #000000;;
     background-size: cover;
-    background-image: url('../image/LARGA.jpg');
+    background-image: url('../image/LARGA.jpg') !important;
     background-repeat: repeat-y;
+
 }  
 
 
@@ -7480,4 +7483,11 @@ a, a:active, a:visited, a:hover {
 }
 .wdtt{
     left: 75% !important;
+}
+
+.HIDE{
+    display: none !important;
+} 
+.UNLOCK + #unlock {
+    display: block !important;
 }
