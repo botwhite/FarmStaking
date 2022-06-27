@@ -170,7 +170,7 @@ pragma solidity ^0.8.0;
  * these events, as it isn't required by the specification.
  *
  * Finally, the non-standard {decreaseAllowance} and {increaseAllowance}
- * functions have been added to mitigate the well-known issues around setting
+ * functions has been added to mitigate the well-known issues around setting
  * allowances. See {IERC20-approve}.
  */
 contract ERC20 is Context, IERC20, IERC20Metadata {
@@ -510,8 +510,8 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      *
      * - when `from` and `to` are both non-zero, `amount` of ``from``'s tokens
      * has been transferred to `to`.
-     * - when `from` is zero, `amount` tokens have been minted for `to`.
-     * - when `to` is zero, `amount` of ``from``'s tokens have been burned.
+     * - when `from` is zero, `amount` tokens has been minted for `to`.
+     * - when `to` is zero, `amount` of ``from``'s tokens has been burned.
      * - `from` and `to` are never both zero.
      *
      * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].

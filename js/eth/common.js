@@ -286,7 +286,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			else{
 				if ($('#bee_type_button_2').hasClass('COLLECTED')) {
 				$('div.fly.fly-gluttony.ttip > div > .collected').removeClass('HIDE');
-				$('div.fly.fly-gluttony.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+				$('div.fly.fly-gluttony.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 				$('div.fly.fly-gluttony.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-gluttony.ttip > div > .unlock').addClass('HIDE'); 
 				}
@@ -300,7 +300,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 			else{
 				if ($('#bee_type_button_3').hasClass('COLLECTED')) {
 				$('div.fly.fly-greed.ttip > div > .collected').removeClass('HIDE');
-				$('div.fly.fly-greed.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+				$('div.fly.fly-greed.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 				$('div.fly.fly-greed.ttip > div > .buy').addClass('HIDE');
 				$('div.fly.fly-greed.ttip > div > .unlock').addClass('HIDE'); 
 				}
@@ -315,7 +315,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				else{
 					if ($('#bee_type_button_4').hasClass('COLLECTED')) {
 					$('div.fly.fly-wrath.ttip > div > .collected').removeClass('HIDE');
-					$('div.fly.fly-wrath.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-wrath.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 					$('div.fly.fly-wrath.ttip > div > .buy').addClass('HIDE');
 					$('div.fly.fly-wrath.ttip > div > .unlock').addClass('HIDE'); 
 					}
@@ -329,7 +329,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				else{
 					if ($('#bee_type_button_5').hasClass('COLLECTED')) {
 					$('div.fly.fly-heresy.ttip > div > .collected').removeClass('HIDE');
-					$('div.fly.fly-heresy.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-heresy.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 					$('div.fly.fly-heresy.ttip > div > .buy').addClass('HIDE');
 					$('div.fly.fly-heresy.ttip > div > .unlock').addClass('HIDE'); 
 					}
@@ -343,7 +343,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				else{
 					if ($('#bee_type_button_6').hasClass('COLLECTED')) {
 					$('div.fly.fly-lazziness.ttip > div > .collected').removeClass('HIDE');
-					$('div.fly.fly-lazziness.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-lazziness.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 					$('div.fly.fly-lazziness.ttip > div > .buy').addClass('HIDE');
 					$('div.fly.fly-lazziness.ttip > div > .unlock').addClass('HIDE'); 
 					}
@@ -357,7 +357,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				else{
 					if ($('#bee_type_button_7').hasClass('COLLECTED')) {
 					$('div.fly.fly-fraud.ttip > div > .collected').removeClass('HIDE');
-					$('div.fly.fly-fraud.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-fraud.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 					$('div.fly.fly-fraud.ttip > div > .buy').addClass('HIDE');
 					$('div.fly.fly-fraud.ttip > div > .unlock').addClass('HIDE'); 
 					}
@@ -372,7 +372,7 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				else{
 					if ($('#bee_type_button_8').hasClass('COLLECTED')) {
 					$('div.fly.fly-treachery.ttip > div > .collected').removeClass('HIDE');
-					$('div.fly.fly-treachery.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+					$('div.fly.fly-treachery.ttip > div > .collected').html('This circle has been collected and is producing souls and sins!');
 					$('div.fly.fly-treachery.ttip > div > .buy').addClass('HIDE');
 					$('div.fly.fly-treachery.ttip > div > .unlock').addClass('HIDE'); 
 					}

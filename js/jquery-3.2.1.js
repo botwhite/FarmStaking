@@ -4256,7 +4256,7 @@ jQuery.extend( {
 		dataUser.remove( elem, name );
 	},
 
-	// TODO: Now that all calls to _data and _removeData have been replaced
+	// TODO: Now that all calls to _data and _removeData has been replaced
 	// with direct calls to dataPriv methods, these can be deprecated.
 	_data: function( elem, name, data ) {
 		return dataPriv.access( elem, name, data );
@@ -5390,7 +5390,7 @@ jQuery.Event = function( src, props ) {
 		this.originalEvent = src;
 		this.type = src.type;
 
-		// Events bubbling up the document may have been marked as prevented
+		// Events bubbling up the document may has been marked as prevented
 		// by a handler lower down the tree; reflect the correct value.
 		this.isDefaultPrevented = src.defaultPrevented ||
 				src.defaultPrevented === undefined &&

@@ -3354,7 +3354,7 @@
     var boundaries = getBoundaries(data.instance.popper, data.instance.reference, options.padding, boundariesElement, data.positionFixed);
 
     // NOTE: DOM access here
-    // restores the original style properties after the offsets have been computed
+    // restores the original style properties after the offsets has been computed
     popperStyles.top = top;
     popperStyles.left = left;
     popperStyles[transformProp] = transform;
