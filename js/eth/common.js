@@ -277,6 +277,20 @@ function fillBeesWaxes(playerBees = [], airdropCollected = false, registered = f
 				$('#bee_type_button_'+bee_type).removeClass('UNLOCK');
 				// $('#bee_type_button_'+bee_type).addClass('BUY_A_BEE');
 			}
+			if($('#bee_type_button_2').hasClass('UNLOCK')){
+				$('div.fly.fly-gluttony.ttip > div > .unlock').removeClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
+				$('div.fly.fly-gluttony.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .collected').addClass('HIDE'); 
+				}
+			else{
+				if ($('#bee_type_button_2').hasClass('COLLECTED')) {
+				$('div.fly.fly-gluttony.ttip > div > .collected').removeClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .collected').html('This circle have been collected and is producing souls and sins!');
+				$('div.fly.fly-gluttony.ttip > div > .buy').addClass('HIDE');
+				$('div.fly.fly-gluttony.ttip > div > .unlock').addClass('HIDE'); 
+				}
+			}
 			if($('#bee_type_button_3').hasClass('UNLOCK')){
 				$('div.fly.fly-greed.ttip > div > .unlock').removeClass('HIDE');
 				$('div.fly.fly-greed.ttip > div > .unlock').html('You need to have  32 sinners from the past circle and enough weirdos staked (5) to unlock this circle ');
